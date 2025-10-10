@@ -1,0 +1,1177 @@
+{
+  "data": [
+    {
+      "hovertemplate": "%{hovertext}\u003cextra\u003e\u003c\u002fextra\u003e",
+      "hovertext": [
+        "Company: Centene Corporation\u003cbr\u003eQuarter: 2023Q4\u003cbr\u003eCCP: 19652\u003cbr\u003eLTD: 17829\u003cbr\u003eCCP\u002fLTD: 1.10"
+      ],
+      "marker": {
+        "color": "#c5b0d5",
+        "line": {
+          "color": "black",
+          "width": 1
+        },
+        "size": 39.02297776605076,
+        "sizemode": "area"
+      },
+      "mode": "markers+text",
+      "name": "Centene Corporation",
+      "text": [
+        "CNC"
+      ],
+      "textposition": "top center",
+      "visible": true,
+      "x": [
+        19652.0
+      ],
+      "y": [
+        17829.0
+      ],
+      "type": "scatter"
+    },
+    {
+      "hovertemplate": "%{hovertext}\u003cextra\u003e\u003c\u002fextra\u003e",
+      "hovertext": [
+        "Company: Coca-Cola Company (The)\u003cbr\u003eQuarter: 2023Q4\u003cbr\u003eCCP: 13663\u003cbr\u003eLTD: 37507\u003cbr\u003eCCP\u002fLTD: 0.36"
+      ],
+      "marker": {
+        "color": "#bcbd22",
+        "line": {
+          "color": "black",
+          "width": 1
+        },
+        "size": 18.03128859349608,
+        "sizemode": "area"
+      },
+      "mode": "markers+text",
+      "name": "Coca-Cola Company (The)",
+      "text": [
+        "KO"
+      ],
+      "textposition": "top center",
+      "visible": true,
+      "x": [
+        13663.0
+      ],
+      "y": [
+        37507.0
+      ],
+      "type": "scatter"
+    },
+    {
+      "hovertemplate": "%{hovertext}\u003cextra\u003e\u003c\u002fextra\u003e",
+      "hovertext": [
+        "Company: Henry Schein\u003cbr\u003eQuarter: 2023Q4\u003cbr\u003eCCP: 171\u003cbr\u003eLTD: 2087\u003cbr\u003eCCP\u002fLTD: 0.08"
+      ],
+      "marker": {
+        "color": "#7f7f7f",
+        "line": {
+          "color": "black",
+          "width": 1
+        },
+        "size": 10.0,
+        "sizemode": "area"
+      },
+      "mode": "markers+text",
+      "name": "Henry Schein",
+      "text": [
+        "HSIC"
+      ],
+      "textposition": "top center",
+      "visible": true,
+      "x": [
+        171.0
+      ],
+      "y": [
+        2087.0
+      ],
+      "type": "scatter"
+    },
+    {
+      "hovertemplate": "%{hovertext}\u003cextra\u003e\u003c\u002fextra\u003e",
+      "hovertext": [
+        "Company: Gilead Sciences\u003cbr\u003eQuarter: 2023Q4\u003cbr\u003eCCP: 7264\u003cbr\u003eLTD: 24987\u003cbr\u003eCCP\u002fLTD: 0.29"
+      ],
+      "marker": {
+        "color": "#e377c2",
+        "line": {
+          "color": "black",
+          "width": 1
+        },
+        "size": 15.938649248582447,
+        "sizemode": "area"
+      },
+      "mode": "markers+text",
+      "name": "Gilead Sciences",
+      "text": [
+        "GILD"
+      ],
+      "textposition": "top center",
+      "visible": true,
+      "x": [
+        7264.0
+      ],
+      "y": [
+        24987.0
+      ],
+      "type": "scatter"
+    },
+    {
+      "hovertemplate": "%{hovertext}\u003cextra\u003e\u003c\u002fextra\u003e",
+      "hovertext": [
+        "Company: ConocoPhillips\u003cbr\u003eQuarter: 2023Q4\u003cbr\u003eCCP: 6606\u003cbr\u003eLTD: 17863\u003cbr\u003eCCP\u002fLTD: 0.37"
+      ],
+      "marker": {
+        "color": "#8c564b",
+        "line": {
+          "color": "black",
+          "width": 1
+        },
+        "size": 18.18876193881284,
+        "sizemode": "area"
+      },
+      "mode": "markers+text",
+      "name": "ConocoPhillips",
+      "text": [
+        "COP"
+      ],
+      "textposition": "top center",
+      "visible": true,
+      "x": [
+        6606.0
+      ],
+      "y": [
+        17863.0
+      ],
+      "type": "scatter"
+    },
+    {
+      "hovertemplate": "%{hovertext}\u003cextra\u003e\u003c\u002fextra\u003e",
+      "hovertext": [
+        "Company: Bristol Myers Squibb\u003cbr\u003eQuarter: 2023Q4\u003cbr\u003eCCP: 12280\u003cbr\u003eLTD: 36653\u003cbr\u003eCCP\u002fLTD: 0.34"
+      ],
+      "marker": {
+        "color": "#ff9896",
+        "line": {
+          "color": "black",
+          "width": 1
+        },
+        "size": 17.1994183655641,
+        "sizemode": "area"
+      },
+      "mode": "markers+text",
+      "name": "Bristol Myers Squibb",
+      "text": [
+        "BMY"
+      ],
+      "textposition": "top center",
+      "visible": true,
+      "x": [
+        12280.0
+      ],
+      "y": [
+        36653.0
+      ],
+      "type": "scatter"
+    },
+    {
+      "hovertemplate": "%{hovertext}\u003cextra\u003e\u003c\u002fextra\u003e",
+      "hovertext": [
+        "Company: Bath & Body Works, Inc.\u003cbr\u003eQuarter: 2023Q4\u003cbr\u003eCCP: 412\u003cbr\u003eLTD: 4497\u003cbr\u003eCCP\u002fLTD: 0.09"
+      ],
+      "marker": {
+        "color": "#98df8a",
+        "line": {
+          "color": "black",
+          "width": 1
+        },
+        "size": 10.275373063115126,
+        "sizemode": "area"
+      },
+      "mode": "markers+text",
+      "name": "Bath & Body Works, Inc.",
+      "text": [
+        "BBWI"
+      ],
+      "textposition": "top center",
+      "visible": true,
+      "x": [
+        412.0
+      ],
+      "y": [
+        4497.0
+      ],
+      "type": "scatter"
+    },
+    {
+      "hovertemplate": "%{hovertext}\u003cextra\u003e\u003c\u002fextra\u003e",
+      "hovertext": [
+        "Company: Amazon\u003cbr\u003eQuarter: 2023Q4\u003cbr\u003eCCP: 86780\u003cbr\u003eLTD: 58314\u003cbr\u003eCCP\u002fLTD: 1.49"
+      ],
+      "marker": {
+        "color": "#ffbb78",
+        "line": {
+          "color": "black",
+          "width": 1
+        },
+        "size": 50.0,
+        "sizemode": "area"
+      },
+      "mode": "markers+text",
+      "name": "Amazon",
+      "text": [
+        "AMZN"
+      ],
+      "textposition": "top center",
+      "visible": true,
+      "x": [
+        86780.0
+      ],
+      "y": [
+        58314.0
+      ],
+      "type": "scatter"
+    },
+    {
+      "hovertemplate": "%{hovertext}\u003cextra\u003e\u003c\u002fextra\u003e",
+      "hovertext": [
+        "Company: Amgen\u003cbr\u003eQuarter: 2023Q4\u003cbr\u003eCCP: 10944\u003cbr\u003eLTD: 64613\u003cbr\u003eCCP\u002fLTD: 0.17"
+      ],
+      "marker": {
+        "color": "#aec7e8",
+        "line": {
+          "color": "black",
+          "width": 1
+        },
+        "size": 12.48729855490189,
+        "sizemode": "area"
+      },
+      "mode": "markers+text",
+      "name": "Amgen",
+      "text": [
+        "AMGN"
+      ],
+      "textposition": "top center",
+      "visible": true,
+      "x": [
+        10944.0
+      ],
+      "y": [
+        64613.0
+      ],
+      "type": "scatter"
+    },
+    {
+      "hovertemplate": "%{hovertext}\u003cextra\u003e\u003c\u002fextra\u003e",
+      "hovertext": [
+        "Company: Apple Inc.\u003cbr\u003eQuarter: 2023Q4\u003cbr\u003eCCP: 73100\u003cbr\u003eLTD: 106042\u003cbr\u003eCCP\u002fLTD: 0.69"
+      ],
+      "marker": {
+        "color": "#1f77b4",
+        "line": {
+          "color": "black",
+          "width": 1
+        },
+        "size": 27.277980899022456,
+        "sizemode": "area"
+      },
+      "mode": "markers+text",
+      "name": "Apple Inc.",
+      "text": [
+        "AAPL"
+      ],
+      "textposition": "top center",
+      "visible": true,
+      "x": [
+        73100.0
+      ],
+      "y": [
+        106042.0
+      ],
+      "type": "scatter"
+    },
+    {
+      "hovertemplate": "%{hovertext}\u003cextra\u003e\u003c\u002fextra\u003e",
+      "hovertext": [
+        "Company: Thermo Fisher Scientific\u003cbr\u003eQuarter: 2023Q4\u003cbr\u003eCCP: 8077\u003cbr\u003eLTD: 34917\u003cbr\u003eCCP\u002fLTD: 0.23"
+      ],
+      "marker": {
+        "color": "#17becf",
+        "line": {
+          "color": "black",
+          "width": 1
+        },
+        "size": 14.249257490854205,
+        "sizemode": "area"
+      },
+      "mode": "markers+text",
+      "name": "Thermo Fisher Scientific",
+      "text": [
+        "TMO"
+      ],
+      "textposition": "top center",
+      "visible": true,
+      "x": [
+        8077.0
+      ],
+      "y": [
+        34917.0
+      ],
+      "type": "scatter"
+    },
+    {
+      "hovertemplate": "%{hovertext}\u003cextra\u003e\u003c\u002fextra\u003e",
+      "hovertext": [
+        "Company: United Parcel Service\u003cbr\u003eQuarter: 2023Q4\u003cbr\u003eCCP: 6072\u003cbr\u003eLTD: 22264\u003cbr\u003eCCP\u002fLTD: 0.27"
+      ],
+      "marker": {
+        "color": "#9edae5",
+        "line": {
+          "color": "black",
+          "width": 1
+        },
+        "size": 15.427094397039301,
+        "sizemode": "area"
+      },
+      "mode": "markers+text",
+      "name": "United Parcel Service",
+      "text": [
+        "UPS"
+      ],
+      "textposition": "top center",
+      "visible": true,
+      "x": [
+        6072.0
+      ],
+      "y": [
+        22264.0
+      ],
+      "type": "scatter"
+    }
+  ],
+  "layout": {
+    "template": {
+      "data": {
+        "histogram2dcontour": [
+          {
+            "type": "histogram2dcontour",
+            "colorbar": {
+              "outlinewidth": 0,
+              "ticks": ""
+            },
+            "colorscale": [
+              [
+                0.0,
+                "#0d0887"
+              ],
+              [
+                0.1111111111111111,
+                "#46039f"
+              ],
+              [
+                0.2222222222222222,
+                "#7201a8"
+              ],
+              [
+                0.3333333333333333,
+                "#9c179e"
+              ],
+              [
+                0.4444444444444444,
+                "#bd3786"
+              ],
+              [
+                0.5555555555555556,
+                "#d8576b"
+              ],
+              [
+                0.6666666666666666,
+                "#ed7953"
+              ],
+              [
+                0.7777777777777778,
+                "#fb9f3a"
+              ],
+              [
+                0.8888888888888888,
+                "#fdca26"
+              ],
+              [
+                1.0,
+                "#f0f921"
+              ]
+            ]
+          }
+        ],
+        "choropleth": [
+          {
+            "type": "choropleth",
+            "colorbar": {
+              "outlinewidth": 0,
+              "ticks": ""
+            }
+          }
+        ],
+        "histogram2d": [
+          {
+            "type": "histogram2d",
+            "colorbar": {
+              "outlinewidth": 0,
+              "ticks": ""
+            },
+            "colorscale": [
+              [
+                0.0,
+                "#0d0887"
+              ],
+              [
+                0.1111111111111111,
+                "#46039f"
+              ],
+              [
+                0.2222222222222222,
+                "#7201a8"
+              ],
+              [
+                0.3333333333333333,
+                "#9c179e"
+              ],
+              [
+                0.4444444444444444,
+                "#bd3786"
+              ],
+              [
+                0.5555555555555556,
+                "#d8576b"
+              ],
+              [
+                0.6666666666666666,
+                "#ed7953"
+              ],
+              [
+                0.7777777777777778,
+                "#fb9f3a"
+              ],
+              [
+                0.8888888888888888,
+                "#fdca26"
+              ],
+              [
+                1.0,
+                "#f0f921"
+              ]
+            ]
+          }
+        ],
+        "heatmap": [
+          {
+            "colorbar": {
+              "outlinewidth": 0,
+              "ticks": ""
+            },
+            "colorscale": [
+              [
+                0.0,
+                "#0d0887"
+              ],
+              [
+                0.1111111111111111,
+                "#46039f"
+              ],
+              [
+                0.2222222222222222,
+                "#7201a8"
+              ],
+              [
+                0.3333333333333333,
+                "#9c179e"
+              ],
+              [
+                0.4444444444444444,
+                "#bd3786"
+              ],
+              [
+                0.5555555555555556,
+                "#d8576b"
+              ],
+              [
+                0.6666666666666666,
+                "#ed7953"
+              ],
+              [
+                0.7777777777777778,
+                "#fb9f3a"
+              ],
+              [
+                0.8888888888888888,
+                "#fdca26"
+              ],
+              [
+                1.0,
+                "#f0f921"
+              ]
+            ],
+            "type": "heatmap"
+          }
+        ],
+        "contourcarpet": [
+          {
+            "type": "contourcarpet",
+            "colorbar": {
+              "outlinewidth": 0,
+              "ticks": ""
+            }
+          }
+        ],
+        "contour": [
+          {
+            "type": "contour",
+            "colorbar": {
+              "outlinewidth": 0,
+              "ticks": ""
+            },
+            "colorscale": [
+              [
+                0.0,
+                "#0d0887"
+              ],
+              [
+                0.1111111111111111,
+                "#46039f"
+              ],
+              [
+                0.2222222222222222,
+                "#7201a8"
+              ],
+              [
+                0.3333333333333333,
+                "#9c179e"
+              ],
+              [
+                0.4444444444444444,
+                "#bd3786"
+              ],
+              [
+                0.5555555555555556,
+                "#d8576b"
+              ],
+              [
+                0.6666666666666666,
+                "#ed7953"
+              ],
+              [
+                0.7777777777777778,
+                "#fb9f3a"
+              ],
+              [
+                0.8888888888888888,
+                "#fdca26"
+              ],
+              [
+                1.0,
+                "#f0f921"
+              ]
+            ]
+          }
+        ],
+        "surface": [
+          {
+            "type": "surface",
+            "colorbar": {
+              "outlinewidth": 0,
+              "ticks": ""
+            },
+            "colorscale": [
+              [
+                0.0,
+                "#0d0887"
+              ],
+              [
+                0.1111111111111111,
+                "#46039f"
+              ],
+              [
+                0.2222222222222222,
+                "#7201a8"
+              ],
+              [
+                0.3333333333333333,
+                "#9c179e"
+              ],
+              [
+                0.4444444444444444,
+                "#bd3786"
+              ],
+              [
+                0.5555555555555556,
+                "#d8576b"
+              ],
+              [
+                0.6666666666666666,
+                "#ed7953"
+              ],
+              [
+                0.7777777777777778,
+                "#fb9f3a"
+              ],
+              [
+                0.8888888888888888,
+                "#fdca26"
+              ],
+              [
+                1.0,
+                "#f0f921"
+              ]
+            ]
+          }
+        ],
+        "mesh3d": [
+          {
+            "type": "mesh3d",
+            "colorbar": {
+              "outlinewidth": 0,
+              "ticks": ""
+            }
+          }
+        ],
+        "scatter": [
+          {
+            "fillpattern": {
+              "fillmode": "overlay",
+              "size": 10,
+              "solidity": 0.2
+            },
+            "type": "scatter"
+          }
+        ],
+        "parcoords": [
+          {
+            "type": "parcoords",
+            "line": {
+              "colorbar": {
+                "outlinewidth": 0,
+                "ticks": ""
+              }
+            }
+          }
+        ],
+        "scatterpolargl": [
+          {
+            "type": "scatterpolargl",
+            "marker": {
+              "colorbar": {
+                "outlinewidth": 0,
+                "ticks": ""
+              }
+            }
+          }
+        ],
+        "bar": [
+          {
+            "error_x": {
+              "color": "#2a3f5f"
+            },
+            "error_y": {
+              "color": "#2a3f5f"
+            },
+            "marker": {
+              "line": {
+                "color": "#E5ECF6",
+                "width": 0.5
+              },
+              "pattern": {
+                "fillmode": "overlay",
+                "size": 10,
+                "solidity": 0.2
+              }
+            },
+            "type": "bar"
+          }
+        ],
+        "scattergeo": [
+          {
+            "type": "scattergeo",
+            "marker": {
+              "colorbar": {
+                "outlinewidth": 0,
+                "ticks": ""
+              }
+            }
+          }
+        ],
+        "scatterpolar": [
+          {
+            "type": "scatterpolar",
+            "marker": {
+              "colorbar": {
+                "outlinewidth": 0,
+                "ticks": ""
+              }
+            }
+          }
+        ],
+        "histogram": [
+          {
+            "marker": {
+              "pattern": {
+                "fillmode": "overlay",
+                "size": 10,
+                "solidity": 0.2
+              }
+            },
+            "type": "histogram"
+          }
+        ],
+        "scattergl": [
+          {
+            "type": "scattergl",
+            "marker": {
+              "colorbar": {
+                "outlinewidth": 0,
+                "ticks": ""
+              }
+            }
+          }
+        ],
+        "scatter3d": [
+          {
+            "type": "scatter3d",
+            "line": {
+              "colorbar": {
+                "outlinewidth": 0,
+                "ticks": ""
+              }
+            },
+            "marker": {
+              "colorbar": {
+                "outlinewidth": 0,
+                "ticks": ""
+              }
+            }
+          }
+        ],
+        "scattermapbox": [
+          {
+            "type": "scattermapbox",
+            "marker": {
+              "colorbar": {
+                "outlinewidth": 0,
+                "ticks": ""
+              }
+            }
+          }
+        ],
+        "scatterternary": [
+          {
+            "type": "scatterternary",
+            "marker": {
+              "colorbar": {
+                "outlinewidth": 0,
+                "ticks": ""
+              }
+            }
+          }
+        ],
+        "scattercarpet": [
+          {
+            "type": "scattercarpet",
+            "marker": {
+              "colorbar": {
+                "outlinewidth": 0,
+                "ticks": ""
+              }
+            }
+          }
+        ],
+        "carpet": [
+          {
+            "aaxis": {
+              "endlinecolor": "#2a3f5f",
+              "gridcolor": "white",
+              "linecolor": "white",
+              "minorgridcolor": "white",
+              "startlinecolor": "#2a3f5f"
+            },
+            "baxis": {
+              "endlinecolor": "#2a3f5f",
+              "gridcolor": "white",
+              "linecolor": "white",
+              "minorgridcolor": "white",
+              "startlinecolor": "#2a3f5f"
+            },
+            "type": "carpet"
+          }
+        ],
+        "table": [
+          {
+            "cells": {
+              "fill": {
+                "color": "#EBF0F8"
+              },
+              "line": {
+                "color": "white"
+              }
+            },
+            "header": {
+              "fill": {
+                "color": "#C8D4E3"
+              },
+              "line": {
+                "color": "white"
+              }
+            },
+            "type": "table"
+          }
+        ],
+        "barpolar": [
+          {
+            "marker": {
+              "line": {
+                "color": "#E5ECF6",
+                "width": 0.5
+              },
+              "pattern": {
+                "fillmode": "overlay",
+                "size": 10,
+                "solidity": 0.2
+              }
+            },
+            "type": "barpolar"
+          }
+        ],
+        "pie": [
+          {
+            "automargin": true,
+            "type": "pie"
+          }
+        ]
+      },
+      "layout": {
+        "autotypenumbers": "strict",
+        "colorway": [
+          "#636efa",
+          "#EF553B",
+          "#00cc96",
+          "#ab63fa",
+          "#FFA15A",
+          "#19d3f3",
+          "#FF6692",
+          "#B6E880",
+          "#FF97FF",
+          "#FECB52"
+        ],
+        "font": {
+          "color": "#2a3f5f"
+        },
+        "hovermode": "closest",
+        "hoverlabel": {
+          "align": "left"
+        },
+        "paper_bgcolor": "white",
+        "plot_bgcolor": "#E5ECF6",
+        "polar": {
+          "bgcolor": "#E5ECF6",
+          "angularaxis": {
+            "gridcolor": "white",
+            "linecolor": "white",
+            "ticks": ""
+          },
+          "radialaxis": {
+            "gridcolor": "white",
+            "linecolor": "white",
+            "ticks": ""
+          }
+        },
+        "ternary": {
+          "bgcolor": "#E5ECF6",
+          "aaxis": {
+            "gridcolor": "white",
+            "linecolor": "white",
+            "ticks": ""
+          },
+          "baxis": {
+            "gridcolor": "white",
+            "linecolor": "white",
+            "ticks": ""
+          },
+          "caxis": {
+            "gridcolor": "white",
+            "linecolor": "white",
+            "ticks": ""
+          }
+        },
+        "coloraxis": {
+          "colorbar": {
+            "outlinewidth": 0,
+            "ticks": ""
+          }
+        },
+        "colorscale": {
+          "sequential": [
+            [
+              0.0,
+              "#0d0887"
+            ],
+            [
+              0.1111111111111111,
+              "#46039f"
+            ],
+            [
+              0.2222222222222222,
+              "#7201a8"
+            ],
+            [
+              0.3333333333333333,
+              "#9c179e"
+            ],
+            [
+              0.4444444444444444,
+              "#bd3786"
+            ],
+            [
+              0.5555555555555556,
+              "#d8576b"
+            ],
+            [
+              0.6666666666666666,
+              "#ed7953"
+            ],
+            [
+              0.7777777777777778,
+              "#fb9f3a"
+            ],
+            [
+              0.8888888888888888,
+              "#fdca26"
+            ],
+            [
+              1.0,
+              "#f0f921"
+            ]
+          ],
+          "sequentialminus": [
+            [
+              0.0,
+              "#0d0887"
+            ],
+            [
+              0.1111111111111111,
+              "#46039f"
+            ],
+            [
+              0.2222222222222222,
+              "#7201a8"
+            ],
+            [
+              0.3333333333333333,
+              "#9c179e"
+            ],
+            [
+              0.4444444444444444,
+              "#bd3786"
+            ],
+            [
+              0.5555555555555556,
+              "#d8576b"
+            ],
+            [
+              0.6666666666666666,
+              "#ed7953"
+            ],
+            [
+              0.7777777777777778,
+              "#fb9f3a"
+            ],
+            [
+              0.8888888888888888,
+              "#fdca26"
+            ],
+            [
+              1.0,
+              "#f0f921"
+            ]
+          ],
+          "diverging": [
+            [
+              0,
+              "#8e0152"
+            ],
+            [
+              0.1,
+              "#c51b7d"
+            ],
+            [
+              0.2,
+              "#de77ae"
+            ],
+            [
+              0.3,
+              "#f1b6da"
+            ],
+            [
+              0.4,
+              "#fde0ef"
+            ],
+            [
+              0.5,
+              "#f7f7f7"
+            ],
+            [
+              0.6,
+              "#e6f5d0"
+            ],
+            [
+              0.7,
+              "#b8e186"
+            ],
+            [
+              0.8,
+              "#7fbc41"
+            ],
+            [
+              0.9,
+              "#4d9221"
+            ],
+            [
+              1,
+              "#276419"
+            ]
+          ]
+        },
+        "xaxis": {
+          "gridcolor": "white",
+          "linecolor": "white",
+          "ticks": "",
+          "title": {
+            "standoff": 15
+          },
+          "zerolinecolor": "white",
+          "automargin": true,
+          "zerolinewidth": 2
+        },
+        "yaxis": {
+          "gridcolor": "white",
+          "linecolor": "white",
+          "ticks": "",
+          "title": {
+            "standoff": 15
+          },
+          "zerolinecolor": "white",
+          "automargin": true,
+          "zerolinewidth": 2
+        },
+        "scene": {
+          "xaxis": {
+            "backgroundcolor": "#E5ECF6",
+            "gridcolor": "white",
+            "linecolor": "white",
+            "showbackground": true,
+            "ticks": "",
+            "zerolinecolor": "white",
+            "gridwidth": 2
+          },
+          "yaxis": {
+            "backgroundcolor": "#E5ECF6",
+            "gridcolor": "white",
+            "linecolor": "white",
+            "showbackground": true,
+            "ticks": "",
+            "zerolinecolor": "white",
+            "gridwidth": 2
+          },
+          "zaxis": {
+            "backgroundcolor": "#E5ECF6",
+            "gridcolor": "white",
+            "linecolor": "white",
+            "showbackground": true,
+            "ticks": "",
+            "zerolinecolor": "white",
+            "gridwidth": 2
+          }
+        },
+        "shapedefaults": {
+          "line": {
+            "color": "#2a3f5f"
+          }
+        },
+        "annotationdefaults": {
+          "arrowcolor": "#2a3f5f",
+          "arrowhead": 0,
+          "arrowwidth": 1
+        },
+        "geo": {
+          "bgcolor": "white",
+          "landcolor": "#E5ECF6",
+          "subunitcolor": "white",
+          "showland": true,
+          "showlakes": true,
+          "lakecolor": "white"
+        },
+        "title": {
+          "x": 0.05
+        },
+        "mapbox": {
+          "style": "light"
+        }
+      }
+    },
+    "shapes": [
+      {
+        "line": {
+          "color": "red",
+          "dash": "dash"
+        },
+        "type": "line",
+        "x0": 9510.5,
+        "x1": 9510.5,
+        "y0": 0,
+        "y1": 116646.20000000001
+      },
+      {
+        "line": {
+          "color": "blue",
+          "dash": "dash"
+        },
+        "type": "line",
+        "x0": 0,
+        "x1": 95458.00000000001,
+        "y0": 29952.0,
+        "y1": 29952.0
+      }
+    ],
+    "title": {
+      "text": "Debt vs Liquid Assets: Company Segments"
+    },
+    "xaxis": {
+      "title": {
+        "text": "Current Cash Position"
+      },
+      "showline": true,
+      "linewidth": 1,
+      "linecolor": "black",
+      "mirror": true,
+      "showgrid": true,
+      "gridcolor": "lightgray"
+    },
+    "yaxis": {
+      "title": {
+        "text": "Long-Term Debt"
+      },
+      "showline": true,
+      "linewidth": 1,
+      "linecolor": "black",
+      "mirror": true,
+      "showgrid": true,
+      "gridcolor": "lightgray"
+    },
+    "width": 900,
+    "height": 600,
+    "plot_bgcolor": "white",
+    "showlegend": true,
+    "legend": {
+      "title": {
+        "text": "Companies (click to show\u002fhide)"
+      }
+    }
+  }
+}

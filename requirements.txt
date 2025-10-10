@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+dash
+flask
+pandas
+plotly
+pymongo
+python-dotenv

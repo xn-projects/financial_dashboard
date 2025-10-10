@@ -1,0 +1,17 @@
+
+services:
+  - type: web
+    name: financial-dashboard
+    env: python
+    plan: free
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "uvicorn app:api --host=0.0.0.0 --port=10000"
+    envVars:
+      - key: USE_MONGO
+        value: true
+      - key: MONGODB_URI
+        value: "mongodb+srv://kseniia_chepigina:sonre3-buzMum-kufvem@cluster0.oekorln.mongodb.net/financial?retryWrites=true&w=majority"
+      - key: DB_NAME
+        value: "financial"
+      - key: COLLECTION
+        value: "metrics"
