@@ -1,4 +1,4 @@
-## Financial Resilience Analysis – From Tableau to Plotly
+## Financial Resilience Analysis – From Tableau to Plotly Dash
 
 ### Project Background  
 
@@ -40,15 +40,18 @@ This evolution gave us:
 
 ### Repository Structure
 ```
-├── app.py                      # Main FastAPI + Dash application
-├── financial_data.json         # Sample dataset (static)
-├── fig1_CCP_and_LTD_by_Company.json
-├── fig2_Ratio_CCP_LTD_by_Companies.json
+├── app.py                               # Main FastAPI + Dash application
+├── financial_data.json                  # Sample dataset (static)
+├── fig1_CCP_and_LTD_by_Company.json     # Plotly figure JSON
+├── fig2_Ratio_CCP_LTD_by_Companies.json # Plotly figure JSON
 ├── fig3_Financial_Resilience_Heatmap.json
 ├── fig4_Debt_vs_Liquid_Assets_Company_Segments.json
 ├── fig5_Debt_vs_Liquid_Assets.json
-├── tableau_dashboard/          # Tableau prototype files
-└── requirements.txt            # Python dependencies
+├── tableau_dashboard/                   # Tableau prototype files
+├── requirements.txt                     # Python dependencies
+├── README.md                            # Project documentation
+├── Procfile                             # Deployment config (Render)
+└── render.yaml                          # Deployment config for Render
 ```
 ---
 
