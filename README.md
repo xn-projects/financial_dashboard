@@ -48,6 +48,7 @@ This evolution gave us:
 ├── fig4_Debt_vs_Liquid_Assets_Company_Segments.json    # Plotly figure JSON
 ├── fig5_Debt_vs_Liquid_Assets.json                     # Plotly figure JSON
 ├── tableau_dashboard/                                  # Tableau prototype files
+├── plotlydash_images/                                  # Screenshots of the dashboard tabs
 ├── requirements.txt                                    # Python dependencies
 ├── README.md                                           # Project documentation
 ├── Procfile                                            # Deployment config (Render)
@@ -167,22 +168,30 @@ Benefits of MongoDB integration:
 
 ### Dashboard Tabs
 
-The interactive dashboard contains five tabs:
+The interactive dashboard contains **five tabs**, each answering a specific analytical question:  
 
 1. **CCP & LTD by Company**  
-   - Time series of liquidity vs. debt for each company.
+   Line charts showing the dynamics of **cash, cash equivalents & marketable securities (CCP)** and **long-term debt (LTD)** for each company.  
+   Allows comparison of how liquidity reserves and debt burdens have evolved from 2019 to 2023.  
 
 2. **Debt Coverage Ratio**  
-   - Ratio of CCP to LTD — a measure of financial resilience.
+   Time series of the **CCP/LTD ratio**.  
+   A key indicator of financial resilience: the higher the ratio, the more capable a company is of covering its debt with liquid assets. 
 
 3. **Financial Resilience Heatmap**  
-   - Quarter-by-quarter CCP/LTD ratios across companies.
+   Heatmap of **CCP/LTD ratios per quarter** across all companies.  
+   A quick way to identify periods of risk (low ratios in red) and resilience (higher ratios in green).   
 
 4. **Debt vs Liquid Assets (latest)**  
-   - Bubble chart snapshot: liquidity vs. debt by company segment.
+   A **bubble chart snapshot** of the most recent reporting quarter:  
+   - X-axis: liquid assets (CCP).  
+   - Y-axis: long-term debt (LTD).  
+   - Bubble size: relative company scale.  
+   Highlights how companies are positioned in terms of liquidity versus debt.
 
-5. **Debt vs Liquid Assets (all)**  
-   - Animated bubble chart across time, showing evolution.
+5. **Debt vs Liquid Assets (all)**   
+   A **bubble chart** showing the **evolution of CCP vs LTD over time**.  
+   Users can **select a specific quarter** and see how companies shift between high-risk and resilient zones over time.
 
 ---
 
