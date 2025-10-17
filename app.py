@@ -1,4 +1,5 @@
 import os
+from dotenv import load_dotenv
 import json
 import pandas as pd
 import plotly.io as pio
@@ -9,13 +10,12 @@ from dash import Dash, html, dcc, Input, Output
 from flask import Flask
 from pymongo import MongoClient
 
+load_dotenv()
+
 USE_MONGO = os.getenv("USE_MONGO", "true").lower() == "true"
 DATA_PATH = os.getenv("DATA_PATH", "financial_data.json")
 FIGURES_DIR = os.path.dirname(__file__)
-MONGODB_URI = os.getenv(
-    "MONGODB_URI",
-    "mongodb+srv://kseniia_chepigina:sonre3-buzMum-kufvem@cluster0.oekorln.mongodb.net/financial?retryWrites=true&w=majority",
-)
+MONGODB_URI = os.getenv("MONGODB_URI", "")
 DB_NAME = os.getenv("DB_NAME", "financial")
 COLLECTION = os.getenv("COLLECTION", "metrics")
 
