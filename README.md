@@ -38,7 +38,8 @@ This evolution gave us:
 
 ---
 
-### Repository Structure
+### 📂 Repository Structure  
+
 ├── app.py                      # Main FastAPI + Dash application
 ├── financial_data.json         # Sample dataset (static)
 ├── fig1_CCP_and_LTD_by_Company.json
