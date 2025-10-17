@@ -40,18 +40,18 @@ This evolution gave us:
 
 ### Repository Structure
 ```
-├── app.py                               # Main FastAPI + Dash application
-├── financial_data.json                  # Sample dataset (static)
-├── fig1_CCP_and_LTD_by_Company.json     # Plotly figure JSON
-├── fig2_Ratio_CCP_LTD_by_Companies.json # Plotly figure JSON
-├── fig3_Financial_Resilience_Heatmap.json
-├── fig4_Debt_vs_Liquid_Assets_Company_Segments.json
-├── fig5_Debt_vs_Liquid_Assets.json
-├── tableau_dashboard/                   # Tableau prototype files
-├── requirements.txt                     # Python dependencies
-├── README.md                            # Project documentation
-├── Procfile                             # Deployment config (Render)
-└── render.yaml                          # Deployment config for Render
+├── app.py                                              # Main FastAPI + Dash application
+├── financial_data.json                                 # Sample dataset (static)
+├── fig1_CCP_and_LTD_by_Company.json                    # Plotly figure JSON
+├── fig2_Ratio_CCP_LTD_by_Companies.json                # Plotly figure JSON
+├── fig3_Financial_Resilience_Heatmap.json              # Plotly figure JSON
+├── fig4_Debt_vs_Liquid_Assets_Company_Segments.json    # Plotly figure JSON
+├── fig5_Debt_vs_Liquid_Assets.json                     # Plotly figure JSON
+├── tableau_dashboard/                                  # Tableau prototype files
+├── requirements.txt                                    # Python dependencies
+├── README.md                                           # Project documentation
+├── Procfile                                            # Deployment config (Render)
+└── render.yaml                                         # Deployment config for Render
 ```
 ---
 
