@@ -38,8 +38,8 @@ This evolution gave us:
 
 ---
 
-### 📂 Repository Structure  
-
+### Repository Structure
+```
 ├── app.py                      # Main FastAPI + Dash application
 ├── financial_data.json         # Sample dataset (static)
 ├── fig1_CCP_and_LTD_by_Company.json
@@ -49,6 +49,7 @@ This evolution gave us:
 ├── fig5_Debt_vs_Liquid_Assets.json
 ├── tableau_dashboard/          # Tableau prototype files
 └── requirements.txt            # Python dependencies
+```
 ---
 
 ### Application Architecture  
