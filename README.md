@@ -22,31 +22,38 @@ The dashboard includes five analytical views:
 
 ### 1. CCP & LTD by Company
 
-Trends of liquid assets vs long‑term debt.
+This view shows how cash reserves and long-term debt evolve over time for each company. A widening gap between CCP and LTD indicates improving liquidity strength, while convergence or crossing patterns may signal rising financial pressure. Trends of liquid assets vs long‑term debt.
 
 ![CCP & LTD by Company](images/CCP%20&%20LTD%20by%20Company.png)
 
 ### 2. Debt Coverage Ratio
 
-CCP/LTD ratio over time as an indicator of resilience.
+This ratio highlights the company’s ability to cover debt with available liquid assets. Stable or rising values imply stronger resilience. Companies consistently below 0.5 may face higher refinancing or liquidity risks. CCP/LTD ratio over time as an indicator of resilience.
 
 ![Debt Coverage Ratio](images/Debt%20Coverage%20Ratio.png)
 
 ### 3. Financial Resilience Heatmap
 
-Quarter-by-quarter comparison across companies.
+The color gradient helps quickly identify periods of financial stress or stability. Cooler tones (higher CCP/LTD) point to stronger liquidity positions, while warmer tones highlight potentially vulnerable quarters. Quarter-by-quarter comparison across companies.
 
 ![Financial Resilience Heatmap](images/Financial%20Resilience%20Heatmap.png)
 
 ### 4. Debt vs Liquid Assets (latest)
 
-Most recent quarter snapshot.
+This view shows the most recent quarter only, providing a point‑in‑time comparison of companies’ liquidity versus debt. Companies positioned toward the bottom‑right quadrant indicate a healthier balance (higher liquidity and lower debt), while those in the top‑left quadrant reflect higher leverage pressure.
 
 ![Debt vs Liquid Assets (latest)](images/Debt%20vs%20Liquid%20Assets%20\(lastest\).png)
 
 ### 5. Debt vs Liquid Assets (all)
 
-Company trajectories over time.
+This view expands the previous snapshot by showing company positions across different reporting periods. You can switch between single quarters or aggregated time ranges to observe how liquidity and debt levels evolve.
+The movement across points helps highlight strategic shifts:
+
+- Rightward → growing liquid assets
+
+- Upward → increasing long-term debt
+
+This visualization reveals direction and pace of financial change rather than a single-moment snapshot.
 
 ![Debt vs Liquid Assets (all)](images/Debt%20vs%20Liquid%20Assets%20\(all\).png)
 
