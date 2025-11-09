@@ -1,58 +1,79 @@
-## Financial Resilience Analysis – From Tableau to Plotly Dash
+## Financial Resilience Dashboard 
 
-### Project Background  
+**Comparing Corporate Liquidity and Long-Term Debt**
 
-The project was initially developed as a **Tableau dashboard** to visualize corporate financial data.  
-- It focused on **cash, cash equivalents & marketable securities (CCP)** vs. **long-term debt (LTD)** across multiple companies.  
-- Tableau allowed quick insights and interactive filtering, but it had clear limitations:  
-  - Updates from new SEC filings required manual work.  
-  - Tableau dashboards are less flexible for advanced processing.  
-  - No integration with APIs or external services.  
+This project provides an interactive dashboard to analyze how well companies can cover their long-term debt using liquid assets. It focuses on two key financial indicators extracted from SEC filings:
 
-Based on these constraints, we rebuilt the solution with **Python + Plotly + FastAPI + Dash**, deployed on **Render**.  
+- **CCP**: Cash, cash equivalents, and marketable securities  
+- **LTD**: Long-term debt  
 
-This evolution gave us:  
-- **Automation** – parsing SEC filings directly into JSON or MongoDB.  
-- **API integration** – endpoints that provide both raw data and processed figures.  
-- **Interactive dashboard** – hosted online and available to users.  
-- **Scalability** – new data can be added and visualized without manual work.  
+The dashboard enables comparison across companies, industries, and reporting periods. It supports both static data (JSON) and dynamic data updates through MongoDB Atlas. The application is deployed on Render and accessible through a web interface.
 
 ---
 
-### Objectives & Achievements  
+## Motivation
 
-#### Objectives
-- Collect quarterly CCP and LTD data from SEC EDGAR.  
-- Compare liquidity and debt across companies and industries.  
-- Provide insights into **financial resilience** and debt coverage.  
-- Develop both an exploratory Tableau prototype and a production-ready Python application.  
-- Deploy the solution with an API and interactive web dashboard.  
-
-#### Achievements
-- Created an initial **Tableau dashboard prototype** (`/tableau_dashboard/`) with early insights.  
-- Built a **Python pipeline** (`app.py`) that integrates FastAPI and Dash.  
-- Implemented dual-mode data backend: local JSON file or MongoDB Atlas collection.  
-- Designed **five Plotly visualizations**, each exported as `.json`.  
-- Created a **REST API** with endpoints for data, companies, quarters, and metrics.  
-- Deployed the application to **Render**, making it publicly available.  
+Understanding the balance between liquidity and debt is essential for evaluating a company's financial resilience. The original prototype was created in Tableau, which was useful for rapid exploration. Tableau required manual dataset updates and did not allow integration with API-based workflows. The new version automates data access, processing, and visualization to support scalable, repeatable financial analysis.
 
 ---
 
-### Repository Structure
+## Main Features
+
+- Interactive web dashboard built with Plotly Dash
+- REST API for external access and integration
+- Choice of data backend:
+  - Local JSON file
+  - MongoDB Atlas (recommended for continuous updates)
+- Five visualization views offering time-series and cross-sectional insights
+- Cloud deployment using Render for public access
+
+---
+
+## Live Dashboards
+
+| Version | Link | Description |
+|--------|------|-------------|
+| Tableau Prototype | https://public.tableau.com/app/profile/kseniia.chepigina/viz/EvolutionofCCPLTD/Dashboard12 | Initial exploratory version |
+| Plotly Dash Application | https://financial-dashboard-ep61.onrender.com/dashboard/ | Interactive web dashboard with API backend |
+
+---
+
+## Repository Structure
 ```
-├── app.py                                              # Main FastAPI + Dash application
-├── financial_data.json                                 # Sample dataset (static)
-├── fig1_CCP_and_LTD_by_Company.json                    # Plotly figure JSON
-├── fig2_Ratio_CCP_LTD_by_Companies.json                # Plotly figure JSON
-├── fig3_Financial_Resilience_Heatmap.json              # Plotly figure JSON
-├── fig4_Debt_vs_Liquid_Assets_Company_Segments.json    # Plotly figure JSON
-├── fig5_Debt_vs_Liquid_Assets.json                     # Plotly figure JSON
-├── tableau_dashboard/                                  # Tableau prototype files
-├── plotlydash_images/                                  # Screenshots of the dashboard tabs
-├── requirements.txt                                    # Python dependencies
-├── README.md                                           # Project documentation
-├── Procfile                                            # Deployment config (Render)
-└── render.yaml                                         # Deployment config for Render
+📦 financial_dashboard/
+├── 📁 app/
+│   ├── __init__.py
+│   └── app.py
+│
+├── 📁 data/
+│   ├── filings_demo_step3.sglite
+│   └── financial_data.json
+│
+├── 📁 figures/
+│   ├── fig1_CCP_and_LTD_by_Company.json
+│   ├── fig2_Ratio_CCP_LTD_by_Companies.json
+│   ├── fig3_Financial_Resilience_Heatmap.json 
+│   ├── fig4_Debt_vs_Liquid_Assets_Company_Segments.json
+│   └── fig5_Debt_vs_Liquid_Assets.json
+│
+├── 📁 images/
+│   ├── CCP & LTD by Company.png
+│   ├── Debt Coverage Ratio.png
+│   ├── Debt vs Liquid Assets (all).png
+│   ├── Debt vs Liquid Assets (lastest).png
+│   └── Financial Resilience Heatmap.png
+│
+├── 📁 tableau/
+│   ├── Forms-3.csv
+│   ├── Stocks.csv
+│   ├── Tableau_dashboard.png
+│   ├── Tasks.csv
+│   └── export_sqlite_tables.py
+│
+├── Procfile
+├── 📄 README.md
+├── render.yaml
+└── requirements.txt
 ```
 ---
 
