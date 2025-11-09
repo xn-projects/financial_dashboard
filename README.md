@@ -42,7 +42,7 @@ Quarter-by-quarter comparison across companies.
 
 Most recent quarter snapshot.
 
-![Debt vs Liquid Assets (latest)](images/Debt%20vs%20Liquid%20Assets%20\(latest\).png)
+![Debt vs Liquid Assets (latest)](images/Debt%20vs%20Liquid%20Assets%20\(lastest\).png)
 
 ### 5. Debt vs Liquid Assets (all)
 
