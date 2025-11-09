@@ -8,10 +8,10 @@ The dashboard was initially prototyped in Tableau for rapid exploration, then re
 
 ## Live Versions
 
-* **Tableau Prototype:** (first exploratory version)
+* **Tableau Prototype:** (first exploratory version)<br>
   [https://public.tableau.com/app/profile/kseniia.chepigina/viz/EvolutionofCCPLTD/Dashboard12](https://public.tableau.com/app/profile/kseniia.chepigina/viz/EvolutionofCCPLTD/Dashboard12)
 
-* **Plotly Dash Application:** (production interactive dashboard)
+* **Plotly Dash Application:** (production interactive dashboard)<br>
   [https://financial-dashboard-ep61.onrender.com/dashboard/](https://financial-dashboard-ep61.onrender.com/dashboard/)
 
 ---
