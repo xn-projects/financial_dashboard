@@ -47,13 +47,14 @@ This view shows the most recent quarter only, providing a point‑in‑time comp
 ### 5. Debt vs Liquid Assets (all)
 
 This view expands the previous snapshot by showing company positions across different reporting periods. You can switch between single quarters or aggregated time ranges to observe how liquidity and debt levels evolve.
+
 The movement across points helps highlight strategic shifts:
 
-- Rightward → growing liquid assets
-
-- Upward → increasing long-term debt
+- **Rightward** → growing liquid assets
+- **Upward** → increasing long-term debt
 
 This visualization reveals direction and pace of financial change rather than a single-moment snapshot.
+
 
 ![Debt vs Liquid Assets (all)](images/Debt%20vs%20Liquid%20Assets%20\(all\).png)
 
