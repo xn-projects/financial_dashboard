@@ -1,178 +1,134 @@
 # Technical Details
 
-## 1. Architecture Overview
+## 1. Overall Architecture
 
-The application integrates three core layers into a single deployable service:
+The application combines data storage, an API layer, and an interactive dashboard into a single deployable service.  
+This ensures data consistency across the UI and external consumers, simplifies updates, and reduces deployment overhead.
 
-1. **Data Backend** – Loads financial data either from a static JSON file or from MongoDB Atlas.
-2. **REST API Layer** – Provides programmatic access to data for external tools and clients.
-3. **Interactive Dashboard** – A Plotly Dash interface embedded inside the same server.
+The system includes three core layers:
 
-This combined setup simplifies deployment, reduces infrastructure overhead, and ensures consistency between the data used by the API and the dashboard.
+1. **Data Backend** – provides access to financial data (local JSON or MongoDB).
+2. **REST API (FastAPI)** – exposes structured data for external use.
+3. **Interactive Dashboard (Plotly Dash)** – visualizes the data in a web-based interface.
+
+All layers run within the same server process.
 
 ---
 
-## 2. Data Sources
+## 2. Data Backend
 
-The application can use **one of two data sources**, controlled via environment variable `USE_MONGO`:
+The application supports two interchangeable data sources, controlled through an environment variable:
 
-| Data Source                   | Description                             | When Used                              |
-| ----------------------------- | --------------------------------------- | -------------------------------------- |
-| `financial_data.json` (local) | Static dataset stored in `data/` folder | Local testing, offline usage           |
-| MongoDB Atlas                 | Cloud-hosted scalable database          | Production deployment, dynamic updates |
+| Data Source | Location | Usage |
+|------------|----------|-------|
+| `financial_data.json` | `data/` directory | Local execution, offline analysis, development |
+| MongoDB Atlas | Cloud-hosted database | Production deployment and dynamic updates |
 
-**Environment Control:**
+**Switching the backend:**
 
 ```
 USE_MONGO=true   → Use MongoDB Atlas
 USE_MONGO=false  → Use JSON file
 ```
 
-This approach allows easy switching between development and production data contexts without modifying the application code.
+### Core Data Fields Used in Analysis
+
+| Field | Description |
+|-------|-------------|
+| `CompanyName` | Company name |
+| `Symbol` | Stock ticker |
+| `ReportQuarter` | Standardized quarterly label (e.g., `Q4 2023`) |
+| `CCP` | Cash, cash equivalents & marketable securities |
+| `LTD` | Long-term debt |
+
+Other fields in the dataset are artifacts of the parsing process and do not affect visualization logic.
 
 ---
 
-## 3. API Layer (FastAPI)
+## 3. Data Normalization Process
 
-The REST API is built using **FastAPI**, chosen for its speed, async support, and interactive documentation.
+Reporting periods vary across companies. To make cross-company comparisons meaningful:
 
-* CORS is enabled to allow usage from external dashboards or web clients.
-* The API provides access to full dataset, company lists, quarter lists, and per‑company metrics.
+- **Reporting dates are aligned to standardized calendar quarters.**
+- Each company-quarter record receives a uniform `ReportQuarter` label.
 
-### Available API Endpoints
-
-| Endpoint             | Purpose                                     |
-| -------------------- | ------------------------------------------- |
-| `/health`            | Service status (record count + data source) |
-| `/data`              | Full dataset as JSON                        |
-| `/companies`         | List of all companies in the dataset        |
-| `/quarters`          | List of reporting quarters                  |
-| `/metrics/{company}` | Time‑series metrics for a selected company  |
-| `/`                  | Root endpoint containing info and links     |
-
-These endpoints make the service compatible with external analytics tools and frontend integrations.
+This harmonization enables clean time-based analysis.
 
 ---
 
-## 4. Dashboard Layer (Dash)
+## 4. REST API (FastAPI)
 
-The dashboard is implemented using **Plotly Dash**, running on **Flask**, and embedded inside the FastAPI application using `WSGIMiddleware`.
+The API exposes both raw and structured data and can be consumed by dashboards or other analytical tools.
 
-### Key Characteristics:
+| Endpoint | Purpose |
+|---------|---------|
+| `/health` | Basic service status and active data source |
+| `/data` | Full dataset as JSON |
+| `/companies` | List of available companies |
+| `/quarters` | List of reporting periods |
+| `/metrics/{company}` | Time-series metrics for a selected company |
 
-* Uses pre‑computed Plotly figure JSON files stored in `figures/`.
-* Consists of **five tabs**, each answering a specific analytical question.
-* Ensures separation between **data processing (done offline)** and **visualization (dynamic but lightweight)**.
-
-This design reduces runtime computation cost and keeps UI performance fast.
-
----
-
-## 5. Deployment
-
-The application is designed for deployment on **Render** (or similar platforms):
-
-* The server is launched via `uvicorn`.
-* `PORT` environment variable controls the external port.
-* Only one service needs to be deployed, since API and dashboard share the same server.
-
-### Deployment Files
-
-* `Procfile` – Defines the startup command
-* `render.yaml` – Describes environment configuration
+CORS is enabled to allow external frontends to connect.
 
 ---
 
-## 6. Data Workflow
+## 5. Dashboard (Plotly Dash)
 
-### Data Collection
+The interactive dashboard is built using **Plotly Dash** and embedded into the FastAPI application using `WSGIMiddleware`.
 
-Data originates from **SEC EDGAR filings** (10‑Q and 10‑K). The goal is to extract:
+Instead of computing visualizations dynamically, the dashboard loads **pre-generated Plotly figure JSON files** stored in `figures/`.  
+This approach improves performance and keeps UI rendering lightweight.
 
-* **CCP** – Cash, Cash Equivalents & Marketable Securities
-* **LTD** – Long‑Term Debt
+### Dashboard Views (5 Tabs)
 
-### Data Structure
-
-Each row represents one **company‑quarter** record.
-
-| Field           | Meaning                                      |
-| --------------- | -------------------------------------------- |
-| `Form_id`       | Internal filing identifier                   |
-| `TextListLen`   | Parsed text length (supporting metadata)     |
-| `TableIndex`    | Table index used during extraction           |
-| `SumDivider`    | Scaling normalization factor                 |
-| `JsonTable`     | Flag indicating JSON conversion stage        |
-| `ValueColumn`   | Column index used during extraction          |
-| `CCP`           | Liquidity reserves (cash & equivalents)      |
-| `LTD`           | Long‑term debt amount                        |
-| `id`            | Unique record ID                             |
-| `FormName`      | Filing name (e.g., `aapl‑20231230`)          |
-| `CIK`           | Official SEC Central Index Key               |
-| `ValueDate`     | Reporting period date                        |
-| `FilingDate`    | Date the report was filed                    |
-| `FormURL`       | Direct SEC link                              |
-| `Symbol`        | Stock ticker                                 |
-| `CompanyName`   | Company name                                 |
-| `ReportQuarter` | Standardized quarter label (e.g., `Q4 2023`) |
-
-### Why MongoDB
-
-MongoDB Atlas is used in production because it:
-
-* Allows **incremental updates** (new filings without regenerating JSON)
-* Supports **fast queries** across companies and time periods
-* Scales well as dataset grows
-
-### Normalization
-
-Reporting dates vary by company. To support consistent quarter‑by‑quarter comparison:
-
-* `ValueDate` and `FilingDate` are reconciled
-* Each record is assigned to a **standardized calendar quarter**
-
-This ensures comparability across companies.
+1. **CCP & LTD by Company** – time series of liquidity vs debt.
+2. **Debt Coverage Ratio (CCP/LTD)** – resilience trend over time.
+3. **Financial Resilience Heatmap** – quarter-by-quarter comparison across companies.
+4. **Debt vs Liquid Assets (latest)** – snapshot of current liquidity vs debt positioning.
+5. **Debt vs Liquid Assets (all)** – evolution of positions over time, with period selection.
 
 ---
 
-## 7. Tableau Prototype → Python + Plotly Version
+## 6. Transition from Tableau to Python
 
-**Tableau Strengths:**
+The initial dashboard prototype was built in **Tableau** to explore the data quickly.  
+However, Tableau had key limitations:
 
-* Quick exploratory analysis
-* Strong built‑in visuals
+- No automated data refresh
+- Limited integration with external systems
+- Manual data preparation required
 
-**Limitations:**
+Rebuilding the dashboard in **Python + FastAPI + Dash** enabled:
 
-* Manual data refresh
-* No automated integration with EDGAR
-* Limited customization and API extensibility
-
-**Python + Plotly Advantages:**
-
-* Full automation of data loading
-* Scalable backend (MongoDB)
-* Flexible and interactive dashboard logic
-* Ability to export Plotly figures as JSON for web reuse
+- Automated data ingestion
+- Scalable backend architecture
+- A single deployment for both UI and API
+- Reuse of Plotly figure JSONs across different frontends
 
 ---
 
-## 8. JSON Figure Export
+## 7. Deployment
 
-Plotly figures are stored as `.json` instead of being generated on every request.
+The application is deployed as a single service using `uvicorn`.
 
-Benefits:
+Key deployment files:
 
-* Faster dashboard rendering
-* Consistent visuals across UI environments
-* Reusable in React / plain Plotly.js frontends
+| File | Purpose |
+|------|---------|
+| `Procfile` | Defines the application start command |
+| `render.yaml` | Configuration for deployment on Render |
+
+The `PORT` environment variable is automatically provided by the hosting platform.
 
 ---
 
-## 9. Maintainability and Extensibility
+## 8. Extensibility and Future Growth
 
-* Clear separation of **data**, **API**, and **UI layers**
-* Swappable data backend (local ↔ cloud)
-* Easy to add new metrics or dashboards
+The architecture supports straightforward extension:
 
-This architecture supports long‑term growth of the project.
+- New metrics (e.g., Net Debt, Free Cash Flow, EBITDA ratios)
+- Additional companies or sectors
+- Alternative data pipelines
+- New dashboard views or analytic layers
+
+The separation of **data → API → visualization** allows the system to scale without major refactoring.
