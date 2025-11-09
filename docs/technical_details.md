@@ -2,7 +2,8 @@
 
 ## 1. Overall Architecture
 
-The application combines data storage, an API layer, and an interactive dashboard into a single deployable service.  
+This ensures consistent data usage across the UI and external consumers and keeps deployment and maintenance simple.
+
 This ensures data consistency across the UI and external consumers, simplifies updates, and reduces deployment overhead.
 
 The system includes three core layers:
@@ -74,18 +75,17 @@ CORS is enabled to allow external frontends to connect.
 
 ## 5. Dashboard (Plotly Dash)
 
-The interactive dashboard is built using **Plotly Dash** and embedded into the FastAPI application using `WSGIMiddleware`.
+The dashboard is built using Plotly Dash and embedded into the FastAPI server using `WSGIMiddleware`.
 
-Instead of computing visualizations dynamically, the dashboard loads **pre-generated Plotly figure JSON files** stored in `figures/`.  
-This approach improves performance and keeps UI rendering lightweight.
+All visualizations are loaded from pre-computed Plotly figure JSON files located in the `figures/` directory.  
+This avoids real-time heavy computation and ensures fast UI rendering.
 
-### Dashboard Views (5 Tabs)
+The dashboard provides interactive controls for:
+- selecting companies,
+- choosing reporting periods,
+- switching between absolute values and ratios.
 
-1. **CCP & LTD by Company** – time series of liquidity vs debt.
-2. **Debt Coverage Ratio (CCP/LTD)** – resilience trend over time.
-3. **Financial Resilience Heatmap** – quarter-by-quarter comparison across companies.
-4. **Debt vs Liquid Assets (latest)** – snapshot of current liquidity vs debt positioning.
-5. **Debt vs Liquid Assets (all)** – evolution of positions over time, with period selection.
+Detailed descriptions of each analytical view are provided in the main README.
 
 ---
 
