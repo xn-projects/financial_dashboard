@@ -52,6 +52,22 @@ Company trajectories over time.
 
 ---
 
+## Interaction
+
+The dashboard supports:
+
+* Selecting one or multiple companies for comparison.
+* Choosing any time period from 2019 to 2024.
+* Switching between absolute values (CCP & LTD) and ratios (CCP/LTD).
+* Exploring both the latest financial positions and long‑term trajectories.
+
+### Why These Metrics?
+
+* **CCP (Cash & Cash Position)** reflects a company’s available liquid resources.
+* **LTD (Long‑Term Debt)** represents obligations that require repayment over a longer horizon.
+* **CCP/LTD ratio** shows how well a company can cover long‑term debt using available cash.
+
+---
 
 ## Repository Structure
 ```
