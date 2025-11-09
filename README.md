@@ -42,7 +42,7 @@ The color gradient helps quickly identify periods of financial stress or stabili
 
 This view shows the most recent quarter only, providing a point‑in‑time comparison of companies’ liquidity versus debt. Companies positioned toward the bottom‑right quadrant indicate a healthier balance (higher liquidity and lower debt), while those in the top‑left quadrant reflect higher leverage pressure.
 
-![Debt vs Liquid Assets (latest)](images/Debt%20vs%20Liquid%20Assets%20\(lastest\).png)
+![Debt vs Liquid Assets (latest)](images/Debt%20vs%20Liquid%20Assets%20\(latest\).png)
 
 ### 5. Debt vs Liquid Assets (all)
 
