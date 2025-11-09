@@ -118,7 +118,7 @@ USE_MONGO=false uvicorn app.app:api --reload
 
 For architecture, data workflow, and implementation details (including Tableau-to-Dash transition, API structure, MongoDB integration, and normalization methodology), see:
 
-📄 `docs/technical_details.md`
+[Technical Details](docs/technical_details.md)
 
 ---
 
