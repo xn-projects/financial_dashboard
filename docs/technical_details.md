@@ -31,6 +31,7 @@ The application supports two interchangeable data sources, controlled through an
 USE_MONGO=true   → Use MongoDB Atlas
 USE_MONGO=false  → Use JSON file
 ```
+The JSON file is useful for development and offline experimentation, while MongoDB enables growth and automated updates in production environments.
 
 ### Core Data Fields Used in Analysis
 
@@ -83,7 +84,7 @@ This avoids real-time heavy computation and ensures fast UI rendering.
 The dashboard provides interactive controls for:
 - selecting companies,
 - choosing reporting periods,
-- switching between absolute values and ratios.
+- comparing raw values (CCP, LTD) and derived metrics (e.g., CCP/LTD ratio)
 
 Detailed descriptions of each analytical view are provided in the main README.
 
@@ -131,4 +132,4 @@ The architecture supports straightforward extension:
 - Alternative data pipelines
 - New dashboard views or analytic layers
 
-The separation of **data → API → visualization** allows the system to scale without major refactoring.
+The separation of **data → API → visualization** allows the system to scale without significant code changes.
