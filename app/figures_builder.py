@@ -6,48 +6,25 @@ import plotly.subplots as sp
 import matplotlib.pyplot as plt
 
 
-def report_quarter(date_str):
-    try:
-        date = pd.to_datetime(date_str)
-        year, month, day = date.year, date.month, date.day
-        if month <= 3 or (month == 4 and day <= 4):
-            return f"Q1 {year}"
-        elif month <= 6 or (month == 7 and day <= 4):
-            return f"Q2 {year}"
-        elif month <= 9 or (month == 10 and day <= 4):
-            return f"Q3 {year}"
-        else:
-            return f"Q4 {year}"
-    except:
-        return None
-
-
-def parse_quarter(qstr: str):
-    if pd.isna(qstr):
-        return pd.NaT
-    match = re.match(r"Q([1-4])\s+(\d{4})", str(qstr))
-    if match:
-        q = int(match.group(1))
-        year = int(match.group(2))
-        return pd.Period(year=year, quarter=q, freq="Q").to_timestamp(how="start")
-    return pd.NaT
-
-
 def prepare_data(df):
     df = df.copy()
 
-    if "ValueDate" in df.columns:
-        df["ReportQuarter"] = df["ValueDate"].apply(report_quarter)
-
-    df["ReportQuarter"] = (
-        pd.to_datetime(df["ReportQuarter"], errors="coerce")
-        .dt.to_period("Q")
-        .astype(str)
-    )
+    def parse_quarter(qstr):
+        if pd.isna(qstr):
+            return pd.NaT
+        qstr = str(qstr).strip()
+        match = re.match(r"Q([1-4])\s+(\d{4})", qstr)
+        if match:
+            q = int(match.group(1))
+            year = int(match.group(2))
+            return pd.Period(year=year, quarter=q, freq="Q").to_timestamp(how="start")
+        return pd.NaT
 
     df["QuarterStart"] = df["ReportQuarter"].apply(parse_quarter)
 
-    return df.sort_values(["Symbol", "QuarterStart"], ignore_index=True)
+    df["ReportQuarter"] = pd.to_datetime(df["QuarterStart"]).dt.to_period("Q").astype(str)
+
+    return df.sort_values(["Symbol", "QuarterStart"])
 
 
 def generate_company_colors(df):
