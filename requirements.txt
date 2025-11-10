@@ -6,5 +6,5 @@ pandas
 plotly
 pymongo
 python-dotenv
-matplotlib
-numpy
+matplotlib==3.8.2
+numpy==1.26.4
