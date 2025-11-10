@@ -47,12 +47,11 @@ try:
     fig1_1 = load_fig('fig1_CCP_and_LTD_by_Company.json')
     fig2 = load_fig('fig2_Ratio_CCP_LTD_by_Companies.json')
     fig3 = load_fig('fig3_Financial_Resilience_Heatmap.json')
-    fig4 = load_fig('fig4_Debt_vs_Liquid_Assets_Company_Segments.json')
     fig5 = load_fig('fig5_Debt_vs_Liquid_Assets.json')
     print('All figures successfully loaded!')
 except Exception as e:
     print(f'Warning: {e}')
-    fig1_1 = fig2 = fig3 = fig4 = fig5 = None
+    fig1_1 = fig2 = fig3 = fig5 = None
 
 api = FastAPI(title='Financial Dashboard API', version='2.0')
 
@@ -105,7 +104,6 @@ dash_app.layout = html.Div([
         dcc.Tab(label='CCP & LTD by Company', value='tab1'),
         dcc.Tab(label='Debt Coverage Ratio', value='tab2'),
         dcc.Tab(label='Financial Resilience Heatmap', value='tab3'),
-        dcc.Tab(label='Debt vs Liquid Assets (latest)', value='tab4'),
         dcc.Tab(label='Debt vs Liquid Assets (all)', value='tab5'),
     ]),
     html.Div(id='tabs-content', style={'marginTop': '20px'}),
@@ -116,7 +114,6 @@ def render_tab(tab):
     if tab == 'tab1' and fig1_1: return html.Div([dcc.Graph(figure=fig1_1)])
     elif tab == 'tab2' and fig2: return html.Div([dcc.Graph(figure=fig2)])
     elif tab == 'tab3' and fig3: return html.Div([dcc.Graph(figure=fig3)])
-    elif tab == 'tab4' and fig4: return html.Div([dcc.Graph(figure=fig4)])
     elif tab == 'tab5' and fig5: return html.Div([dcc.Graph(figure=fig5)])
     return html.Div('Figure not available.', style={'textAlign': 'center', 'color': 'red'})
 
