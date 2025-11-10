@@ -122,7 +122,7 @@ The dashboard supports:
 ## How to Run Locally
 
 ```bash
-git clone <repo-url>
+git clone https://github.com/xn-projects/financial_dashboard.git
 cd financial_dashboard
 pip install -r requirements.txt
 
@@ -149,4 +149,3 @@ For architecture, data workflow, and implementation details (including Tableau-t
 ## Summary
 
 This dashboard helps assess financial resilience by comparing liquidity and debt positions across companies and quarters. The current implementation supports automated data loading, flexible API access, and a fully interactive visualization interface suitable for further analysis and expansion.
-  
