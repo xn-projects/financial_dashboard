@@ -9,6 +9,7 @@ from flask import Flask
 from pymongo import MongoClient
 
 from app.figures_builder import (
+    prepare_data,    
     generate_company_colors,
     create_fig_1,
     create_fig_2,
@@ -36,6 +37,7 @@ def get_data_from_mongo():
     return pd.DataFrame(records)
 
 result_df = get_data_from_mongo() if USE_MONGO else get_data_from_json()
+result_df = prepare_data(result_df)
 print(f"Loaded {len(result_df)} records from {'MongoDB' if USE_MONGO else 'JSON'}")
 
 company_colors = generate_company_colors(result_df)
