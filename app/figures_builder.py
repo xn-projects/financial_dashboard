@@ -420,7 +420,7 @@ def create_fig_4(df: pd.DataFrame, company_colors: dict) -> go.Figure:
             buttons=buttons,
             active=0,
             direction="down",
-            x=0.4, y=1.12
+            x=0.4, y=0.97
         )]
     )
 
