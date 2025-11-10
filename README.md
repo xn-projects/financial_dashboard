@@ -38,22 +38,21 @@ The color gradient helps quickly identify periods of financial stress or stabili
 
 ![Financial Resilience Heatmap](images/Financial%20Resilience%20Heatmap.png)
 
-### 4. Debt vs Liquid Assets (latest)
+### 4. Debt vs Liquid Assets (all)
 
-This view shows the most recent quarter only, providing a point‑in‑time comparison of companies’ liquidity versus debt. Companies positioned toward the bottom‑right quadrant indicate a healthier balance (higher liquidity and lower debt), while those in the top‑left quadrant reflect higher leverage pressure.
+This visualization compares companies’ liquidity (CCP) and long-term debt (LTD), with the option to view either the most recent quarter or any selected reporting period.
 
-![Debt vs Liquid Assets (latest)](images/Debt%20vs%20Liquid%20Assets%20\(latest\).png)
+It helps evaluate balance sheet positioning:
 
-### 5. Debt vs Liquid Assets (all)
+- **Bottom-right quadrant** → stronger liquidity relative to debt  
+- **Top-left quadrant** → higher leverage pressure  
 
-This view expands the previous snapshot by showing company positions across different reporting periods. You can switch between single quarters or aggregated time ranges to observe how liquidity and debt levels evolve.
+By switching between quarters or aggregated time ranges, you can observe how company positions shift over time:
 
-The movement across points helps highlight strategic shifts:
+- **Rightward movement** → growing liquid assets
+- **Upward movement** → increasing long-term debt
 
-- **Rightward** → growing liquid assets
-- **Upward** → increasing long-term debt
-
-This visualization reveals direction and pace of financial change rather than a single-moment snapshot.
+This allows analysis of both the current financial state and longer-term strategic trends.
 
 
 ![Debt vs Liquid Assets (all)](images/Debt%20vs%20Liquid%20Assets%20\(all\).png)
