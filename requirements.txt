@@ -6,3 +6,5 @@ pandas
 plotly
 pymongo
 python-dotenv
+matplotlib
+numpy
