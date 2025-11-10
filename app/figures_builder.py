@@ -7,6 +7,8 @@ import matplotlib.pyplot as plt
 
 
 def prepare_data(df):
+    df = df.copy()
+    
     def parse_quarter(qstr):
         if pd.isna(qstr):
             return pd.NaT
