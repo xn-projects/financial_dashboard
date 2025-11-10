@@ -1,9 +1,26 @@
 import pandas as pd
 import numpy as np
+import re
 import plotly.graph_objects as go
 import plotly.subplots as sp
 import matplotlib.pyplot as plt
 
+
+def prepare_data(df):
+    def parse_quarter(qstr):
+        if pd.isna(qstr):
+            return pd.NaT
+        match = re.match(r"Q([1-4])\s+(\d{4})", str(qstr))
+        if match:
+            q = int(match.group(1))
+            year = int(match.group(2))
+            return pd.Period(year=year, quarter=q, freq="Q").to_timestamp(how="start")
+        return pd.NaT
+
+    df["QuarterStart"] = df["ReportQuarter"].apply(parse_quarter)
+    df["ReportQuarter"] = pd.to_datetime(df["QuarterStart"]).dt.to_period("Q").astype(str)
+    return df.sort_values(["Symbol", "QuarterStart"])
+    
 
 def generate_company_colors(df):
     """
