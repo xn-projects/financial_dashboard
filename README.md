@@ -81,7 +81,8 @@ The dashboard supports:
 📦 financial_dashboard/
 ├── 📁 app/
 │   ├── __init__.py
-│   └── app.py
+│   ├── app.py
+│   └── figures_builder.py
 │
 ├── 📁 data/
 │   ├── filings_demo_step3.sglite
