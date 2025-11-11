@@ -174,7 +174,7 @@ def create_fig_2(df: pd.DataFrame, company_colors: dict) -> go.Figure:
             go.Scatter(
                 x=company_data["QuarterStart"],
                 y=company_data["DebtCoverage"],
-                mode="lines+markers",
+                mode="lines",
                 name=company,
                 line=dict(color=color, width=2),
                 marker=dict(color=color, size=6),
@@ -420,7 +420,7 @@ def create_fig_4(df: pd.DataFrame, company_colors: dict) -> go.Figure:
             buttons=buttons,
             active=0,
             direction="down",
-            x=0.4, y=0.97
+            x=0.3, y=1.00
         )]
     )
 
