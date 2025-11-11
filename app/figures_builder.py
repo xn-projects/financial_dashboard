@@ -309,34 +309,29 @@ def create_fig_4(df: pd.DataFrame, company_colors: dict) -> go.Figure:
             size = scaled_sizes.loc[subset.index[0]]
             color = company_colors.get(company, "#000000")
 
-            fig.add_trace(
-                go.Scatter(
-                    x=subset["CCP"],
-                    y=subset["LTD"],
-                    mode="markers+text",
-                    marker=dict(
-                        color=color,
-                        size=size,
-                        sizemode="area",
-                        line=dict(width=1, color="black")
-                    ),
-                    text=subset["Symbol"],
-                    textfont=dict(color=color),
-                    textposition="top center",
-                    name=f"{company} - {q_label}",
-                    legendgroup=company,
-                    hovertext=[
-                        f"Company: {company}<br>"
-                        f"Quarter: {subset['ReportQuarter'].iloc[0]}<br>"
-                        f"CCP: {subset['CCP'].iloc[0]:.0f}<br>"
-                        f"LTD: {subset['LTD'].iloc[0]:.0f}<br>"
-                        f"CCP/LTD: {subset['DebtCoverage'].iloc[0]:.2f}"
-                    ],
-                    hovertemplate="%{hovertext}<extra></extra>",
-                    showlegend=True,
-                    visible=False
-                )
+            tr = go.Scatter(
+                x=subset["CCP"],
+                y=subset["LTD"],
+                mode="markers+text",
+                marker=dict(color=color, size=size, sizemode="area", line=dict(width=1, color="black")),
+                text=subset["Symbol"],
+                textfont=dict(color=color),
+                textposition="top center",
+                name=f"{company} - {q_label}",
+                legendgroup=company,
+                hovertext=[
+                    f"Company: {company}<br>"
+                    f"Quarter: {subset['ReportQuarter'].iloc[0]}<br>"
+                    f"CCP: {subset['CCP'].iloc[0]:.0f}<br>"
+                    f"LTD: {subset['LTD'].iloc[0]:.0f}<br>"
+                    f"CCP/LTD: {subset['DebtCoverage'].iloc[0]:.2f}"
+                ],
+                hovertemplate="%{hovertext}<extra></extra>",
+                showlegend=False,
+                visible=False
             )
+            fig.add_trace(tr)
+            fig.data[-1].meta = "raw"
 
     for quarter, q_label in zip(quarters_sorted, quarter_labels):
         subset = latest[latest["QuarterStart"] == quarter]
@@ -346,7 +341,7 @@ def create_fig_4(df: pd.DataFrame, company_colors: dict) -> go.Figure:
         median_ccp = subset["CCP"].median()
         median_ltd = subset["LTD"].median()
 
-        fig.add_trace(go.Scatter(
+        tr1 = go.Scatter(
             x=[median_ccp, median_ccp],
             y=[0, subset["LTD"].max() * 1.1],
             mode="lines",
@@ -354,8 +349,11 @@ def create_fig_4(df: pd.DataFrame, company_colors: dict) -> go.Figure:
             showlegend=False,
             visible=False,
             name=f"Median CCP - {q_label}"
-        ))
-        fig.add_trace(go.Scatter(
+        )
+        fig.add_trace(tr1)
+        fig.data[-1].meta = "median-line"
+
+        tr2 = go.Scatter(
             x=[0, subset["CCP"].max() * 1.1],
             y=[median_ltd, median_ltd],
             mode="lines",
@@ -363,68 +361,78 @@ def create_fig_4(df: pd.DataFrame, company_colors: dict) -> go.Figure:
             showlegend=False,
             visible=False,
             name=f"Median LTD - {q_label}"
-        ))
+        )
+        fig.add_trace(tr2)
+        fig.data[-1].meta = "median-line"
 
     median_all = latest.groupby("CompanyName").median(numeric_only=True).reset_index()
     median_all = median_all.merge(latest[["CompanyName", "Symbol"]].drop_duplicates(), on="CompanyName")
 
     sizes_median = median_all["DebtCoverage"]
-    if sizes_median.max() == sizes_median.min():
-        scaled_median_sizes = pd.Series((min_size + max_size) / 2, index=sizes_median.index)
-    else:
-        scaled_median_sizes = min_size + (sizes_median - sizes_median.min()) * (max_size - min_size) / (sizes_median.max() - sizes_median.min())
+    scaled_median_sizes = (
+        pd.Series((min_size + max_size) / 2, index=sizes_median.index)
+        if sizes_median.max() == sizes_median.min()
+        else min_size + (sizes_median - sizes_median.min()) * (max_size - min_size) / (sizes_median.max() - sizes_median.min())
+    )
 
     for idx, row in median_all.iterrows():
-        company = row["CompanyName"]
-        color = company_colors.get(company, "#000000")
+        color = company_colors.get(row["CompanyName"], "#000000")
         size = scaled_median_sizes.loc[idx]
 
-        fig.add_trace(go.Scatter(
+        tr = go.Scatter(
             x=[row["CCP"]],
             y=[row["LTD"]],
             mode="markers+text",
-            marker=dict(color=color, size=size, line=dict(color="black", width=1)),
+            marker=dict(color=color, size=size, sizemode="area", line=dict(width=1, color="black")),
             text=row["Symbol"],
             textposition="top center",
-            name=f"{company} - Median",
-            legendgroup=company,
+            name=f"{row['CompanyName']} - Median",
+            legendgroup=row["CompanyName"],
             showlegend=True,
             visible=True
-        ))
+        )
+        fig.add_trace(tr)
+        fig.data[-1].meta = "median"
 
     buttons = []
 
     buttons.append(dict(
         label="All Quarters (Median)",
         method="update",
-        args=[{"visible": [("Median" in tr.name) for tr in fig.data]},
-              {"title": "Debt vs Liquid Assets: Median Across Quarters"}]
+        args=[
+            {"visible": [tr.meta in ("median", "median-line") for tr in fig.data]},
+            {"title": "Debt vs Liquid Assets: Median Across Quarters"}
+        ]
     ))
 
     for q_label in quarter_labels:
         buttons.append(dict(
             label=q_label,
             method="update",
-            args=[{"visible": [(q_label in tr.name) for tr in fig.data]},
-                  {"title": f"Debt vs Liquid Assets: {q_label}"}]
+            args=[
+                {"visible": [(tr.meta == "raw" and q_label in tr.name) or tr.meta == "median-line"
+                             for tr in fig.data]},
+                {"title": f"Debt vs Liquid Assets: {q_label}"}
+            ]
         ))
 
     fig.update_layout(
-        title=f"Debt vs Liquid Assets: Median Across Quarters",
+        title="Debt vs Liquid Assets: Median Across Quarters",
         xaxis_title="Current Cash Position (CCP)",
         yaxis_title="Long-Term Debt (LTD)",
         width=1000, height=650,
         plot_bgcolor="white",
-        showlegend=True,
         updatemenus=[dict(
             buttons=buttons,
             active=0,
             direction="down",
-            x=0.3, y=1.00
-        )]
+            x=0.5, xanchor="center",
+            y=1.18, yanchor="top"
+        )],
+        margin=dict(t=120)
     )
 
-    fig.update_xaxes(showgrid=True, gridcolor="lightgray", linecolor="black")
-    fig.update_yaxes(showgrid=True, gridcolor="lightgray", linecolor="black")
+    fig.update_xaxes(showline=True, linewidth=1, linecolor="black", gridcolor="lightgray")
+    fig.update_yaxes(showline=True, linewidth=1, linecolor="black", gridcolor="lightgray")
 
     return fig
