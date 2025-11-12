@@ -52,6 +52,30 @@ def generate_company_colors(df):
     return company_colors
 
 
+def add_annotation(fig: go.Figure, text: str, position: str = "top") -> go.Figure:
+    """
+    Adds a persistent description text block to the figure.
+    Position can be 'top' or 'bottom'.
+    """
+    if position == "top":
+        y = 1.12
+        yanchor = "bottom"
+    else:
+        y = -0.20
+        yanchor = "top"
+
+    fig.add_annotation(
+        text=text,
+        align="left",
+        showarrow=False,
+        xref="paper", yref="paper",
+        x=0, y=y,
+        xanchor="left", yanchor=yanchor,
+        font=dict(size=12, color="gray")
+    )
+    return fig
+    
+
 def create_fig_1(df: pd.DataFrame, company_colors: dict) -> go.Figure:
     
     min_val = min(df['CCP'].min(), df['LTD'].min())
@@ -460,23 +484,16 @@ def create_fig_4(df: pd.DataFrame, company_colors: dict) -> go.Figure:
             x=0.35, xanchor="left",
             y=1.10, yanchor="top"
         )],
-        margin=dict(t=120),
-        annotations=[
-                dict(
-                    text=(
-                        "This chart compares companies’ <b>Current Cash Position (CCP)</b> "
-                        "to their <b>Long-Term Debt (LTD)</b>. "
-                        "Bubble size shows the <b>CCP/LTD ratio</b>. "
-                        "Use the filter above to switch between quarters or view median values across all periods."
-                    ),
-                    align="left",
-                    showarrow=False,
-                    xref="paper", yref="paper",
-                    x=0, y=-1.10,
-                    xanchor="left", yanchor="top",
-                    font=dict(size=12, color="gray")
-                )
-            ]
+        margin=dict(t=140)
+    )
+
+    fig = add_annotation(
+        fig,
+        "This chart compares companies’ <b>Current Cash Position (CCP)</b> "
+        "to their <b>Long-Term Debt (LTD)</b>. "
+        "Bubble size shows the <b>CCP/LTD ratio</b>. "
+        "Use the filter above to switch between quarters or view median values across all periods.",
+        position="top"
     )
 
     fig.update_xaxes(showline=True, linewidth=1, linecolor="black", mirror=True,
