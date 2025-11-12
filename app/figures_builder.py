@@ -490,13 +490,13 @@ def create_fig_4(df: pd.DataFrame, company_colors: dict) -> go.Figure:
     fig = add_annotation(
         fig,
         "This chart compares companies’ <b>Current Cash Position (CCP)</b> "
-        "to their <b>Long-Term Debt (LTD)</b>. "
-        "Bubble size shows the <b>CCP/LTD ratio</b>. "
+        "to their <b>Long-Term Debt (LTD)</b>.<br>"
+        "Bubble size shows the <b>CCP/LTD ratio</b>.<br>"
         "Use the filter above to switch between quarters or view median values across all periods.",
         position="top"
     )
-    
-    fig.layout.annotations[-1].update(width=950)
+
+    fig.update_layout(margin=dict(t=160))
 
     fig.update_xaxes(showline=True, linewidth=1, linecolor="black", mirror=True,
                      showgrid=True, gridcolor="lightgray")
