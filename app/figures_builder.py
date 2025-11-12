@@ -472,7 +472,7 @@ def create_fig_4(df: pd.DataFrame, company_colors: dict) -> go.Figure:
                     align="left",
                     showarrow=False,
                     xref="paper", yref="paper",
-                    x=0, y=-0.25,
+                    x=0, y=-1.10,
                     xanchor="left", yanchor="top",
                     font=dict(size=12, color="gray")
                 )
