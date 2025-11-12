@@ -495,6 +495,8 @@ def create_fig_4(df: pd.DataFrame, company_colors: dict) -> go.Figure:
         "Use the filter above to switch between quarters or view median values across all periods.",
         position="top"
     )
+    
+    fig.layout.annotations[-1].update(width=950)
 
     fig.update_xaxes(showline=True, linewidth=1, linecolor="black", mirror=True,
                      showgrid=True, gridcolor="lightgray")
