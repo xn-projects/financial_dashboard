@@ -223,6 +223,7 @@ def create_fig_2(df: pd.DataFrame, company_colors: dict) -> go.Figure:
 
     fig.update_layout(
         title="CCP/LTD Ratio by Companies",
+        title_x=0.5,
         xaxis_title="Quarter",
         yaxis_title="CCP/LTD Ratio",
         plot_bgcolor="white",
@@ -290,6 +291,7 @@ def create_fig_3(df: pd.DataFrame) -> go.Figure:
 
     fig.update_layout(
         title="Financial Resilience: CCP/LTD Ratio Heatmap",
+        title_x=0.5,
         xaxis_title="Quarter",
         yaxis=dict(
             autorange="reversed",
