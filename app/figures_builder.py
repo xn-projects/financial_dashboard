@@ -175,6 +175,9 @@ def create_fig_1(df: pd.DataFrame, company_colors: dict) -> go.Figure:
     fig.update_yaxes(title="Millions, $", range=y_range, secondary_y=False)
     fig.update_yaxes(range=y_range, secondary_y=True)
 
+    fig.update_xaxes(showgrid=True, gridcolor="lightgray", linecolor="black", linewidth=1, mirror=True)
+    fig.update_yaxes(showgrid=True, gridcolor="lightgray", linecolor="black", linewidth=1, mirror=True)
+
     return fig
 
 
@@ -228,8 +231,16 @@ def create_fig_2(df: pd.DataFrame, company_colors: dict) -> go.Figure:
         showlegend=True,
         legend_title="Companies (click to show/hide)"
     )
-
-    fig.update_yaxes(rangemode="tozero")
+    fig.update_xaxes(
+        showgrid=True, gridcolor="lightgray",
+        showline=True, linewidth=1, linecolor="black", mirror=True
+    )
+    fig.update_yaxes(
+        showgrid=True, gridcolor="lightgray",
+        showline=True, linewidth=1, linecolor="black", mirror=True,
+        rangemode="tozero"
+    )
+    
     return fig
 
 
@@ -488,7 +499,7 @@ def create_fig_4(df: pd.DataFrame, company_colors: dict) -> go.Figure:
             pad={"r": 10, "t": 10},
             showactive=True,
             x=0.35, xanchor="left",
-            y=1.10, yanchor="top"
+            y=1.12, yanchor="top"
         )],
         margin=dict(t=180)
     )
