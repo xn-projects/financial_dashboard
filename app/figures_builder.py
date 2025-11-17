@@ -468,7 +468,14 @@ def create_fig_4(df: pd.DataFrame, company_colors: dict) -> go.Figure:
     ))
 
     fig.update_layout(
-        title="Debt vs Liquid Assets: Median Across Quarters",
+        title=dict(
+            text="Debt vs Liquid Assets: Median Across Quarters",
+            x=0.5,
+            y=0.98,
+            xanchor="center",
+            yanchor="top",
+            font=dict(size=20)
+        ),
         xaxis_title="Current Cash Position (CCP)",
         yaxis_title="Long-Term Debt (LTD)",
         width=1000, height=650,
@@ -484,7 +491,7 @@ def create_fig_4(df: pd.DataFrame, company_colors: dict) -> go.Figure:
             x=0.35, xanchor="left",
             y=1.10, yanchor="top"
         )],
-        margin=dict(t=140)
+        margin=dict(t=180)
     )
 
     fig = add_annotation(
