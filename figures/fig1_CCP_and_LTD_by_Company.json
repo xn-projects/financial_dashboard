@@ -25,21 +25,13 @@
         "Company: AAPL\u003cbr\u003eQuarter: 2023Q3\u003cbr\u003eCCP: $ 61555 M",
         "Company: AAPL\u003cbr\u003eQuarter: 2023Q4\u003cbr\u003eCCP: $ 73100 M"
       ],
+      "legendgroup": "AAPL",
       "line": {
         "color": "#1f77b4",
-        "dash": "solid",
         "width": 2
       },
-      "marker": {
-        "color": "#1f77b4",
-        "line": {
-          "color": "black",
-          "width": 2
-        },
-        "opacity": 0.8
-      },
       "mode": "lines",
-      "name": "AAPL_CCP",
+      "name": "AAPL",
       "showlegend": true,
       "x": [
         "2018-10-01T00:00:00",
@@ -116,21 +108,13 @@
         "Company: AMGN\u003cbr\u003eQuarter: 2023Q3\u003cbr\u003eCCP: $ 34741 M",
         "Company: AMGN\u003cbr\u003eQuarter: 2023Q4\u003cbr\u003eCCP: $ 10944 M"
       ],
+      "legendgroup": "AMGN",
       "line": {
         "color": "#aec7e8",
-        "dash": "solid",
         "width": 2
       },
-      "marker": {
-        "color": "#aec7e8",
-        "line": {
-          "color": "black",
-          "width": 2
-        },
-        "opacity": 0.8
-      },
       "mode": "lines",
-      "name": "AMGN_CCP",
+      "name": "AMGN",
       "showlegend": true,
       "x": [
         "2018-10-01T00:00:00",
@@ -207,21 +191,13 @@
         "Company: AMZN\u003cbr\u003eQuarter: 2023Q3\u003cbr\u003eCCP: $ 64169 M",
         "Company: AMZN\u003cbr\u003eQuarter: 2023Q4\u003cbr\u003eCCP: $ 86780 M"
       ],
+      "legendgroup": "AMZN",
       "line": {
         "color": "#ffbb78",
-        "dash": "solid",
         "width": 2
       },
-      "marker": {
-        "color": "#ffbb78",
-        "line": {
-          "color": "black",
-          "width": 2
-        },
-        "opacity": 0.8
-      },
       "mode": "lines",
-      "name": "AMZN_CCP",
+      "name": "AMZN",
       "showlegend": true,
       "x": [
         "2018-10-01T00:00:00",
@@ -298,21 +274,13 @@
         "Company: BBWI\u003cbr\u003eQuarter: 2023Q3\u003cbr\u003eCCP: $ 790 M",
         "Company: BBWI\u003cbr\u003eQuarter: 2023Q4\u003cbr\u003eCCP: $ 412 M"
       ],
+      "legendgroup": "BBWI",
       "line": {
         "color": "#98df8a",
-        "dash": "solid",
         "width": 2
       },
-      "marker": {
-        "color": "#98df8a",
-        "line": {
-          "color": "black",
-          "width": 2
-        },
-        "opacity": 0.8
-      },
       "mode": "lines",
-      "name": "BBWI_CCP",
+      "name": "BBWI",
       "showlegend": true,
       "x": [
         "2018-10-01T00:00:00",
@@ -389,21 +357,13 @@
         "Company: BMY\u003cbr\u003eQuarter: 2023Q3\u003cbr\u003eCCP: $ 7685 M",
         "Company: BMY\u003cbr\u003eQuarter: 2023Q4\u003cbr\u003eCCP: $ 12280 M"
       ],
+      "legendgroup": "BMY",
       "line": {
         "color": "#ff9896",
-        "dash": "solid",
         "width": 2
       },
-      "marker": {
-        "color": "#ff9896",
-        "line": {
-          "color": "black",
-          "width": 2
-        },
-        "opacity": 0.8
-      },
       "mode": "lines",
-      "name": "BMY_CCP",
+      "name": "BMY",
       "showlegend": true,
       "x": [
         "2018-10-01T00:00:00",
@@ -480,21 +440,13 @@
         "Company: CNC\u003cbr\u003eQuarter: 2023Q3\u003cbr\u003eCCP: $ 20431 M",
         "Company: CNC\u003cbr\u003eQuarter: 2023Q4\u003cbr\u003eCCP: $ 19652 M"
       ],
+      "legendgroup": "CNC",
       "line": {
         "color": "#c5b0d5",
-        "dash": "solid",
         "width": 2
       },
-      "marker": {
-        "color": "#c5b0d5",
-        "line": {
-          "color": "black",
-          "width": 2
-        },
-        "opacity": 0.8
-      },
       "mode": "lines",
-      "name": "CNC_CCP",
+      "name": "CNC",
       "showlegend": true,
       "x": [
         "2018-10-01T00:00:00",
@@ -571,21 +523,13 @@
         "Company: COP\u003cbr\u003eQuarter: 2023Q3\u003cbr\u003eCCP: $ 9446 M",
         "Company: COP\u003cbr\u003eQuarter: 2023Q4\u003cbr\u003eCCP: $ 6606 M"
       ],
+      "legendgroup": "COP",
       "line": {
         "color": "#8c564b",
-        "dash": "solid",
         "width": 2
       },
-      "marker": {
-        "color": "#8c564b",
-        "line": {
-          "color": "black",
-          "width": 2
-        },
-        "opacity": 0.8
-      },
       "mode": "lines",
-      "name": "COP_CCP",
+      "name": "COP",
       "showlegend": true,
       "x": [
         "2018-10-01T00:00:00",
@@ -662,21 +606,13 @@
         "Company: GILD\u003cbr\u003eQuarter: 2023Q3\u003cbr\u003eCCP: $ 6864 M",
         "Company: GILD\u003cbr\u003eQuarter: 2023Q4\u003cbr\u003eCCP: $ 7264 M"
       ],
+      "legendgroup": "GILD",
       "line": {
         "color": "#e377c2",
-        "dash": "solid",
         "width": 2
       },
-      "marker": {
-        "color": "#e377c2",
-        "line": {
-          "color": "black",
-          "width": 2
-        },
-        "opacity": 0.8
-      },
       "mode": "lines",
-      "name": "GILD_CCP",
+      "name": "GILD",
       "showlegend": true,
       "x": [
         "2018-10-01T00:00:00",
@@ -753,21 +689,13 @@
         "Company: HSIC\u003cbr\u003eQuarter: 2023Q3\u003cbr\u003eCCP: $ 166 M",
         "Company: HSIC\u003cbr\u003eQuarter: 2023Q4\u003cbr\u003eCCP: $ 171 M"
       ],
+      "legendgroup": "HSIC",
       "line": {
         "color": "#7f7f7f",
-        "dash": "solid",
         "width": 2
       },
-      "marker": {
-        "color": "#7f7f7f",
-        "line": {
-          "color": "black",
-          "width": 2
-        },
-        "opacity": 0.8
-      },
       "mode": "lines",
-      "name": "HSIC_CCP",
+      "name": "HSIC",
       "showlegend": true,
       "x": [
         "2018-10-01T00:00:00",
@@ -844,21 +772,13 @@
         "Company: KO\u003cbr\u003eQuarter: 2023Q3\u003cbr\u003eCCP: $ 15435 M",
         "Company: KO\u003cbr\u003eQuarter: 2023Q4\u003cbr\u003eCCP: $ 13663 M"
       ],
+      "legendgroup": "KO",
       "line": {
         "color": "#bcbd22",
-        "dash": "solid",
         "width": 2
       },
-      "marker": {
-        "color": "#bcbd22",
-        "line": {
-          "color": "black",
-          "width": 2
-        },
-        "opacity": 0.8
-      },
       "mode": "lines",
-      "name": "KO_CCP",
+      "name": "KO",
       "showlegend": true,
       "x": [
         "2018-10-01T00:00:00",
@@ -935,21 +855,13 @@
         "Company: TMO\u003cbr\u003eQuarter: 2023Q3\u003cbr\u003eCCP: $ 6151 M",
         "Company: TMO\u003cbr\u003eQuarter: 2023Q4\u003cbr\u003eCCP: $ 8077 M"
       ],
+      "legendgroup": "TMO",
       "line": {
         "color": "#17becf",
-        "dash": "solid",
         "width": 2
       },
-      "marker": {
-        "color": "#17becf",
-        "line": {
-          "color": "black",
-          "width": 2
-        },
-        "opacity": 0.8
-      },
       "mode": "lines",
-      "name": "TMO_CCP",
+      "name": "TMO",
       "showlegend": true,
       "x": [
         "2018-10-01T00:00:00",
@@ -1026,21 +938,13 @@
         "Company: UPS\u003cbr\u003eQuarter: 2023Q3\u003cbr\u003eCCP: $ 7278 M",
         "Company: UPS\u003cbr\u003eQuarter: 2023Q4\u003cbr\u003eCCP: $ 6072 M"
       ],
+      "legendgroup": "UPS",
       "line": {
         "color": "#9edae5",
-        "dash": "solid",
         "width": 2
       },
-      "marker": {
-        "color": "#9edae5",
-        "line": {
-          "color": "black",
-          "width": 2
-        },
-        "opacity": 0.8
-      },
       "mode": "lines",
-      "name": "UPS_CCP",
+      "name": "UPS",
       "showlegend": true,
       "x": [
         "2018-10-01T00:00:00",
@@ -1117,22 +1021,15 @@
         "Company: AAPL\u003cbr\u003eQuarter: 2023Q3\u003cbr\u003eLTD: $ 105103 M",
         "Company: AAPL\u003cbr\u003eQuarter: 2023Q4\u003cbr\u003eLTD: $ 106042 M"
       ],
+      "legendgroup": "AAPL",
       "line": {
         "color": "#1f77b4",
         "dash": "dash",
         "width": 2
       },
-      "marker": {
-        "color": "#1f77b4",
-        "line": {
-          "color": "black",
-          "width": 2
-        },
-        "opacity": 0.8
-      },
       "mode": "lines",
-      "name": "AAPL_LTD",
-      "showlegend": true,
+      "name": "AAPL",
+      "showlegend": false,
       "x": [
         "2018-10-01T00:00:00",
         "2019-01-01T00:00:00",
@@ -1208,22 +1105,15 @@
         "Company: AMGN\u003cbr\u003eQuarter: 2023Q3\u003cbr\u003eLTD: $ 60468 M",
         "Company: AMGN\u003cbr\u003eQuarter: 2023Q4\u003cbr\u003eLTD: $ 64613 M"
       ],
+      "legendgroup": "AMGN",
       "line": {
         "color": "#aec7e8",
         "dash": "dash",
         "width": 2
       },
-      "marker": {
-        "color": "#aec7e8",
-        "line": {
-          "color": "black",
-          "width": 2
-        },
-        "opacity": 0.8
-      },
       "mode": "lines",
-      "name": "AMGN_LTD",
-      "showlegend": true,
+      "name": "AMGN",
+      "showlegend": false,
       "x": [
         "2018-10-01T00:00:00",
         "2019-01-01T00:00:00",
@@ -1299,22 +1189,15 @@
         "Company: AMZN\u003cbr\u003eQuarter: 2023Q3\u003cbr\u003eLTD: $ 61098 M",
         "Company: AMZN\u003cbr\u003eQuarter: 2023Q4\u003cbr\u003eLTD: $ 58314 M"
       ],
+      "legendgroup": "AMZN",
       "line": {
         "color": "#ffbb78",
         "dash": "dash",
         "width": 2
       },
-      "marker": {
-        "color": "#ffbb78",
-        "line": {
-          "color": "black",
-          "width": 2
-        },
-        "opacity": 0.8
-      },
       "mode": "lines",
-      "name": "AMZN_LTD",
-      "showlegend": true,
+      "name": "AMZN",
+      "showlegend": false,
       "x": [
         "2018-10-01T00:00:00",
         "2019-01-01T00:00:00",
@@ -1390,22 +1273,15 @@
         "Company: BBWI\u003cbr\u003eQuarter: 2023Q3\u003cbr\u003eLTD: $ 4668 M",
         "Company: BBWI\u003cbr\u003eQuarter: 2023Q4\u003cbr\u003eLTD: $ 4497 M"
       ],
+      "legendgroup": "BBWI",
       "line": {
         "color": "#98df8a",
         "dash": "dash",
         "width": 2
       },
-      "marker": {
-        "color": "#98df8a",
-        "line": {
-          "color": "black",
-          "width": 2
-        },
-        "opacity": 0.8
-      },
       "mode": "lines",
-      "name": "BBWI_LTD",
-      "showlegend": true,
+      "name": "BBWI",
+      "showlegend": false,
       "x": [
         "2018-10-01T00:00:00",
         "2019-01-01T00:00:00",
@@ -1481,22 +1357,15 @@
         "Company: BMY\u003cbr\u003eQuarter: 2023Q3\u003cbr\u003eLTD: $ 32137 M",
         "Company: BMY\u003cbr\u003eQuarter: 2023Q4\u003cbr\u003eLTD: $ 36653 M"
       ],
+      "legendgroup": "BMY",
       "line": {
         "color": "#ff9896",
         "dash": "dash",
         "width": 2
       },
-      "marker": {
-        "color": "#ff9896",
-        "line": {
-          "color": "black",
-          "width": 2
-        },
-        "opacity": 0.8
-      },
       "mode": "lines",
-      "name": "BMY_LTD",
-      "showlegend": true,
+      "name": "BMY",
+      "showlegend": false,
       "x": [
         "2018-10-01T00:00:00",
         "2019-01-01T00:00:00",
@@ -1572,22 +1441,15 @@
         "Company: CNC\u003cbr\u003eQuarter: 2023Q3\u003cbr\u003eLTD: $ 18001 M",
         "Company: CNC\u003cbr\u003eQuarter: 2023Q4\u003cbr\u003eLTD: $ 17829 M"
       ],
+      "legendgroup": "CNC",
       "line": {
         "color": "#c5b0d5",
         "dash": "dash",
         "width": 2
       },
-      "marker": {
-        "color": "#c5b0d5",
-        "line": {
-          "color": "black",
-          "width": 2
-        },
-        "opacity": 0.8
-      },
       "mode": "lines",
-      "name": "CNC_LTD",
-      "showlegend": true,
+      "name": "CNC",
+      "showlegend": false,
       "x": [
         "2018-10-01T00:00:00",
         "2019-01-01T00:00:00",
@@ -1663,22 +1525,15 @@
         "Company: COP\u003cbr\u003eQuarter: 2023Q3\u003cbr\u003eLTD: $ 18182 M",
         "Company: COP\u003cbr\u003eQuarter: 2023Q4\u003cbr\u003eLTD: $ 17863 M"
       ],
+      "legendgroup": "COP",
       "line": {
         "color": "#8c564b",
         "dash": "dash",
         "width": 2
       },
-      "marker": {
-        "color": "#8c564b",
-        "line": {
-          "color": "black",
-          "width": 2
-        },
-        "opacity": 0.8
-      },
       "mode": "lines",
-      "name": "COP_LTD",
-      "showlegend": true,
+      "name": "COP",
+      "showlegend": false,
       "x": [
         "2018-10-01T00:00:00",
         "2019-01-01T00:00:00",
@@ -1754,22 +1609,15 @@
         "Company: GILD\u003cbr\u003eQuarter: 2023Q3\u003cbr\u003eLTD: $ 24982 M",
         "Company: GILD\u003cbr\u003eQuarter: 2023Q4\u003cbr\u003eLTD: $ 24987 M"
       ],
+      "legendgroup": "GILD",
       "line": {
         "color": "#e377c2",
         "dash": "dash",
         "width": 2
       },
-      "marker": {
-        "color": "#e377c2",
-        "line": {
-          "color": "black",
-          "width": 2
-        },
-        "opacity": 0.8
-      },
       "mode": "lines",
-      "name": "GILD_LTD",
-      "showlegend": true,
+      "name": "GILD",
+      "showlegend": false,
       "x": [
         "2018-10-01T00:00:00",
         "2019-01-01T00:00:00",
@@ -1845,22 +1693,15 @@
         "Company: HSIC\u003cbr\u003eQuarter: 2023Q3\u003cbr\u003eLTD: $ 1887 M",
         "Company: HSIC\u003cbr\u003eQuarter: 2023Q4\u003cbr\u003eLTD: $ 2087 M"
       ],
+      "legendgroup": "HSIC",
       "line": {
         "color": "#7f7f7f",
         "dash": "dash",
         "width": 2
       },
-      "marker": {
-        "color": "#7f7f7f",
-        "line": {
-          "color": "black",
-          "width": 2
-        },
-        "opacity": 0.8
-      },
       "mode": "lines",
-      "name": "HSIC_LTD",
-      "showlegend": true,
+      "name": "HSIC",
+      "showlegend": false,
       "x": [
         "2018-10-01T00:00:00",
         "2019-01-01T00:00:00",
@@ -1936,22 +1777,15 @@
         "Company: KO\u003cbr\u003eQuarter: 2023Q3\u003cbr\u003eLTD: $ 36256 M",
         "Company: KO\u003cbr\u003eQuarter: 2023Q4\u003cbr\u003eLTD: $ 37507 M"
       ],
+      "legendgroup": "KO",
       "line": {
         "color": "#bcbd22",
         "dash": "dash",
         "width": 2
       },
-      "marker": {
-        "color": "#bcbd22",
-        "line": {
-          "color": "black",
-          "width": 2
-        },
-        "opacity": 0.8
-      },
       "mode": "lines",
-      "name": "KO_LTD",
-      "showlegend": true,
+      "name": "KO",
+      "showlegend": false,
       "x": [
         "2018-10-01T00:00:00",
         "2019-01-01T00:00:00",
@@ -2027,22 +1861,15 @@
         "Company: TMO\u003cbr\u003eQuarter: 2023Q3\u003cbr\u003eLTD: $ 35284 M",
         "Company: TMO\u003cbr\u003eQuarter: 2023Q4\u003cbr\u003eLTD: $ 34917 M"
       ],
+      "legendgroup": "TMO",
       "line": {
         "color": "#17becf",
         "dash": "dash",
         "width": 2
       },
-      "marker": {
-        "color": "#17becf",
-        "line": {
-          "color": "black",
-          "width": 2
-        },
-        "opacity": 0.8
-      },
       "mode": "lines",
-      "name": "TMO_LTD",
-      "showlegend": true,
+      "name": "TMO",
+      "showlegend": false,
       "x": [
         "2018-10-01T00:00:00",
         "2019-01-01T00:00:00",
@@ -2118,22 +1945,15 @@
         "Company: UPS\u003cbr\u003eQuarter: 2023Q3\u003cbr\u003eLTD: $ 21125 M",
         "Company: UPS\u003cbr\u003eQuarter: 2023Q4\u003cbr\u003eLTD: $ 22264 M"
       ],
+      "legendgroup": "UPS",
       "line": {
         "color": "#9edae5",
         "dash": "dash",
         "width": 2
       },
-      "marker": {
-        "color": "#9edae5",
-        "line": {
-          "color": "black",
-          "width": 2
-        },
-        "opacity": 0.8
-      },
       "mode": "lines",
-      "name": "UPS_LTD",
-      "showlegend": true,
+      "name": "UPS",
+      "showlegend": false,
       "x": [
         "2018-10-01T00:00:00",
         "2019-01-01T00:00:00",
@@ -3009,13 +2829,7 @@
         "2023-Q2",
         "2023-Q3",
         "2023-Q4"
-      ],
-      "showline": true,
-      "linewidth": 1,
-      "linecolor": "black",
-      "mirror": true,
-      "showgrid": true,
-      "gridcolor": "lightgray"
+      ]
     },
     "yaxis": {
       "anchor": "x",
@@ -3029,13 +2843,7 @@
       "range": [
         -11789.118400000001,
         130583.3744
-      ],
-      "showline": true,
-      "linewidth": 1,
-      "linecolor": "black",
-      "mirror": true,
-      "showgrid": true,
-      "gridcolor": "lightgray"
+      ]
     },
     "yaxis2": {
       "anchor": "x",
@@ -3044,13 +2852,7 @@
       "range": [
         -11789.118400000001,
         130583.3744
-      ],
-      "showline": true,
-      "linewidth": 1,
-      "linecolor": "black",
-      "mirror": true,
-      "showgrid": false,
-      "visible": false
+      ]
     },
     "updatemenus": [
       {
@@ -3072,30 +2874,21 @@
                   true,
                   true,
                   true,
-                  false,
-                  false,
-                  false,
-                  false,
-                  false,
-                  false,
-                  false,
-                  false,
-                  false,
-                  false,
-                  false,
-                  false
+                  "legendonly",
+                  "legendonly",
+                  "legendonly",
+                  "legendonly",
+                  "legendonly",
+                  "legendonly",
+                  "legendonly",
+                  "legendonly",
+                  "legendonly",
+                  "legendonly",
+                  "legendonly",
+                  "legendonly"
                 ]
               },
-              {
-                "yaxis.range": [
-                  -11789.118400000001,
-                  130583.3744
-                ],
-                "yaxis2.range": [
-                  -11789.118400000001,
-                  130583.3744
-                ]
-              }
+              {}
             ],
             "label": "CCP",
             "method": "update"
@@ -3104,18 +2897,18 @@
             "args": [
               {
                 "visible": [
-                  false,
-                  false,
-                  false,
-                  false,
-                  false,
-                  false,
-                  false,
-                  false,
-                  false,
-                  false,
-                  false,
-                  false,
+                  "legendonly",
+                  "legendonly",
+                  "legendonly",
+                  "legendonly",
+                  "legendonly",
+                  "legendonly",
+                  "legendonly",
+                  "legendonly",
+                  "legendonly",
+                  "legendonly",
+                  "legendonly",
+                  "legendonly",
                   true,
                   true,
                   true,
@@ -3130,16 +2923,7 @@
                   true
                 ]
               },
-              {
-                "yaxis.range": [
-                  -11789.118400000001,
-                  130583.3744
-                ],
-                "yaxis2.range": [
-                  -11789.118400000001,
-                  130583.3744
-                ]
-              }
+              {}
             ],
             "label": "LTD",
             "method": "update"
@@ -3174,18 +2958,9 @@
                   true
                 ]
               },
-              {
-                "yaxis.range": [
-                  -11789.118400000001,
-                  130583.3744
-                ],
-                "yaxis2.range": [
-                  -11789.118400000001,
-                  130583.3744
-                ]
-              }
+              {}
             ],
-            "label": "Both",
+            "label": "CCP & LTD",
             "method": "update"
           }
         ],
@@ -3203,14 +2978,7 @@
     ],
     "title": {
       "text": "CCP and LTD by Company",
-      "x": 0.5,
-      "y": 1,
-      "font": {
-        "family": "Georgia",
-        "size": 20,
-        "color": "black",
-        "weight": "bold"
-      }
+      "x": 0.5
     },
     "plot_bgcolor": "white",
     "showlegend": true,
