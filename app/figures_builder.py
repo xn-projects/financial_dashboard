@@ -463,8 +463,7 @@ def create_fig_4(df: pd.DataFrame, company_colors: dict) -> go.Figure:
         label="All Quarters (Median)",
         method="update",
         args=[{"visible": [("Global Median" in tr.name) or ("- Median" in tr.name)
-                            for tr in fig.data]},
-              {"title": "Debt vs Liquid Assets: Median Across Quarters"}]
+                            for tr in fig.data]}]
     ))
 
     fig.update_layout(
