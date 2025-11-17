@@ -2829,7 +2829,13 @@
         "2023-Q2",
         "2023-Q3",
         "2023-Q4"
-      ]
+      ],
+      "showgrid": true,
+      "gridcolor": "lightgray",
+      "showline": true,
+      "linewidth": 1,
+      "linecolor": "black",
+      "mirror": true
     },
     "yaxis": {
       "anchor": "x",
@@ -2843,7 +2849,13 @@
       "range": [
         -11789.118400000001,
         130583.3744
-      ]
+      ],
+      "showgrid": true,
+      "gridcolor": "lightgray",
+      "showline": true,
+      "linewidth": 1,
+      "linecolor": "black",
+      "mirror": true
     },
     "yaxis2": {
       "anchor": "x",
@@ -2852,7 +2864,13 @@
       "range": [
         -11789.118400000001,
         130583.3744
-      ]
+      ],
+      "showgrid": true,
+      "gridcolor": "lightgray",
+      "showline": true,
+      "linewidth": 1,
+      "linecolor": "black",
+      "mirror": true
     },
     "updatemenus": [
       {
