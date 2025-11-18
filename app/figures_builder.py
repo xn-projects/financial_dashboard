@@ -514,14 +514,14 @@ def create_fig_4(df: pd.DataFrame, company_colors: dict) -> go.Figure:
         title=dict(
             text="Debt vs Liquid Assets: Median Across Quarters",
             x=0.5,
-            y=0.98,
+            y=0.99,
             xanchor="center",
             yanchor="top",
             font=dict(size=20)
         ),
         xaxis_title="Current Cash Position (CCP)",
         yaxis_title="Long-Term Debt (LTD)",
-        width=1100, height=850,
+        width=1100, height=650,
         plot_bgcolor="white",
         showlegend=True,
         legend_title="Companies (click to show/hide)",
@@ -532,13 +532,14 @@ def create_fig_4(df: pd.DataFrame, company_colors: dict) -> go.Figure:
             pad={"r": 10, "t": 10},
             showactive=True,
             x=0.35, xanchor="left",
-            y=1.12, yanchor="top"
+            y=1.09, yanchor="top"
         )],
         margin=dict(t=180)
     )
 
     fig = add_annotation(
         fig,
+        y=1.07,
         "This visualization compares companies <b>Current Cash Position (CCP)</b> "
         "to their <b>Long-Term Debt (LTD)</b> "
         "with the option to view either median values across all periods or any selected reporting period.<br>"
