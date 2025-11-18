@@ -551,16 +551,20 @@ def create_fig_4(df: pd.DataFrame, company_colors: dict) -> go.Figure:
         quarter_buttons.append(dict(
             label=q_label,
             method="update",
-            args=[{"visible": visible},
-                  {"title": {"text": f"Debt vs Liquid Assets: {q_label}"}}]
+            args=[
+                {"visible": visible},
+                {"title.text": f"Debt vs Liquid Assets: {q_label}"}
+            ]
         ))
 
     quarter_buttons.insert(0, dict(
         label="All Quarters (Median)",
         method="update",
-        args=[{"visible": [("Global Median" in tr.name) or ("- Median" in tr.name)
-                            for tr in fig.data]},
-             {"title": {"text": "Debt vs Liquid Assets: Median Across Quarters"}}]
+        args=[
+            {"visible": [("Global Median" in tr.name) or ("- Median" in tr.name)
+                        for tr in fig.data]},
+            {"title.text": "Debt vs Liquid Assets: Median Across Quarters"}
+        ]
     ))
 
     fig.update_layout(
