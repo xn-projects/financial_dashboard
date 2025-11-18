@@ -567,11 +567,11 @@ def create_fig_4(df: pd.DataFrame, company_colors: dict) -> go.Figure:
             "This allows analysis of both the current financial state and longer-term strategic trends."
         ),
         position="top",
-        y=1.03,
+        y=1.09,
         font=dict(size=14)
     )
     
-    fig.update_layout(margin=dict(t=280))
+    fig.update_layout(margin=dict(t=200))
 
     fig.update_xaxes(showline=True, linewidth=1, linecolor="black", mirror=True,
                      showgrid=True, gridcolor="lightgray")
