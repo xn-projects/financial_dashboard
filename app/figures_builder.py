@@ -533,7 +533,8 @@ def create_fig_4(df: pd.DataFrame, company_colors: dict) -> go.Figure:
         label="All Quarters (Median)",
         method="update",
         args=[{"visible": [("Global Median" in tr.name) or ("- Median" in tr.name)
-                            for tr in fig.data]}]
+                            for tr in fig.data]},
+             {"title_text": "Debt vs Liquid Assets: Median Across Quarters"}]
     ))
 
     fig.update_layout(
@@ -558,7 +559,7 @@ def create_fig_4(df: pd.DataFrame, company_colors: dict) -> go.Figure:
             pad={"r": 10, "t": 10},
             showactive=True,
             x=0.1, xanchor="left",
-            y=1.14, yanchor="top"
+            y=1.13, yanchor="top"
         )],
         margin=dict(t=180)
     )
@@ -567,18 +568,18 @@ def create_fig_4(df: pd.DataFrame, company_colors: dict) -> go.Figure:
         fig,
         text=(
             "This visualization compares companies <b>Current Cash Position (CCP)</b> "
-            "to their <b>Long-Term Debt (LTD)</b> "
-            "with the option to view either median values across all periods or any selected reporting period.<br>"
+            "to their <b>Long-Term Debt (LTD)</b> with the option to view either median<br>"
+            "values across all periods or any selected reporting period.<br>"
             "Bubble size shows the <b>CCP/LTD ratio</b>.<br>"
             "<b>Bottom-right quadrant</b> → stronger liquidity relative to debt "
-            "<b>Top-left quadrant</b> → higher leverage pressure<br> "
+            "<b>Top-left quadrant</b> → higher leverage pressure<br>"
             "By switching between quarters or aggregated time ranges, you can observe how company positions shift over time:<br>"
             "<b>Rightward movement</b> → growing liquid assets "
             "<b>Upward movement</b> → increasing long-term debt<br>"
             "This allows analysis of both the current financial state and longer-term strategic trends."
         ),
         position="top",
-        y=1.06,
+        y=1.09,
         font=dict(size=14),
         width=1300
     )
