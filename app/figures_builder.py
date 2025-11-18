@@ -109,7 +109,7 @@ def create_fig_1(df: pd.DataFrame, company_colors: dict) -> go.Figure:
 
     fig = sp.make_subplots(
         specs=[[{"secondary_y": True}]],
-        figure=go.Figure(layout=dict(width=1100, height=600))
+        figure=go.Figure(layout=dict(width=1100, height=650))
     )
 
     companies = df['Symbol'].unique()
@@ -182,7 +182,7 @@ def create_fig_1(df: pd.DataFrame, company_colors: dict) -> go.Figure:
                 showactive=True,
                 x=0.1,
                 xanchor="left",
-                y=1.11,
+                y=1.12,
                 yanchor="top"
             )
         ]
@@ -191,7 +191,7 @@ def create_fig_1(df: pd.DataFrame, company_colors: dict) -> go.Figure:
     fig.update_layout(
         title="CCP and LTD by Company",
         title_x=0.5,
-        title_y=0.98,
+        title_y=0.99,
         xaxis=dict(
             title="Quarter",
             tickangle=-45,
@@ -200,6 +200,25 @@ def create_fig_1(df: pd.DataFrame, company_colors: dict) -> go.Figure:
         showlegend=True,
         legend_title="Companies (click to show/hide)"
     )
+
+    fig = add_annotation(
+        fig,
+        text=(
+            "This chart displays the quarterly evolution of <b>Current Cash Position (CCP)</b> "
+            "and <b>Long-Term Debt (LTD)</b> for each company over the selected period.<br>"
+            "CCP (solid lines) reflect changes in companies’ cash reserves, "
+            "while LTD (dashed lines) shows long-term debt levels over time.<br>"
+            "A widening gap between the two signals stronger liquidity, whereas narrowing or crossing lines may indicate "
+            "increasing leverage pressure.<br>"
+            "Use the dropdown to switch between CCP, LTD, or combined trends."
+        ),
+        position="top",
+        y=1.07,
+        font=dict(size=14),
+        width=1300
+    )
+    
+    fig.update_layout(margin=dict(t=210))
 
     fig.update_yaxes(title="USD (Millions)", range=y_range, secondary_y=False)
     fig.update_yaxes(range=y_range, secondary_y=True)
@@ -605,12 +624,12 @@ def create_fig_4(df: pd.DataFrame, company_colors: dict) -> go.Figure:
             "Use the dropdown to switch between individual quarters or median values."
         ),
         position="top",
-        y=1.09,
+        y=1.07,
         font=dict(size=14),
         width=1300
     )
     
-    fig.update_layout(margin=dict(t=220))
+    fig.update_layout(margin=dict(t=210))
 
     fig.update_xaxes(showline=True, linewidth=1, linecolor="black", mirror=True,
                      showgrid=True, gridcolor="lightgray")
