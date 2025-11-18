@@ -526,7 +526,7 @@ def create_fig_4(df: pd.DataFrame, company_colors: dict) -> go.Figure:
             label=q_label,
             method="update",
             args=[{"visible": visible},
-                  {"title": f"Debt vs Liquid Assets: {q_label}"}]
+                  {"title_text": f"Debt vs Liquid Assets: {q_label}"}]
         ))
 
     quarter_buttons.insert(0, dict(
