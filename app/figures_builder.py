@@ -167,6 +167,7 @@ def create_fig_1(df: pd.DataFrame, company_colors: dict) -> go.Figure:
     fig.update_layout(
         title="CCP and LTD by Company",
         title_x=0.5,
+        title_y=0.98,
         xaxis=dict(
             title="Quarter",
             tickangle=-45,
@@ -252,10 +253,11 @@ def create_fig_2(df: pd.DataFrame, company_colors: dict) -> go.Figure:
     fig.update_layout(
         title="CCP/LTD Ratio by Companies",
         title_x=0.5,
+        title_y=0.98,
         xaxis_title="Quarter",
         yaxis_title="CCP/LTD Ratio",
         plot_bgcolor="white",
-        width=1000,
+        width=1100,
         height=600,
         showlegend=True,
         legend_title="Companies (click to show/hide)"
@@ -320,6 +322,7 @@ def create_fig_3(df: pd.DataFrame) -> go.Figure:
     fig.update_layout(
         title="Financial Resilience: CCP/LTD Ratio Heatmap",
         title_x=0.5,
+        title_y=0.98,
         xaxis_title="Quarter",
         yaxis=dict(
             autorange="reversed",
@@ -334,7 +337,7 @@ def create_fig_3(df: pd.DataFrame) -> go.Figure:
         ),
         margin=dict(l=180, r=40, t=80, b=60),
         plot_bgcolor="white",
-        width=1000,
+        width=1100,
         height=600,
     )
 
@@ -518,7 +521,7 @@ def create_fig_4(df: pd.DataFrame, company_colors: dict) -> go.Figure:
         ),
         xaxis_title="Current Cash Position (CCP)",
         yaxis_title="Long-Term Debt (LTD)",
-        width=1000, height=650,
+        width=1100, height=600,
         plot_bgcolor="white",
         showlegend=True,
         legend_title="Companies (click to show/hide)",
