@@ -70,6 +70,24 @@ dash_app = Dash(__name__, server=flask_app, url_base_pathname="/dashboard/")
 
 dash_app.layout = html.Div([
     html.H1("Financial Dashboard", style={"textAlign": "center", "marginBottom": "20px"}),
+    html.Div(
+        [
+            html.P(
+                "This project explores how companies balance liquidity and long-term debt "
+                "to evaluate their financial resilience. "
+                "The goal is to provide clear, interactive insights into how well "
+                "different companies can cover debt obligations with liquid assets.",
+                style={
+                    "textAlign": "center",
+                    "maxWidth": "900px",
+                    "margin": "0 auto",
+                    "fontSize": "14px",
+                    "color": "#333"
+                }
+            )
+        ],
+        style={"marginBottom": "25px"}
+    ),
     dcc.Tabs(id="tabs", value="tab1", children=[
         dcc.Tab(label="CCP & LTD by Company", value="tab1"),
         dcc.Tab(label="Debt Coverage Ratio", value="tab2"),
