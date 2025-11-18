@@ -521,7 +521,7 @@ def create_fig_4(df: pd.DataFrame, company_colors: dict) -> go.Figure:
         ),
         xaxis_title="Current Cash Position (CCP)",
         yaxis_title="Long-Term Debt (LTD)",
-        width=1100, height=600,
+        width=1100, height=800,
         plot_bgcolor="white",
         showlegend=True,
         legend_title="Companies (click to show/hide)",
