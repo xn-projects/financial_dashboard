@@ -558,7 +558,7 @@ def create_fig_4(df: pd.DataFrame, company_colors: dict) -> go.Figure:
             pad={"r": 10, "t": 10},
             showactive=True,
             x=0.1, xanchor="left",
-            y=1.12, yanchor="top"
+            y=1.14, yanchor="top"
         )],
         margin=dict(t=180)
     )
@@ -578,9 +578,9 @@ def create_fig_4(df: pd.DataFrame, company_colors: dict) -> go.Figure:
             "This allows analysis of both the current financial state and longer-term strategic trends."
         ),
         position="top",
-        y=1.08,
+        y=1.06,
         font=dict(size=14),
-        width=1000
+        width=1300
     )
     
     fig.update_layout(margin=dict(t=200))
