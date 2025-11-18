@@ -603,7 +603,7 @@ def create_fig_4(df: pd.DataFrame, company_colors: dict) -> go.Figure:
             "<b>• Bottom-right = stronger liquidity</b><br>"
             "<b>• Top-left = higher leverage pressure</b><br><br>"
             "Use the dropdown to switch between individual quarters or median values."
-        )
+        ),
         position="top",
         y=1.09,
         font=dict(size=14),
