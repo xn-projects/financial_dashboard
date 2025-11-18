@@ -81,7 +81,7 @@ dash_app.layout = html.Div([
                     "textAlign": "center",
                     "maxWidth": "900px",
                     "margin": "0 auto",
-                    "fontSize": "14px",
+                    "fontSize": "16px",
                     "color": "#333"
                 }
             )
