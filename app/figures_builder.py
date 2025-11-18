@@ -596,12 +596,12 @@ def create_fig_4(df: pd.DataFrame, company_colors: dict) -> go.Figure:
     fig = add_annotation(
         fig,
         text=(
-            "This chart compares each company’s cash position (CCP) with its long-term debt (LTD).<br><br>"
+            "This chart compares each company’s cash position (CCP) with its long-term debt (LTD).<br>"
             "<b>• Bubble size = CCP/LTD ratio</b> (larger → stronger liquidity).<br>"
             "<b>• Blue dashed line = median LTD</b><br>"
             "<b>• Red dashed line = median CCP</b><br>"
             "<b>• Bottom-right = stronger liquidity</b><br>"
-            "<b>• Top-left = higher leverage pressure</b><br><br>"
+            "<b>• Top-left = higher leverage pressure</b><br>"
             "Use the dropdown to switch between individual quarters or median values."
         ),
         position="top",
@@ -610,7 +610,7 @@ def create_fig_4(df: pd.DataFrame, company_colors: dict) -> go.Figure:
         width=1300
     )
     
-    fig.update_layout(margin=dict(t=200))
+    fig.update_layout(margin=dict(t=220))
 
     fig.update_xaxes(showline=True, linewidth=1, linecolor="black", mirror=True,
                      showgrid=True, gridcolor="lightgray")
