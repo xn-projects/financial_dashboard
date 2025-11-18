@@ -98,7 +98,10 @@ def add_annotation(
     
 
 def create_fig_1(df: pd.DataFrame, company_colors: dict) -> go.Figure:
-    
+
+    quarters_sorted = sorted(df["ReportQuarter"].dropna().unique())
+    quarter_labels = pd.to_datetime(quarters_sorted).to_period("Q").strftime("%Y-Q%q")
+
     min_val = min(df['CCP'].min(), df['LTD'].min())
     max_val = max(df['CCP'].max(), df['LTD'].max())
     padding = (max_val - min_val) * 0.1
@@ -201,7 +204,12 @@ def create_fig_1(df: pd.DataFrame, company_colors: dict) -> go.Figure:
 
     fig.update_yaxes(title="USD (Millions)", range=y_range, secondary_y=False)
     fig.update_yaxes(range=y_range, secondary_y=True)
+
     fig.update_xaxes(
+        tickmode='array',
+        tickvals=quarters_sorted,
+        ticktext=quarter_labels,
+        tickangle=-45,
         showgrid=True,
         gridcolor="lightgray",
         showline=True,
@@ -209,6 +217,7 @@ def create_fig_1(df: pd.DataFrame, company_colors: dict) -> go.Figure:
         linecolor="black",
         mirror=True
     )
+    
     fig.update_yaxes(
         showgrid=True,
         gridcolor="lightgray",
@@ -242,6 +251,9 @@ def create_fig_2(df: pd.DataFrame, company_colors: dict) -> go.Figure:
 
     fig = go.Figure()
     companies = data["CompanyName"].unique()
+
+    quarters_sorted = sorted(df["ReportQuarter"].dropna().unique())
+    quarter_labels = pd.to_datetime(quarters_sorted).to_period("Q").strftime("%Y-Q%q")
 
     for company in companies:
         company_data = data[data["CompanyName"] == company].sort_values("QuarterStart")
@@ -283,13 +295,27 @@ def create_fig_2(df: pd.DataFrame, company_colors: dict) -> go.Figure:
         showlegend=True,
         legend_title="Companies (click to show/hide)"
     )
+    
     fig.update_xaxes(
-        showgrid=True, gridcolor="lightgray",
-        showline=True, linewidth=1, linecolor="black", mirror=True
+        tickmode='array',
+        tickvals=quarters_sorted,
+        ticktext=quarter_labels,
+        tickangle=-45,
+        showgrid=True,
+        gridcolor="lightgray",
+        showline=True,
+        linewidth=1,
+        linecolor="black",
+        mirror=True
     )
+    
     fig.update_yaxes(
-        showgrid=True, gridcolor="lightgray",
-        showline=True, linewidth=1, linecolor="black", mirror=True,
+        showgrid=True,
+        gridcolor="lightgray",
+        showline=True,
+        linewidth=1,
+        linecolor="black",
+        mirror=True,
         rangemode="tozero"
     )
     
