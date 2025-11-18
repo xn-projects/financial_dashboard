@@ -40,20 +40,35 @@ The color gradient helps quickly identify periods of financial stress or stabili
 
 ### 4. Debt vs Liquid Assets (all)
 
-This visualization compares companies’ liquidity (CCP) and long-term debt (LTD), with the option to view either the most recent quarter or any selected reporting period.
+**How to Interpret This Chart**
 
-It helps evaluate balance sheet positioning:
+This visualization compares each company’s **Current Cash Position (CCP)** with its **Long-Term Debt (LTD)** to evaluate both **liquidity strength** and **leverage risk**.
 
-- **Bottom-right quadrant** → stronger liquidity relative to debt  
-- **Top-left quadrant** → higher leverage pressure  
+**How to Read the Chart**
+- **X-axis (CCP):** Available cash and liquid assets.  
+- **Y-axis (LTD):** Long-term borrowing obligations.  
+- **Bubble size:** **CCP/LTD ratio** — larger bubbles indicate stronger liquidity relative to debt.  
+- **Labels:** Company tickers for quick identification.
 
-By switching between quarters or aggregated time ranges, you can observe how company positions shift over time:
+**Quadrant Interpretation**
 
-- **Rightward movement** → growing liquid assets
-- **Upward movement** → increasing long-term debt
+#### **➡ Bottom-right quadrant – Most favorable**
+High cash + low debt → **strong liquidity, low leverage risk.**
 
-This allows analysis of both the current financial state and longer-term strategic trends.
+#### **⬆ Top-left quadrant – Least favorable**
+Low cash + high debt → **potential financial stress or tightening liquidity.**
 
+#### **⬇ Bottom-left quadrant**
+Low cash + low debt → smaller or conservative companies, typically **lower structural risk**.
+
+#### **⬆➡ Top-right quadrant**
+High cash + high debt → active financing strategies; **higher reliance on debt cycles**.
+
+**Reference Lines**
+- **Blue dashed horizontal line:** Median **LTD** across all companies — shows which firms carry above/below typical debt levels.  
+- **Red dashed vertical line:** Median **CCP** — distinguishes companies with stronger vs weaker liquidity relative to peers.
+
+This structure allows quick evaluation of each company's financial resilience and positioning relative to industry medians.
 
 ![Debt vs Liquid Assets (all)](images/Debt%20vs%20Liquid%20Assets%20\(all\).png)
 
