@@ -57,7 +57,8 @@ def add_annotation(
     text: str,
     position: str = "top",
     y: float = None,
-    font: dict = None
+    font: dict = None,
+    width: int = None,
 ) -> go.Figure:
     """
     Adds a persistent description text block to the figure.
@@ -87,6 +88,9 @@ def add_annotation(
         xanchor="left",
         yanchor=yanchor,
         font=font)
+
+    if width is not None:
+        annotation_args["width"] = width
     
     return fig
     
@@ -573,7 +577,8 @@ def create_fig_4(df: pd.DataFrame, company_colors: dict) -> go.Figure:
         ),
         position="top",
         y=1.08,
-        font=dict(size=14)
+        font=dict(size=14),
+        width=1000
     )
     
     fig.update_layout(margin=dict(t=200))
