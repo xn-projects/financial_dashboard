@@ -539,13 +539,19 @@ def create_fig_4(df: pd.DataFrame, company_colors: dict) -> go.Figure:
 
     fig = add_annotation(
         fig,
-        "This chart compares companies’ <b>Current Cash Position (CCP)</b> "
-        "to their <b>Long-Term Debt (LTD)</b>.<br>"
+        "This visualization compares companies’ <b>Current Cash Position (CCP)</b> "
+        "to their <b>Long-Term Debt (LTD)</b> "
+        "with the option to view either median values across all periods or any selected reporting period.<br>"
         "Bubble size shows the <b>CCP/LTD ratio</b>.<br>"
-        "Use the filter below to switch between quarters or view median values across all periods.",
+        "</b>Bottom-right quadrant</b> → stronger liquidity relative to debt "
+        "</b>Top-left quadrant</b> → higher leverage pressure<br> "
+        "By switching between quarters or aggregated time ranges, you can observe how company positions shift over time:<br>"
+        "</b>Rightward movement</b> → growing liquid assets "
+        "</b>Upward movement</b> → increasing long-term debt<br>"
+        "This allows analysis of both the current financial state and longer-term strategic trends.",
         position="top"
     )
-
+    
     fig.update_layout(margin=dict(t=160))
 
     fig.update_xaxes(showline=True, linewidth=1, linecolor="black", mirror=True,
