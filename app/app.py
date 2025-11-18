@@ -42,7 +42,7 @@ print(f"Loaded {len(result_df)} records from {'MongoDB' if USE_MONGO else 'JSON'
 
 company_colors = generate_company_colors(result_df)
 
-fig1_1 = create_fig_1(result_df, company_colors)
+fig1 = create_fig_1(result_df, company_colors)
 fig2 = create_fig_2(result_df, company_colors)
 fig3 = create_fig_3(result_df)
 fig4 = create_fig_4(result_df, company_colors)
@@ -81,7 +81,7 @@ dash_app.layout = html.Div([
 
 @dash_app.callback(Output("tabs-content", "children"), Input("tabs", "value"))
 def render_tab(tab):
-    if tab == "tab1": return html.Div([dcc.Graph(figure=fig1_1)])
+    if tab == "tab1": return html.Div([dcc.Graph(figure=fig1)])
     elif tab == "tab2": return html.Div([dcc.Graph(figure=fig2)])
     elif tab == "tab3": return html.Div([dcc.Graph(figure=fig3)])
     elif tab == "tab4": return html.Div([dcc.Graph(figure=fig4)])
