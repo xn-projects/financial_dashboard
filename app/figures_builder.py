@@ -52,26 +52,41 @@ def generate_company_colors(df):
     return company_colors
 
 
-def add_annotation(fig: go.Figure, text: str, position: str = "top") -> go.Figure:
+def add_annotation(
+    fig: go.Figure,
+    text: str,
+    position: str = "top",
+    y: float = None,
+    font: dict = None
+) -> go.Figure:
     """
     Adds a persistent description text block to the figure.
     Position can be 'top' or 'bottom'.
     """
-    if position == "top":
-        y = 1.12
-        yanchor = "bottom"
+    if font is None:
+        font = dict(size=12, color="gray")
+
+    if y is None:
+        if position == "top":
+            y = 1.10
+            yanchor = "bottom"
+        else:
+            y = -0.20
+            yanchor = "top"
     else:
-        y = -0.20
-        yanchor = "top"
+        yanchor = "bottom" if position == "top" else "top"
 
     fig.add_annotation(
         text=text,
         align="left",
         showarrow=False,
-        xref="paper", yref="paper",
-        x=0, y=y,
-        xanchor="left", yanchor=yanchor,
-        font=dict(size=12, color="gray")
+        xref="paper",
+        yref="paper",
+        x=0,
+        y=y,
+        xanchor="left",
+        yanchor=yanchor,
+        font=font)
     )
     return fig
     
