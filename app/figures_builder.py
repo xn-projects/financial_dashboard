@@ -87,7 +87,7 @@ def add_annotation(
         xanchor="left",
         yanchor=yanchor,
         font=font)
-    )
+    
     return fig
     
 
