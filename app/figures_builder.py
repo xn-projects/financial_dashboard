@@ -265,10 +265,10 @@ def create_fig_3(df: pd.DataFrame) -> go.Figure:
     quarter_labels = pd.to_datetime(quarters_sorted).to_period("Q").strftime("%Y-Q%q")
 
     colorscale = [
-        [0.0, "#E15759"],
-        [0.2, "#FFD700"],
-        [0.5, "#4E79A7"], 
-        [1.0, "#59A14F"]
+        [0.0, "#F28E8C"],
+        [0.2, "#F7C600"],
+        [0.5, "#B9DCD2"],
+        [1.0, "#7FA6A3"]
     ]
 
     pivot_padded = np.hstack([np.full((pivot.shape[0], 1), np.nan), pivot.values])
