@@ -99,7 +99,7 @@ def add_annotation(
 
 def create_fig_1(df: pd.DataFrame, company_colors: dict) -> go.Figure:
 
-    quarters_sorted = sorted(df["ReportQuarter"].dropna().unique())
+    quarters_sorted = sorted(df["QuarterStart"].dropna().unique())
     quarter_labels = pd.to_datetime(quarters_sorted).to_period("Q").strftime("%Y-Q%q")
 
     min_val = min(df['CCP'].min(), df['LTD'].min())
@@ -195,7 +195,6 @@ def create_fig_1(df: pd.DataFrame, company_colors: dict) -> go.Figure:
         xaxis=dict(
             title="Quarter",
             tickangle=-45,
-            tickmode='array',
         ),
         plot_bgcolor="white",
         showlegend=True,
@@ -252,7 +251,7 @@ def create_fig_2(df: pd.DataFrame, company_colors: dict) -> go.Figure:
     fig = go.Figure()
     companies = data["CompanyName"].unique()
 
-    quarters_sorted = sorted(df["ReportQuarter"].dropna().unique())
+    quarters_sorted = sorted(data["QuarterStart"].dropna().unique())
     quarter_labels = pd.to_datetime(quarters_sorted).to_period("Q").strftime("%Y-Q%q")
 
     for company in companies:
