@@ -85,7 +85,7 @@ def create_fig_1(df: pd.DataFrame, company_colors: dict) -> go.Figure:
 
     fig = sp.make_subplots(
         specs=[[{"secondary_y": True}]],
-        figure=go.Figure(layout=dict(width=1200, height=600))
+        figure=go.Figure(layout=dict(width=1100, height=600))
     )
 
     companies = df['Symbol'].unique()
@@ -133,7 +133,7 @@ def create_fig_1(df: pd.DataFrame, company_colors: dict) -> go.Figure:
                 line=dict(color=color, width=2, dash='dash'),
                 hovertext=hovertext_ltd,
                 hovertemplate="%{hovertext}<extra></extra>",
-                showlegend=False
+                showlegend=True
             ),
             secondary_y=True
         )
@@ -145,10 +145,10 @@ def create_fig_1(df: pd.DataFrame, company_colors: dict) -> go.Figure:
                 buttons=[
                     dict(label="CCP",
                          method="update",
-                         args=[{"visible": [True]*len(companies) + ["legendonly"]*len(companies)}, {}]),
+                         args=[{"visible": [True]*len(companies) + [False]*len(companies)}, {}]),
                     dict(label="LTD",
                          method="update",
-                         args=[{"visible": ["legendonly"]*len(companies) + [True]*len(companies)}, {}]),
+                         args=[{"visible": [False]*len(companies) + [True]*len(companies)}, {}]),
                     dict(label="CCP & LTD",
                          method="update",
                          args=[{"visible": [True]*(2*len(companies))}, {}])
@@ -167,16 +167,46 @@ def create_fig_1(df: pd.DataFrame, company_colors: dict) -> go.Figure:
     fig.update_layout(
         title="CCP and LTD by Company",
         title_x=0.5,
+        xaxis=dict(
+            title="Quarter",
+            tickangle=-45,
+            tickmode='array',
+            tickvals=list(unique_quarters),
+            ticktext=quarter_labels
+        ),
         plot_bgcolor="white",
         showlegend=True,
         legend_title="Companies (click to show/hide)"
     )
 
-    fig.update_yaxes(title="Millions, $", range=y_range, secondary_y=False)
+    fig.update_yaxes(title="USD (Millions)", range=y_range, secondary_y=False)
     fig.update_yaxes(range=y_range, secondary_y=True)
-
-    fig.update_xaxes(showgrid=True, gridcolor="lightgray", linecolor="black", linewidth=1, mirror=True)
-    fig.update_yaxes(showgrid=True, gridcolor="lightgray", linecolor="black", linewidth=1, mirror=True)
+    fig.update_xaxes(
+        showgrid=True,
+        gridcolor="lightgray",
+        showline=True,
+        linewidth=1,
+        linecolor="black",
+        mirror=True
+    )
+    fig.update_yaxes(
+        showgrid=True,
+        gridcolor="lightgray",
+        showline=True,
+        linewidth=1,
+        linecolor="black",
+        mirror=True,
+        secondary_y=False
+    )
+    fig.update_yaxes(
+        showgrid=True,
+        gridcolor="lightgray",
+        showline=True,
+        linewidth=1,
+        linecolor="black",
+        mirror=True,
+        secondary_y=True
+    )
 
     return fig
 
