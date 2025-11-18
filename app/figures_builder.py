@@ -173,7 +173,7 @@ def create_fig_1(df: pd.DataFrame, company_colors: dict) -> go.Figure:
                 showactive=True,
                 x=0.1,
                 xanchor="left",
-                y=1.15,
+                y=1.11,
                 yanchor="top"
             )
         ]
@@ -567,7 +567,7 @@ def create_fig_4(df: pd.DataFrame, company_colors: dict) -> go.Figure:
             "This allows analysis of both the current financial state and longer-term strategic trends."
         ),
         position="top",
-        y=1.09,
+        y=1.08,
         font=dict(size=14)
     )
     
