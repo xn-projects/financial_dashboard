@@ -329,7 +329,12 @@ def create_fig_3(df: pd.DataFrame) -> go.Figure:
             zmax=np.nanmax(pivot.values),
             xgap=2,
             ygap=3,
-            colorbar=dict(title="CCP/LTD Ratio"),
+            colorbar=dict(
+                thickness=12,
+                len=0.75,
+                x=1.05,
+                title_side="right"
+            ),
             hovertemplate="Company: %{y}<br>Quarter: %{x}<br>CCP/LTD: %{z:.2f}<extra></extra>",
         )
     )
