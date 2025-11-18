@@ -77,7 +77,7 @@ def add_annotation(
     else:
         yanchor = "bottom" if position == "top" else "top"
 
-    fig.add_annotation(
+    annotation_args = dict(
         text=text,
         align="left",
         showarrow=False,
