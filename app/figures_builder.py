@@ -559,7 +559,7 @@ def create_fig_4(df: pd.DataFrame, company_colors: dict) -> go.Figure:
             pad={"r": 10, "t": 10},
             showactive=True,
             x=0.1, xanchor="left",
-            y=1.13, yanchor="top"
+            y=1.12, yanchor="top"
         )],
         margin=dict(t=180)
     )
