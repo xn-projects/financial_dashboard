@@ -91,6 +91,8 @@ def add_annotation(
 
     if width is not None:
         annotation_args["width"] = width
+        
+    fig.add_annotation(**annotation_args)
     
     return fig
     
