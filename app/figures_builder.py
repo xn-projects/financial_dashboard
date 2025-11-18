@@ -521,7 +521,7 @@ def create_fig_4(df: pd.DataFrame, company_colors: dict) -> go.Figure:
         ),
         xaxis_title="Current Cash Position (CCP)",
         yaxis_title="Long-Term Debt (LTD)",
-        width=1100, height=800,
+        width=1100, height=850,
         plot_bgcolor="white",
         showlegend=True,
         legend_title="Companies (click to show/hide)",
@@ -539,17 +539,18 @@ def create_fig_4(df: pd.DataFrame, company_colors: dict) -> go.Figure:
 
     fig = add_annotation(
         fig,
-        "This visualization compares companies’ <b>Current Cash Position (CCP)</b> "
+        "This visualization compares companies <b>Current Cash Position (CCP)</b> "
         "to their <b>Long-Term Debt (LTD)</b> "
         "with the option to view either median values across all periods or any selected reporting period.<br>"
         "Bubble size shows the <b>CCP/LTD ratio</b>.<br>"
-        "</b>Bottom-right quadrant</b> → stronger liquidity relative to debt "
-        "</b>Top-left quadrant</b> → higher leverage pressure<br> "
+        "<b>Bottom-right quadrant</b> → stronger liquidity relative to debt "
+        "<b>Top-left quadrant</b> → higher leverage pressure<br> "
         "By switching between quarters or aggregated time ranges, you can observe how company positions shift over time:<br>"
-        "</b>Rightward movement</b> → growing liquid assets "
-        "</b>Upward movement</b> → increasing long-term debt<br>"
+        "<b>Rightward movement</b> → growing liquid assets "
+        "<b>Upward movement</b> → increasing long-term debt<br>"
         "This allows analysis of both the current financial state and longer-term strategic trends.",
-        position="top"
+        position="top",
+        font=dict(size=14)
     )
     
     fig.update_layout(margin=dict(t=160))
