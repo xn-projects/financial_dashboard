@@ -536,7 +536,7 @@ def create_fig_4(df: pd.DataFrame, company_colors: dict) -> go.Figure:
         ),
         xaxis_title="Current Cash Position (CCP)",
         yaxis_title="Long-Term Debt (LTD)",
-        width=1100, height=650,
+        width=1100, height=700,
         plot_bgcolor="white",
         showlegend=True,
         legend_title="Companies (click to show/hide)",
@@ -546,8 +546,8 @@ def create_fig_4(df: pd.DataFrame, company_colors: dict) -> go.Figure:
             direction="down",
             pad={"r": 10, "t": 10},
             showactive=True,
-            x=0.35, xanchor="left",
-            y=1.09, yanchor="top"
+            x=0.1, xanchor="left",
+            y=1.11, yanchor="top"
         )],
         margin=dict(t=180)
     )
