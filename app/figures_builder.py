@@ -171,8 +171,6 @@ def create_fig_1(df: pd.DataFrame, company_colors: dict) -> go.Figure:
             title="Quarter",
             tickangle=-45,
             tickmode='array',
-            tickvals=list(unique_quarters),
-            ticktext=quarter_labels
         ),
         plot_bgcolor="white",
         showlegend=True,
