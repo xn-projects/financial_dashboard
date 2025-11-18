@@ -551,7 +551,7 @@ def create_fig_4(df: pd.DataFrame, company_colors: dict) -> go.Figure:
         width=1100, height=700,
         plot_bgcolor="white",
         showlegend=True,
-        legend_title="Companies (click to show/hide)",
+        legend_title="Companies (click to show/hide)<br>",
         updatemenus=[dict(
             buttons=quarter_buttons,
             active=0,
