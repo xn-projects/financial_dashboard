@@ -109,7 +109,7 @@ def create_fig_1(df: pd.DataFrame, company_colors: dict) -> go.Figure:
 
     fig = sp.make_subplots(
         specs=[[{"secondary_y": True}]],
-        figure=go.Figure(layout=dict(width=1100, height=650))
+        figure=go.Figure(layout=dict(width=1100, height=700))
     )
 
     companies = df['Symbol'].unique()
@@ -198,7 +198,7 @@ def create_fig_1(df: pd.DataFrame, company_colors: dict) -> go.Figure:
         ),
         plot_bgcolor="white",
         showlegend=True,
-        legend_title="Companies (click to show/hide)"
+        legend_title="Companies (click to show/hide)<br>"
     )
 
     fig = add_annotation(
@@ -213,7 +213,7 @@ def create_fig_1(df: pd.DataFrame, company_colors: dict) -> go.Figure:
             "Use the dropdown to switch between CCP, LTD, or combined trends."
         ),
         position="top",
-        y=1.03,
+        y=1.10,
         font=dict(size=14),
         width=1300
     )
@@ -304,14 +304,14 @@ def create_fig_2(df: pd.DataFrame, company_colors: dict) -> go.Figure:
     fig.update_layout(
         title="CCP/LTD Ratio by Companies",
         title_x=0.5,
-        title_y=0.98,
+        title_y=0.99,
         xaxis_title="Quarter",
         yaxis_title="CCP/LTD Ratio",
         plot_bgcolor="white",
         width=1100,
-        height=600,
+        height=650,
         showlegend=True,
-        legend_title="Companies (click to show/hide)"
+        legend_title="Companies (click to show/hide)<br>"
     )
     
     fig.update_xaxes(
@@ -392,7 +392,7 @@ def create_fig_3(df: pd.DataFrame) -> go.Figure:
     fig.update_layout(
         title="Financial Resilience: CCP/LTD Ratio Heatmap",
         title_x=0.5,
-        title_y=0.98,
+        title_y=0.99,
         xaxis_title="Quarter",
         yaxis=dict(
             autorange="reversed",
@@ -408,7 +408,7 @@ def create_fig_3(df: pd.DataFrame) -> go.Figure:
         margin=dict(l=180, r=40, t=80, b=60),
         plot_bgcolor="white",
         width=1100,
-        height=600,
+        height=650,
     )
 
     return fig
