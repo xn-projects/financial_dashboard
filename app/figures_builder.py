@@ -191,7 +191,7 @@ def create_fig_1(df: pd.DataFrame, company_colors: dict) -> go.Figure:
     fig.update_layout(
         title="CCP and LTD by Company",
         title_x=0.5,
-        title_y=1.00,
+        title_y=0.98,
         xaxis=dict(
             title="Quarter",
             tickangle=-45,
@@ -307,7 +307,7 @@ def create_fig_2(df: pd.DataFrame, company_colors: dict) -> go.Figure:
     fig.update_layout(
         title="CCP/LTD Ratio by Companies",
         title_x=0.5,
-        title_y=1.00,
+        title_y=0.98,
         xaxis_title="Quarter",
         yaxis_title="CCP/LTD Ratio",
         plot_bgcolor="white",
@@ -395,7 +395,7 @@ def create_fig_3(df: pd.DataFrame) -> go.Figure:
     fig.update_layout(
         title="Financial Resilience: CCP/LTD Ratio Heatmap",
         title_x=0.5,
-        title_y=1.00,
+        title_y=0.98,
         xaxis_title="Quarter",
         yaxis=dict(
             autorange="reversed",
@@ -610,7 +610,7 @@ def create_fig_4(df: pd.DataFrame, company_colors: dict) -> go.Figure:
         title=dict(
             text="Debt vs Liquid Assets: Median Across Quarters",
             x=0.5,
-            y=1.00,
+            y=0.98,
             xanchor="center",
             yanchor="top",
             font=dict(size=20)
