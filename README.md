@@ -110,14 +110,12 @@ The dashboard supports:
 │   ├── fig1_CCP_and_LTD_by_Company.json
 │   ├── fig2_Ratio_CCP_LTD_by_Companies.json
 │   ├── fig3_Financial_Resilience_Heatmap.json 
-│   ├── fig4_Debt_vs_Liquid_Assets_Company_Segments.json
-│   └── fig5_Debt_vs_Liquid_Assets.json
+│   └── fig4_Debt_vs_Liquid_Assets.json
 │
 ├── 📁 images/
 │   ├── CCP & LTD by Company.png
 │   ├── Debt Coverage Ratio.png
 │   ├── Debt vs Liquid Assets (all).png
-│   ├── Debt vs Liquid Assets (lastest).png
 │   └── Financial Resilience Heatmap.png
 │
 ├── 📁 tableau/
