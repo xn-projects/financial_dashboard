@@ -226,7 +226,7 @@ def create_fig_1(df: pd.DataFrame, company_colors: dict) -> go.Figure:
         width=1300
     )
     
-    fig.update_layout(margin=dict(t=200))
+    fig.update_layout(margin=dict(t=190))
 
     fig.update_yaxes(title="USD (Millions)", range=y_range, secondary_y=False)
     fig.update_yaxes(range=y_range, secondary_y=True)
@@ -450,8 +450,8 @@ def create_fig_3(df: pd.DataFrame) -> go.Figure:
         fig,
         text=(
             "This heatmap highlights quarter-by-quarter financial resilience across companies.<br>"
-            "Cooler colors show stronger liquidity (higher CCP/LTD), "
-            "while warmer tones indicate potential stress.<br>"
+            "<b>Cooler colors</b> show stronger liquidity (higher CCP/LTD), "
+            "while <b>warmer tones</b> indicate potential stress.<br>"
             "Use the color pattern to quickly spot improving or weakening balance-sheet strength and compare<br>"
             "stability trends across firms over time."
         ),
@@ -461,7 +461,7 @@ def create_fig_3(df: pd.DataFrame) -> go.Figure:
         width=1300
     )
     
-    fig.update_layout(margin=dict(t=200))
+    fig.update_layout(margin=dict(t=180))
     
     return fig
 
