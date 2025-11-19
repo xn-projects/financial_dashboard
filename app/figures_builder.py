@@ -191,13 +191,16 @@ def create_fig_1(df: pd.DataFrame, company_colors: dict) -> go.Figure:
     fig.update_layout(
         title="CCP and LTD by Company",
         title_x=0.5,
-        title_y=0.99,
+        title_y=1.00,
         xaxis=dict(
             title="Quarter",
             tickangle=-45,
         ),
         plot_bgcolor="white",
         showlegend=True,
+        legend=dict(
+            font=dict(size=11)
+        ),
         legend_title="Companies (click to show/hide)<br>"
     )
 
@@ -218,7 +221,7 @@ def create_fig_1(df: pd.DataFrame, company_colors: dict) -> go.Figure:
         width=1300
     )
     
-    fig.update_layout(margin=dict(t=210))
+    fig.update_layout(margin=dict(t=200))
 
     fig.update_yaxes(title="USD (Millions)", range=y_range, secondary_y=False)
     fig.update_yaxes(range=y_range, secondary_y=True)
@@ -304,7 +307,7 @@ def create_fig_2(df: pd.DataFrame, company_colors: dict) -> go.Figure:
     fig.update_layout(
         title="CCP/LTD Ratio by Companies",
         title_x=0.5,
-        title_y=0.99,
+        title_y=1.00,
         xaxis_title="Quarter",
         yaxis_title="CCP/LTD Ratio",
         plot_bgcolor="white",
@@ -392,7 +395,7 @@ def create_fig_3(df: pd.DataFrame) -> go.Figure:
     fig.update_layout(
         title="Financial Resilience: CCP/LTD Ratio Heatmap",
         title_x=0.5,
-        title_y=0.99,
+        title_y=1.00,
         xaxis_title="Quarter",
         yaxis=dict(
             autorange="reversed",
@@ -589,7 +592,7 @@ def create_fig_4(df: pd.DataFrame, company_colors: dict) -> go.Figure:
         title=dict(
             text="Debt vs Liquid Assets: Median Across Quarters",
             x=0.5,
-            y=0.99,
+            y=1.00,
             xanchor="center",
             yanchor="top",
             font=dict(size=20)
@@ -624,7 +627,7 @@ def create_fig_4(df: pd.DataFrame, company_colors: dict) -> go.Figure:
             "Use the dropdown to switch between individual quarters or median values."
         ),
         position="top",
-        y=1.03,
+        y=1.10,
         font=dict(size=14),
         width=1300
     )
