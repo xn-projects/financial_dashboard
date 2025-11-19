@@ -226,7 +226,7 @@ def create_fig_1(df: pd.DataFrame, company_colors: dict) -> go.Figure:
         width=1300
     )
     
-    fig.update_layout(margin=dict(t=150))
+    fig.update_layout(margin=dict(t=200))
 
     fig.update_yaxes(title="USD (Millions)", range=y_range, secondary_y=False)
     fig.update_yaxes(range=y_range, secondary_y=True)
@@ -322,7 +322,7 @@ def create_fig_2(df: pd.DataFrame, company_colors: dict) -> go.Figure:
         yaxis_title="CCP/LTD Ratio",
         plot_bgcolor="white",
         width=1100,
-        height=700,
+        height=650,
         showlegend=True,
         legend_title="Companies (click to show/hide)<br>"
     )
@@ -342,7 +342,8 @@ def create_fig_2(df: pd.DataFrame, company_colors: dict) -> go.Figure:
         font=dict(size=14),
         width=1300
     )
-    fig.update_layout(margin=dict(t=180))
+    fig.update_layout(margin=dict(t=200))
+    
     fig.update_xaxes(
         tickmode='array',
         tickvals=quarters_sorted,
@@ -442,7 +443,7 @@ def create_fig_3(df: pd.DataFrame) -> go.Figure:
         margin=dict(l=180, r=40, t=80, b=60),
         plot_bgcolor="white",
         width=1100,
-        height=700,
+        height=650,
     )
 
     fig = add_annotation(
@@ -460,7 +461,7 @@ def create_fig_3(df: pd.DataFrame) -> go.Figure:
         width=1300
     )
     
-    fig.update_layout(margin=dict(t=120))
+    fig.update_layout(margin=dict(t=200))
     
     return fig
 
