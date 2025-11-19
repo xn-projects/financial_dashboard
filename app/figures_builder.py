@@ -205,15 +205,15 @@ def create_fig_1(df: pd.DataFrame, company_colors: dict) -> go.Figure:
         fig,
         text=(
             "This chart displays the quarterly evolution of <b>Current Cash Position (CCP)</b> "
-            "and <b>Long-Term Debt (LTD)</b> for each company over the selected period.<br>"
-            "CCP (solid lines) reflect changes in companies’ cash reserves, "
-            "while LTD (dashed lines) shows long-term debt levels over time.<br>"
+            "and <b>Long-Term Debt (LTD)</b> for each company over <br> the selected period.<br>"
+            "<b>CCP (solid lines)</b> reflect changes in companies cash reserves, "
+            "while <b>LTD (dashed lines)</b> shows long-term debt levels over time.<br>"
             "A widening gap between the two signals stronger liquidity, whereas narrowing or crossing lines may indicate "
             "increasing leverage pressure.<br>"
             "Use the dropdown to switch between CCP, LTD, or combined trends."
         ),
         position="top",
-        y=1.07,
+        y=1.03,
         font=dict(size=14),
         width=1300
     )
@@ -624,7 +624,7 @@ def create_fig_4(df: pd.DataFrame, company_colors: dict) -> go.Figure:
             "Use the dropdown to switch between individual quarters or median values."
         ),
         position="top",
-        y=1.07,
+        y=1.03,
         font=dict(size=14),
         width=1300
     )
