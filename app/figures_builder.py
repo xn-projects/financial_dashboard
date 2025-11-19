@@ -204,7 +204,7 @@ def create_fig_1(df: pd.DataFrame, company_colors: dict) -> go.Figure:
         plot_bgcolor="white",
         showlegend=True,
         legend=dict(
-            font=dict(size=11)
+            font=dict(size=10)
         ),
         legend_title="Companies (click to show/hide)<br>"
     )
