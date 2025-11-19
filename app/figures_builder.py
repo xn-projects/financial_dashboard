@@ -133,7 +133,7 @@ def create_fig_1(df: pd.DataFrame, company_colors: dict) -> go.Figure:
                 line=dict(color=color, width=2),
                 hovertext=hovertext_ccp,
                 hovertemplate="%{hovertext}<extra></extra>",
-                showlegend=True
+                showlegend=False
             ),
             secondary_y=False
         )
@@ -157,10 +157,21 @@ def create_fig_1(df: pd.DataFrame, company_colors: dict) -> go.Figure:
                 line=dict(color=color, width=2, dash='dash'),
                 hovertext=hovertext_ltd,
                 hovertemplate="%{hovertext}<extra></extra>",
-                showlegend=True
+                showlegend=False
             ),
             secondary_y=True
         )
+
+    fig.add_trace(
+        go.Scatter(
+            x=[None], y=[None],
+            mode="lines",
+            name=company,
+            legendgroup=company,
+            showlegend=True,
+            line=dict(color=color, width=2)
+        )
+    )
 
     fig.update_layout(
         updatemenus=[
