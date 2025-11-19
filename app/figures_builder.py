@@ -411,10 +411,28 @@ def create_fig_3(df: pd.DataFrame) -> go.Figure:
         margin=dict(l=180, r=40, t=80, b=60),
         plot_bgcolor="white",
         width=1100,
-        height=650,
+        height=700,
     )
 
+    fig = add_annotation(
+        fig,
+        text=(
+            "This heatmap highlights quarter-by-quarter financial resilience across companies.<br>"
+            "Cooler colors show stronger liquidity (higher CCP/LTD), "
+            "while warmer tones indicate potential stress.<br>"
+            "Use the color pattern to quickly spot improving or weakening balance-sheet strength and compare<br>"
+            "stability trends across firms over time."
+        ),
+        position="top",
+        y=1.10,
+        font=dict(size=14),
+        width=1300
+    )
+    
+    fig.update_layout(margin=dict(t=200))
+    
     return fig
+
 
 def create_fig_4(df: pd.DataFrame, company_colors: dict) -> go.Figure:
     """
