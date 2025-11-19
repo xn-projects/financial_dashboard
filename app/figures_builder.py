@@ -189,9 +189,14 @@ def create_fig_1(df: pd.DataFrame, company_colors: dict) -> go.Figure:
     )
 
     fig.update_layout(
-        title="CCP and LTD by Company",
-        title_x=0.5,
-        title_y=0.98,
+        title=dict(
+            text="CCP and LTD by Company",
+            x=0.5,
+            y=0.98,
+            xanchor="center",
+            yanchor="top",
+            font=dict(size=20)
+        ),
         xaxis=dict(
             title="Quarter",
             tickangle=-45,
@@ -221,7 +226,7 @@ def create_fig_1(df: pd.DataFrame, company_colors: dict) -> go.Figure:
         width=1300
     )
     
-    fig.update_layout(margin=dict(t=200))
+    fig.update_layout(margin=dict(t=150))
 
     fig.update_yaxes(title="USD (Millions)", range=y_range, secondary_y=False)
     fig.update_yaxes(range=y_range, secondary_y=True)
@@ -305,18 +310,39 @@ def create_fig_2(df: pd.DataFrame, company_colors: dict) -> go.Figure:
                   fillcolor="#7FA6A3", opacity=0.25, line_width=0)
 
     fig.update_layout(
-        title="CCP/LTD Ratio by Companies",
-        title_x=0.5,
-        title_y=0.98,
+        title=dict(
+            text="CCP/LTD Ratio by Companies",
+            x=0.5,
+            y=0.98,
+            xanchor="center",
+            yanchor="top",
+            font=dict(size=20)
+        ),
         xaxis_title="Quarter",
         yaxis_title="CCP/LTD Ratio",
         plot_bgcolor="white",
         width=1100,
-        height=650,
+        height=700,
         showlegend=True,
         legend_title="Companies (click to show/hide)<br>"
     )
-    
+
+    fig = add_annotation(
+        fig,
+        text=(
+            "CCP/LTD ratio shows how well each company’s cash reserves cover long-term debt.<br>"
+            "Higher ratios indicate stronger liquidity; lower ratios highlight rising leverage risk.<br>"
+            "<b>• Green (Top)</b> — Strong coverage, resilient financial position<br>"
+            "<b>• Yellow (Middle)</b> — Moderate liquidity, worth monitoring<br>"
+            "<b>• Orange (Lower)</b> — Weaker cash coverage, elevated leverage risk<br>"
+            "<b>• Red (Bottom)</b> — Highest vulnerability, insufficient cash relative to debt<br>"
+        ),
+        position="top",
+        y=1.10,
+        font=dict(size=14),
+        width=1300
+    )
+    fig.update_layout(margin=dict(t=180))
     fig.update_xaxes(
         tickmode='array',
         tickvals=quarters_sorted,
@@ -393,9 +419,14 @@ def create_fig_3(df: pd.DataFrame) -> go.Figure:
     )
 
     fig.update_layout(
-        title="Financial Resilience: CCP/LTD Ratio Heatmap",
-        title_x=0.5,
-        title_y=0.98,
+        title=dict(
+            text="Financial Resilience: CCP/LTD Ratio Heatmap",
+            x=0.5,
+            y=0.98,
+            xanchor="center",
+            yanchor="top",
+            font=dict(size=20)
+        ),
         xaxis_title="Quarter",
         yaxis=dict(
             autorange="reversed",
@@ -429,7 +460,7 @@ def create_fig_3(df: pd.DataFrame) -> go.Figure:
         width=1300
     )
     
-    fig.update_layout(margin=dict(t=200))
+    fig.update_layout(margin=dict(t=120))
     
     return fig
 
@@ -649,7 +680,6 @@ def create_fig_4(df: pd.DataFrame, company_colors: dict) -> go.Figure:
         font=dict(size=14),
         width=1300
     )
-    
     fig.update_layout(margin=dict(t=210))
 
     fig.update_xaxes(showline=True, linewidth=1, linecolor="black", mirror=True,
