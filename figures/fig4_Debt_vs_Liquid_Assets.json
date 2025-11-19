@@ -10280,13 +10280,13 @@
       "showgrid": true,
       "gridcolor": "lightgray"
     },
-    "width": 1000,
+    "width": 1100,
     "height": 650,
     "plot_bgcolor": "white",
     "showlegend": true,
     "legend": {
       "title": {
-        "text": "Companies (click to show\u002fhide)"
+        "text": "Companies (click to show\u002fhide)\u003cbr\u003e"
       }
     },
     "updatemenus": [
@@ -17362,9 +17362,9 @@
           "t": 10
         },
         "showactive": true,
-        "x": 0.35,
+        "x": 0.1,
         "xanchor": "left",
-        "y": 1.1,
+        "y": 1.12,
         "yanchor": "top"
       }
     ]

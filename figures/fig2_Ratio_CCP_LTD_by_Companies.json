@@ -33,7 +33,7 @@
         "color": "#1f77b4",
         "size": 6
       },
-      "mode": "lines+markers",
+      "mode": "lines",
       "name": "Apple Inc.",
       "visible": true,
       "x": [
@@ -117,7 +117,7 @@
         "color": "#aec7e8",
         "size": 6
       },
-      "mode": "lines+markers",
+      "mode": "lines",
       "name": "Amgen",
       "visible": true,
       "x": [
@@ -201,7 +201,7 @@
         "color": "#ffbb78",
         "size": 6
       },
-      "mode": "lines+markers",
+      "mode": "lines",
       "name": "Amazon",
       "visible": true,
       "x": [
@@ -285,7 +285,7 @@
         "color": "#98df8a",
         "size": 6
       },
-      "mode": "lines+markers",
+      "mode": "lines",
       "name": "Bath & Body Works, Inc.",
       "visible": true,
       "x": [
@@ -369,7 +369,7 @@
         "color": "#ff9896",
         "size": 6
       },
-      "mode": "lines+markers",
+      "mode": "lines",
       "name": "Bristol Myers Squibb",
       "visible": true,
       "x": [
@@ -453,7 +453,7 @@
         "color": "#c5b0d5",
         "size": 6
       },
-      "mode": "lines+markers",
+      "mode": "lines",
       "name": "Centene Corporation",
       "visible": true,
       "x": [
@@ -537,7 +537,7 @@
         "color": "#8c564b",
         "size": 6
       },
-      "mode": "lines+markers",
+      "mode": "lines",
       "name": "ConocoPhillips",
       "visible": true,
       "x": [
@@ -621,7 +621,7 @@
         "color": "#e377c2",
         "size": 6
       },
-      "mode": "lines+markers",
+      "mode": "lines",
       "name": "Gilead Sciences",
       "visible": true,
       "x": [
@@ -705,7 +705,7 @@
         "color": "#7f7f7f",
         "size": 6
       },
-      "mode": "lines+markers",
+      "mode": "lines",
       "name": "Henry Schein",
       "visible": true,
       "x": [
@@ -789,7 +789,7 @@
         "color": "#bcbd22",
         "size": 6
       },
-      "mode": "lines+markers",
+      "mode": "lines",
       "name": "Coca-Cola Company (The)",
       "visible": true,
       "x": [
@@ -873,7 +873,7 @@
         "color": "#17becf",
         "size": 6
       },
-      "mode": "lines+markers",
+      "mode": "lines",
       "name": "Thermo Fisher Scientific",
       "visible": true,
       "x": [
@@ -957,7 +957,7 @@
         "color": "#9edae5",
         "size": 6
       },
-      "mode": "lines+markers",
+      "mode": "lines",
       "name": "United Parcel Service",
       "visible": true,
       "x": [
@@ -1834,7 +1834,17 @@
       }
     ],
     "title": {
-      "text": "CCP\u002fLTD Ratio by Companies"
+      "text": "CCP\u002fLTD Ratio by Companies",
+      "x": 0.5,
+      "y": 0.98
+    },
+    "legend": {
+      "font": {
+        "size": 11
+      },
+      "title": {
+        "text": "Companies (click to show\u002fhide)\u003cbr\u003e"
+      }
     },
     "xaxis": {
       "title": {
@@ -1887,7 +1897,7 @@
         "2023-Q3",
         "2023-Q4"
       ],
-      "tickangle": 45,
+      "tickangle": -45,
       "showline": true,
       "linewidth": 1,
       "linecolor": "black",
@@ -1908,13 +1918,8 @@
       "rangemode": "tozero"
     },
     "plot_bgcolor": "white",
-    "width": 1000,
-    "height": 600,
-    "showlegend": true,
-    "legend": {
-      "title": {
-        "text": "Companies (click to show\u002fhide)"
-      }
-    }
+    "width": 1100,
+    "height": 650,
+    "showlegend": true
   }
 }

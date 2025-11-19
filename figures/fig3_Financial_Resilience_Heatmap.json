@@ -2,26 +2,29 @@
   "data": [
     {
       "colorbar": {
+        "len": 0.75,
+        "thickness": 12,
         "title": {
-          "text": "CCP\u002fLTD Ratio"
-        }
+          "side": "right"
+        },
+        "x": 1.05
       },
       "colorscale": [
         [
           0.0,
-          "#E15759"
+          "#F28E8C"
         ],
         [
           0.2,
-          "#FFD700"
+          "#F7C600"
         ],
         [
           0.5,
-          "#4E79A7"
+          "#B9DCD2"
         ],
         [
           1.0,
-          "#59A14F"
+          "#7FA6A3"
         ]
       ],
       "hovertemplate": "Company: %{y}\u003cbr\u003eQuarter: %{x}\u003cbr\u003eCCP\u002fLTD: %{z:.2f}\u003cextra\u003e\u003c\u002fextra\u003e",
@@ -1125,6 +1128,11 @@
         }
       }
     },
+    "title": {
+      "text": "Financial Resilience: CCP\u002fLTD Ratio Heatmap",
+      "x": 0.5,
+      "y": 0.98
+    },
     "yaxis": {
       "autorange": "reversed",
       "automargin": true,
@@ -1148,12 +1156,9 @@
       "t": 80,
       "b": 60
     },
-    "title": {
-      "text": "Financial Resilience: CCP\u002fLTD Ratio Heatmap"
-    },
     "plot_bgcolor": "rgba(0,0,0,0)",
     "paper_bgcolor": "rgba(0,0,0,0)",
-    "width": 1000,
-    "height": 600
+    "width": 1100,
+    "height": 650
   }
 }
