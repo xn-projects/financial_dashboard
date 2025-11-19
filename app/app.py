@@ -75,9 +75,8 @@ dash_app.layout = html.Div([
             html.P(
                 [
                     "This project presents a comprehensive examination of corporate liquidity and leverage, ",
-                    html.Br(),
                     "tracking how efficiently companies can cover long-term debt with available cash.",
-                    html.Br(), html.Br(),
+                    html.Br(),
                     "Interactive visualizations highlight structural trends, stress periods, liquidity gaps, ",
                     "and relative positioning across companies – offering an intuitive, data-driven perspective ",
                     "on financial strength and vulnerability across reporting quarters."
