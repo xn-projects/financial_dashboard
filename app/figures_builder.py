@@ -162,7 +162,11 @@ def create_fig_1(df: pd.DataFrame, company_colors: dict) -> go.Figure:
             ),
             secondary_y=True
         )
-
+        
+    for tr in fig.data:
+        if hasattr(tr, "line") and tr.line.dash == "dash":
+            tr.showlegend = False
+        
     fig.update_layout(
         updatemenus=[
             dict(
