@@ -73,10 +73,11 @@ dash_app.layout = html.Div([
     html.Div(
         [
             html.P(
-                "This project explores how companies balance liquidity and long-term debt "
-                "to evaluate their financial resilience. "
-                "The goal is to provide clear, interactive insights into how well "
-                "different companies can cover debt obligations with liquid assets.",
+                "This project presents a comprehensive examination of corporate liquidity and leverage, "
+                "tracking how efficiently companies can cover long-term debt with available cash.<br>"
+                "Interactive visualizations highlight structural trends, stress periods, liquidity gaps, "
+                "and relative positioning across companies - offering an intuitive, data-driven perspective "
+                "on financial strength and vulnerability across reporting quarters.",
                 style={
                     "textAlign": "center",
                     "maxWidth": "900px",
