@@ -333,8 +333,8 @@ def create_fig_2(df: pd.DataFrame, company_colors: dict) -> go.Figure:
             "CCP/LTD ratio shows how well each company’s cash reserves cover long-term debt.<br>"
             "Higher ratios indicate stronger liquidity; lower ratios highlight rising leverage risk.<br>"
             "<b>• Green (Top)</b> — Strong coverage, resilient financial position<br>"
-            "<b>• Yellow (Middle)</b> — Moderate liquidity, worth monitoring<br>"
-            "<b>• Orange (Lower)</b> — Weaker cash coverage, elevated leverage risk<br>"
+            "<b>• Light-green (Middle)</b> — Moderate liquidity, worth monitoring<br>"
+            "<b>• Yellow (Lower)</b> — Weaker cash coverage, elevated leverage risk<br>"
             "<b>• Red (Bottom)</b> — Highest vulnerability, insufficient cash relative to debt<br>"
         ),
         position="top",
