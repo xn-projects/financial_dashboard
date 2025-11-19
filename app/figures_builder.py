@@ -113,6 +113,7 @@ def create_fig_1(df: pd.DataFrame, company_colors: dict) -> go.Figure:
     )
 
     companies = df['Symbol'].unique()
+    n = len(companies)
 
     for company in companies:
         company_data = df[df['Symbol'] == company].sort_values('QuarterStart')
@@ -167,15 +168,39 @@ def create_fig_1(df: pd.DataFrame, company_colors: dict) -> go.Figure:
             dict(
                 active=2,
                 buttons=[
-                    dict(label="CCP",
-                         method="update",
-                         args=[{"visible": [True]*len(companies) + [False]*len(companies)}, {}]),
-                    dict(label="LTD",
-                         method="update",
-                         args=[{"visible": [False]*len(companies) + [True]*len(companies)}, {}]),
-                    dict(label="CCP & LTD",
-                         method="update",
-                         args=[{"visible": [True]*(2*len(companies))}, {}])
+                    dict(
+                        label="CCP",
+                        method="update",
+                        args=[
+                            {
+                                "visible": [True] * n + [False] * n,
+                                "showlegend": [True] * n + [False] * n
+                            },
+                            {}
+                        ]
+                    ),
+                    dict(
+                        label="LTD",
+                        method="update",
+                        args=[
+                            {
+                                "visible": [False] * n + [True] * n,
+                                "showlegend": [False] * n + [True] * n
+                            },
+                            {}
+                        ]
+                    ),
+                    dict(
+                        label="CCP & LTD",
+                        method="update",
+                        args=[
+                            {
+                                "visible": [True] * n + [True] * n,
+                                "showlegend": [True] * n + [False] * n
+                            },
+                            {}
+                        ]
+                    ),
                 ],
                 direction="down",
                 pad={"r": 10, "t": 10},
@@ -204,7 +229,8 @@ def create_fig_1(df: pd.DataFrame, company_colors: dict) -> go.Figure:
         plot_bgcolor="white",
         showlegend=True,
         legend=dict(
-            font=dict(size=10)
+            font=dict(size=10),
+            groupclick="togglegroup"
         ),
         legend_title="Companies (click to show/hide)<br>"
     )
