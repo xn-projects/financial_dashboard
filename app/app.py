@@ -74,12 +74,10 @@ dash_app.layout = html.Div([
         [
             html.P(
                 [
-                    "This dashboard provides an interactive analysis of corporate liquidity and leverage by visualizing how ",
-                    "effectively companies can cover long-term debt with available cash.",
+                    "This dashboard analyzes how companies balance liquidity and long-term leverage over time.",
                     html.Br(),
-                    "The charts highlight structural trends, liquidity gaps, periods of financial stress, ",
-                    "and relative positioning across companies, offering a clear, ",
-                    "data-driven view of financial resilience over time."
+                    "Interactive charts reveal cash strength, debt pressure, structural shifts, ",
+                    "and relative financial resilience across reporting periods."
                 ],
                 style={
                     "textAlign": "center",
