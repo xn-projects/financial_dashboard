@@ -19,14 +19,14 @@ from app.figures_builder import (
 
 load_dotenv()
 
-USE_MONGO = os.getenv('USE_MONGO', 'false').lower() == 'true'
-DATA_PATH = os.getenv('DATA_PATH', os.path.join(os.path.dirname(__file__), '..', "data", "financial_data.json"))
-MONGODB_URI = os.getenv('MONGODB_URI', '')
-DB_NAME = os.getenv('DB_NAME', 'financial')
-COLLECTION = os.getenv('COLLECTION', 'metrics')
+USE_MONGO = os.getenv("USE_MONGO", "false").lower() == "true"
+DATA_PATH = os.getenv("DATA_PATH", os.path.join(os.path.dirname(__file__), "..", "data", "financial_data.json"))
+MONGODB_URI = os.getenv("MONGODB_URI", "")
+DB_NAME = os.getenv("DB_NAME", "financial")
+COLLECTION = os.getenv("COLLECTION", "metrics")
 
 def get_data_from_json():
-    return pd.read_json(DATA_PATH, encoding='utf-8')
+    return pd.read_json(DATA_PATH, encoding="utf-8")
 
 def get_data_from_mongo():
     client = MongoClient(MONGODB_URI)
@@ -74,12 +74,12 @@ dash_app.layout = html.Div([
         [
             html.P(
                 [
-                    "This project presents a comprehensive examination of corporate liquidity and leverage, ",
-                    "tracking how efficiently companies can cover long-term debt with available cash.",
+                    "This dashboard provides an interactive analysis of corporate liquidity and leverage by visualizing how ",
+                    "effectively companies can cover long-term debt with available cash.",
                     html.Br(),
-                    "Interactive visualizations highlight structural trends, stress periods, liquidity gaps, ",
-                    "and relative positioning across companies – offering an intuitive, data-driven perspective ",
-                    "on financial strength and vulnerability across reporting quarters."
+                    "The charts highlight structural trends, liquidity gaps, periods of financial stress, ",
+                    "and relative positioning across companies, offering a clear, ",
+                    "data-driven view of financial resilience over time."
                 ],
                 style={
                     "textAlign": "center",
