@@ -1,8 +1,17 @@
 # Financial Resilience Dashboard 
 
-This project explores how companies balance liquidity and long-term debt to evaluate their financial resilience. The goal is to provide clear, interactive insights into how well different companies can cover debt obligations with liquid assets.
+This project provides an interactive analysis of corporate liquidity and leverage, focusing on how efficiently companies can cover long-term debt using available cash reserves.  
 
-The dashboard was initially prototyped in Tableau for rapid exploration, then rebuilt using Python, Plotly Dash, and FastAPI to support automation, API integration, and scalable deployment.
+The dashboard visualizes key financial relationships through dynamic charts that reveal structural trends, liquidity gaps, stress periods, and relative positioning across companies. It enables users to explore both short-term financial strength and longer-term risk exposure across multiple reporting periods.
+
+The project was initially prototyped in **Tableau** for rapid exploratory analysis and visual validation.  
+It was later fully rebuilt using **Python**, **Plotly Dash**, and **FastAPI** to support:
+- automation,
+- API integration,
+- scalable cloud deployment,
+- and interactive, production-ready analytics.
+
+Together, these technologies provide a flexible and robust framework for data-driven financial risk assessment.
 
 ---
 
