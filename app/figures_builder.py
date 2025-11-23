@@ -40,7 +40,7 @@ def generate_company_colors(df):
     )
 
     n_colors = len(pairs)
-    cmap = plt.cm.get_cmap('tab20', n_colors)
+    cmap = plt.cm.get_cmap("tab20", n_colors)
     palette = [plt.cm.colors.to_hex(cmap(i)) for i in range(n_colors)]
 
     company_colors = {}
@@ -102,8 +102,8 @@ def create_fig_1(df: pd.DataFrame, company_colors: dict) -> go.Figure:
     quarters_sorted = sorted(df["QuarterStart"].dropna().unique())
     quarter_labels = pd.to_datetime(quarters_sorted).to_period("Q").strftime("%Y-Q%q")
 
-    min_val = min(df['CCP'].min(), df['LTD'].min())
-    max_val = max(df['CCP'].max(), df['LTD'].max())
+    min_val = min(df["CCP"].min(), df["LTD"].min())
+    max_val = max(df["CCP"].max(), df["LTD"].max())
     padding = (max_val - min_val) * 0.1
     y_range = [min_val - padding, max_val + padding]
 
@@ -112,23 +112,23 @@ def create_fig_1(df: pd.DataFrame, company_colors: dict) -> go.Figure:
         figure=go.Figure(layout=dict(width=1100, height=700))
     )
 
-    companies = df['Symbol'].unique()
+    companies = df["Symbol"].unique()
     n = len(companies)
 
     for company in companies:
-        company_data = df[df['Symbol'] == company].sort_values('QuarterStart')
+        company_data = df[df["Symbol"] == company].sort_values("QuarterStart")
         color = company_colors.get(company, "#000000")
 
         hovertext_ccp = [
             f"Company: {company}<br>Quarter: {label}<br>CCP: $ {val:.0f} M"
-            for label, val in zip(company_data['ReportQuarter'], company_data['CCP'])
+            for label, val in zip(company_data["ReportQuarter"], company_data["CCP"])
         ]
 
         fig.add_trace(
             go.Scatter(
-                x=company_data['QuarterStart'],
-                y=company_data['CCP'],
-                mode='lines',
+                x=company_data["QuarterStart"],
+                y=company_data["CCP"],
+                mode="lines",
                 name=company,
                 legendgroup=company,
                 line=dict(color=color, width=2),
@@ -140,22 +140,22 @@ def create_fig_1(df: pd.DataFrame, company_colors: dict) -> go.Figure:
         )
 
     for company in companies:
-        company_data = df[df['Symbol'] == company].sort_values('QuarterStart')
+        company_data = df[df["Symbol"] == company].sort_values("QuarterStart")
         color = company_colors.get(company, "#000000")
 
         hovertext_ltd = [
             f"Company: {company}<br>Quarter: {label}<br>LTD: $ {val:.0f} M"
-            for label, val in zip(company_data['ReportQuarter'], company_data['LTD'])
+            for label, val in zip(company_data["ReportQuarter"], company_data["LTD"])
         ]
 
         fig.add_trace(
             go.Scatter(
-                x=company_data['QuarterStart'],
-                y=company_data['LTD'],
-                mode='lines',
+                x=company_data["QuarterStart"],
+                y=company_data["LTD"],
+                mode="lines",
                 name=company,
                 legendgroup=company,
-                line=dict(color=color, width=2, dash='dash'),
+                line=dict(color=color, width=2, dash="dash"),
                 hovertext=hovertext_ltd,
                 hovertemplate="%{hovertext}<extra></extra>",
                 showlegend=True
@@ -241,13 +241,10 @@ def create_fig_1(df: pd.DataFrame, company_colors: dict) -> go.Figure:
     fig = add_annotation(
         fig,
         text=(
-            "This chart displays the quarterly evolution of <b>Current Cash Position (CCP)</b> "
-            "and <b>Long-Term Debt (LTD)</b> for each company over <br> the selected period.<br>"
-            "<b>CCP (solid lines)</b> reflect changes in companies cash reserves, "
-            "while <b>LTD (dashed lines)</b> shows long-term debt levels over time.<br>"
-            "A widening gap between the two signals stronger liquidity, whereas narrowing or crossing lines may indicate "
-            "increasing leverage pressure.<br>"
-            "Use the dropdown to switch between CCP, LTD, or combined trends."
+            "This chart tracks the evolution of <b>cash (CCP)</b> and <b>long-term debt (LTD)</b> over time.<br>"
+            "Widening gaps signal improving liquidity, while convergence or "
+            "crossovers highlight rising leverage pressure.<br>"
+            "Use the dropdown to explore CCP, LTD, or combined trends."
         ),
         position="top",
         y=1.10,
@@ -255,13 +252,13 @@ def create_fig_1(df: pd.DataFrame, company_colors: dict) -> go.Figure:
         width=1300
     )
     
-    fig.update_layout(margin=dict(t=190))
+    fig.update_layout(margin=dict(t=180))
 
     fig.update_yaxes(title="USD (Millions)", range=y_range, secondary_y=False)
     fig.update_yaxes(range=y_range, secondary_y=True)
 
     fig.update_xaxes(
-        tickmode='array',
+        tickmode="array",
         tickvals=quarters_sorted,
         ticktext=quarter_labels,
         tickangle=-45,
@@ -359,22 +356,19 @@ def create_fig_2(df: pd.DataFrame, company_colors: dict) -> go.Figure:
     fig = add_annotation(
         fig,
         text=(
-            "CCP/LTD ratio shows how well each company’s cash reserves cover long-term debt.<br>"
-            "Higher ratios indicate stronger liquidity; lower ratios highlight rising leverage risk.<br>"
-            "<b>• Green (Top)</b> — Strong coverage, resilient financial position<br>"
-            "<b>• Light-green (Middle)</b> — Moderate liquidity, worth monitoring<br>"
-            "<b>• Yellow (Lower)</b> — Weaker cash coverage, elevated leverage risk<br>"
-            "<b>• Red (Bottom)</b> — Highest vulnerability, insufficient cash relative to debt<br>"
+            "This chart shows how effectively cash reserves cover long-term debt over time.<br>"
+            "Higher ratios indicate stronger liquidity resilience; lower values signal elevated leverage risk.<br>"
+            "Color bands highlight risk zones from stable to highly vulnerable."
         ),
         position="top",
         y=1.10,
         font=dict(size=14),
         width=1300
     )
-    fig.update_layout(margin=dict(t=200))
+    fig.update_layout(margin=dict(t=180))
     
     fig.update_xaxes(
-        tickmode='array',
+        tickmode="array",
         tickvals=quarters_sorted,
         ticktext=quarter_labels,
         tickangle=-45,
@@ -478,18 +472,16 @@ def create_fig_3(df: pd.DataFrame) -> go.Figure:
     fig = add_annotation(
         fig,
         text=(
-            "This heatmap highlights quarter-by-quarter financial resilience across companies.<br>"
-            "<b>Cooler colors</b> show stronger liquidity (higher CCP/LTD), "
-            "while <b>warmer tones</b> indicate potential stress.<br>"
-            "Use the color pattern to quickly spot improving or weakening balance-sheet strength and compare<br>"
-            "stability trends across firms over time."
+            "This heatmap highlights shifts in financial resilience across companies and time.<br>"
+            "<b>Cooler tones</b> indicate stronger liquidity coverage, "
+            "while <b>warmer zones</b> reveal periods of elevated financial pressure.<br>"
+            "Designed for rapid pattern recognition across time and peers."
         ),
         position="top",
         y=1.10,
         font=dict(size=14),
         width=1300
     )
-    
     fig.update_layout(margin=dict(t=180))
     
     return fig
@@ -697,20 +689,16 @@ def create_fig_4(df: pd.DataFrame, company_colors: dict) -> go.Figure:
     fig = add_annotation(
         fig,
         text=(
-            "This chart compares each company’s cash position (CCP) with its long-term debt (LTD).<br>"
-            "<b>• Bubble size = CCP/LTD ratio</b> (larger → stronger liquidity).<br>"
-            "<b>• Blue dashed line = median LTD</b><br>"
-            "<b>• Red dashed line = median CCP</b><br>"
-            "<b>• Bottom-right = stronger liquidity</b><br>"
-            "<b>• Top-left = higher leverage pressure</b><br>"
-            "Use the dropdown to switch between individual quarters or median values."
+            "This chart compares liquidity strength (CCP) against long-term leverage (LTD).<br>"
+            "Bubble size reflects the <b>CCP/LTD ratio</b>.<br>"
+            "Median reference lines help identify companies positioned <b>above or below</b> industry benchmarks."
         ),
         position="top",
         y=1.10,
         font=dict(size=14),
         width=1300
     )
-    fig.update_layout(margin=dict(t=210))
+    fig.update_layout(margin=dict(t=180))
 
     fig.update_xaxes(showline=True, linewidth=1, linecolor="black", mirror=True,
                      showgrid=True, gridcolor="lightgray")
