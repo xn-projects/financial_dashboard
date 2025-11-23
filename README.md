@@ -1,17 +1,10 @@
 # Financial Resilience Dashboard 
 
-This project provides an interactive analysis of corporate liquidity and leverage, focusing on how efficiently companies can cover long-term debt using available cash reserves.  
+This project delivers an in-depth analysis of corporate financial resilience by examining how effectively companies balance liquidity and long-term debt.
 
-The dashboard visualizes key financial relationships through dynamic charts that reveal structural trends, liquidity gaps, stress periods, and relative positioning across companies. It enables users to explore both short-term financial strength and longer-term risk exposure across multiple reporting periods.
+The dashboard enables users to explore structural trends, stress periods, and relative positioning across companies through interactive visual analytics.
 
-The project was initially prototyped in **Tableau** for rapid exploratory analysis and visual validation.  
-It was later fully rebuilt using **Python**, **Plotly Dash**, and **FastAPI** to support:
-- automation,
-- API integration,
-- scalable cloud deployment,
-- and interactive, production-ready analytics.
-
-Together, these technologies provide a flexible and robust framework for data-driven financial risk assessment.
+Originally prototyped in **Tableau** for rapid analytical iteration, the solution was fully rebuilt using **Python**, **Plotly Dash**, and **FastAPI** to support automation, API integration, and scalable production deployment.
 
 ---
 
@@ -27,57 +20,37 @@ Together, these technologies provide a flexible and robust framework for data-dr
 
 ## Dashboard Preview
 
-The dashboard includes five analytical views:
+The dashboard includes four analytical views:
 
 ### 1. CCP & LTD by Company
 
-This view shows how cash reserves and long-term debt evolve over time for each company. A widening gap between CCP and LTD indicates improving liquidity strength, while convergence or crossing patterns may signal rising financial pressure. Trends of liquid assets vs long‑term debt.
+This chart tracks how each company’s cash reserves and long-term debt evolve over time.
+It highlights structural shifts in financial strategy: expanding gaps signal strengthening liquidity, while narrowing gaps or crossovers indicate rising leverage pressure.
+The view enables comparison of stability, debt dependency, and financial trajectory across firms.
 
 ![CCP & LTD by Company](images/CCP%20&%20LTD%20by%20Company.png)
 
 ### 2. Debt Coverage Ratio
 
-This ratio highlights the company’s ability to cover debt with available liquid assets. Stable or rising values imply stronger resilience. Companies consistently below 0.5 may face higher refinancing or liquidity risks. CCP/LTD ratio over time as an indicator of resilience.
+This chart measures how effectively companies cover long-term debt with available liquid assets.
+Rising or stable ratios indicate strengthening financial resilience, while persistently low values signal elevated refinancing and liquidity risk.
+The trend view makes it possible to spot early deterioration or recovery patterns across companies.
 
 ![Debt Coverage Ratio](images/Debt%20Coverage%20Ratio.png)
 
 ### 3. Financial Resilience Heatmap
 
-The color gradient helps quickly identify periods of financial stress or stability. Cooler tones (higher CCP/LTD) point to stronger liquidity positions, while warmer tones highlight potentially vulnerable quarters. Quarter-by-quarter comparison across companies.
+The heatmap provides a high-level view of financial resilience across companies and reporting periods.
+Color intensity captures shifts in liquidity strength, allowing rapid identification of stress periods, stabilization phases, and structural improvement trends.
+The format is designed for fast comparative pattern recognition.
 
 ![Financial Resilience Heatmap](images/Financial%20Resilience%20Heatmap.png)
 
 ### 4. Debt vs Liquid Assets (all)
 
-**How to Interpret This Chart**
-
-This visualization compares each company’s **Current Cash Position (CCP)** with its **Long-Term Debt (LTD)** to evaluate both **liquidity strength** and **leverage risk**.
-
-**How to Read the Chart**
-- **X-axis (CCP):** Available cash and liquid assets.  
-- **Y-axis (LTD):** Long-term borrowing obligations.  
-- **Bubble size:** **CCP/LTD ratio** — larger bubbles indicate stronger liquidity relative to debt.  
-- **Labels:** Company tickers for quick identification.
-
-**Quadrant Interpretation**
-
-#### **➡ Bottom-right quadrant – Most favorable**
-High cash + low debt → **strong liquidity, low leverage risk.**
-
-#### **⬆ Top-left quadrant – Least favorable**
-Low cash + high debt → **potential financial stress or tightening liquidity.**
-
-#### **⬇ Bottom-left quadrant**
-Low cash + low debt → smaller or conservative companies, typically **lower structural risk**.
-
-#### **⬆➡ Top-right quadrant**
-High cash + high debt → active financing strategies; **higher reliance on debt cycles**.
-
-**Reference Lines**
-- **Blue dashed horizontal line:** Median **LTD** across all companies — shows which firms carry above/below typical debt levels.  
-- **Red dashed vertical line:** Median **CCP** — distinguishes companies with stronger vs weaker liquidity relative to peers.
-
-This structure allows quick evaluation of each company's financial resilience and positioning relative to industry medians.
+This chart compares each company’s liquidity strength against its long-term leverage.
+Bubble positioning and size reveal not only balance-sheet health, but also relative exposure to financial risk.
+Median reference lines allow users to instantly evaluate positioning versus peer benchmarks.
 
 ![Debt vs Liquid Assets (all)](images/Debt%20vs%20Liquid%20Assets%20\(all\).png)
 
@@ -87,16 +60,20 @@ This structure allows quick evaluation of each company's financial resilience an
 
 The dashboard supports:
 
-* Selecting one or multiple companies for comparison.
-* Choosing any time period from 2019 to 2024.
-* Switching between absolute values (CCP & LTD) and ratios (CCP/LTD).
-* Exploring both the latest financial positions and long‑term trajectories.
-
+* Interactive company selection for side-by-side comparison.
+* Dynamic time range filtering from 2019 to 2024.
+* Switching between absolute financial indicators (CCP & LTD) and relative ratios (CCP/LTD).
+* Exploration of both short-term liquidity positioning and long-term financial trajectories.
+  
 ### Why These Metrics?
 
-* **CCP (Cash & Cash Position)** reflects a company’s available liquid resources.
-* **LTD (Long‑Term Debt)** represents obligations that require repayment over a longer horizon.
-* **CCP/LTD ratio** shows how well a company can cover long‑term debt using available cash.
+These indicators were selected to capture the structural balance between liquidity and leverage:
+
+* **CCP (Cash & Cash Position)** — reflects the company’s immediately available liquid capital.
+* **LTD (Long‑Term Debt)** — represents long-term financial obligations that shape balance-sheet risk.
+* **CCP/LTD ratio** — a direct indicator of financial resilience, showing how effectively liquid resources can cover structural debt.
+
+Together, these metrics provide a clear framework for assessing **financial stability, risk exposure, and strategic capital structure**.
 
 ---
 
@@ -170,4 +147,8 @@ For architecture, data workflow, and implementation details (including Tableau-t
 
 ## Summary
 
-This dashboard helps assess financial resilience by comparing liquidity and debt positions across companies and quarters. The current implementation supports automated data loading, flexible API access, and a fully interactive visualization interface suitable for further analysis and expansion.
+This dashboard provides an analytical framework for evaluating corporate financial resilience through liquidity and debt dynamics.
+
+By combining time-series trends, ratio-based benchmarking, heatmap risk visualization, and quadrant-style positioning, the project enables rapid identification of structural strengths, emerging risks, and strategic balance-sheet patterns.
+
+The architecture supports automated data ingestion, API-driven access, and scalable extensions, making it suitable for both exploratory financial analysis and production-level deployment.
