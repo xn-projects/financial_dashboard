@@ -357,7 +357,7 @@ def create_fig_2(df: pd.DataFrame, company_colors: dict) -> go.Figure:
         fig,
         text=(
             "This chart shows how effectively cash reserves cover long-term debt over time.<br>"
-            "Higher ratios indicate stronger liquidity resilience; lower values signal elevated leverage risk.<br>"
+            "<b>Higher ratios</b> indicate stronger liquidity resilience; <b>lower values<b/> signal elevated leverage risk.<br>"
             "Color bands highlight risk zones from stable to highly vulnerable."
         ),
         position="top",
