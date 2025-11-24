@@ -120,7 +120,7 @@ These benchmarks help immediately identify which companies operate above or belo
 The dashboard supports:
 
 * Interactive company selection for side-by-side comparison.
-* Dynamic time range filtering from 2019 to 2024.
+* Dynamic time range filtering from 2019 to 2023.
 * Switching between absolute financial indicators (CCP & LTD) and relative ratios (CCP/LTD).
 * Exploration of both short-term liquidity positioning and long-term financial trajectories.
   
