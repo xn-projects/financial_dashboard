@@ -253,7 +253,7 @@ def create_fig_1(df: pd.DataFrame, company_colors: dict) -> go.Figure:
         width=1300
     )
     
-    fig.update_layout(margin=dict(t=180))
+    fig.update_layout(margin=dict(t=140))
 
     fig.update_yaxes(title="USD (Millions)", range=y_range, secondary_y=False)
     fig.update_yaxes(range=y_range, secondary_y=True)
@@ -366,7 +366,7 @@ def create_fig_2(df: pd.DataFrame, company_colors: dict) -> go.Figure:
         font=dict(size=14),
         width=1300
     )
-    fig.update_layout(margin=dict(t=150))
+    fig.update_layout(margin=dict(t=140))
 
     fig.update_xaxes(
         tickmode="array",
@@ -483,7 +483,7 @@ def create_fig_3(df: pd.DataFrame) -> go.Figure:
         font=dict(size=14),
         width=1300
     )
-    fig.update_layout(margin=dict(t=150))
+    fig.update_layout(margin=dict(t=140))
     
     return fig
 
@@ -701,7 +701,7 @@ def create_fig_4(df: pd.DataFrame, company_colors: dict) -> go.Figure:
         font=dict(size=14),
         width=1300
     )
-    fig.update_layout(margin=dict(t=180))
+    fig.update_layout(margin=dict(t=160))
     
     fig.update_xaxes(showline=True, linewidth=1, linecolor="black", mirror=True,
                      showgrid=True, gridcolor="lightgray")
