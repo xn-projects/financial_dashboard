@@ -253,7 +253,7 @@ def create_fig_1(df: pd.DataFrame, company_colors: dict) -> go.Figure:
         width=1300
     )
     
-    fig.update_layout(margin=dict(t=140))
+    fig.update_layout(margin=dict(t=145))
 
     fig.update_yaxes(title="USD (Millions)", range=y_range, secondary_y=False)
     fig.update_yaxes(range=y_range, secondary_y=True)
