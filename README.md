@@ -24,33 +24,92 @@ The dashboard includes four analytical views:
 
 ### 1. CCP & LTD by Company
 
-This chart tracks how each company’s cash reserves and long-term debt evolve over time.
-It highlights structural shifts in financial strategy: expanding gaps signal strengthening liquidity, while narrowing gaps or crossovers indicate rising leverage pressure.
-The view enables comparison of stability, debt dependency, and financial trajectory across firms.
+This chart tracks how each company's **cash reserves (CCP)** and **long-term debt (LTD)** evolve over time.
+
+**Solid lines represent CCP (cash and liquid assets).**  
+**Dashed lines represent LTD (long-term debt obligations).**
+
+The distance between the two lines reflects financial strength:
+
+- A widening gap indicates improving liquidity and strengthening balance-sheet resilience
+- Converging lines signal rising leverage pressure
+- Crossovers may indicate periods of financial stress or structural risk
+
+This view enables comparison of company stability, debt dependency, and long-term financial trajectory.
 
 ![CCP & LTD by Company](images/CCP%20&%20LTD%20by%20Company.png)
 
+
 ### 2. Debt Coverage Ratio
 
-This chart measures how effectively companies cover long-term debt with available liquid assets.
-Rising or stable ratios indicate strengthening financial resilience, while persistently low values signal elevated refinancing and liquidity risk.
-The trend view makes it possible to spot early deterioration or recovery patterns across companies.
+This view measures how effectively companies cover long-term debt through available cash using the **CCP/LTD ratio**.
+
+Color bands represent financial risk levels:
+
+- **Green** → strong liquidity coverage  
+- **Light green** → moderate financial stability  
+- **Yellow** → weakening liquidity  
+- **Red** → elevated leverage and refinancing risk
+
+Stable or rising ratios indicate strengthening financial resilience, while persistently low values signal elevated liquidity risk.
+This chart makes it possible to detect early deterioration or recovery patterns across companies.
 
 ![Debt Coverage Ratio](images/Debt%20Coverage%20Ratio.png)
 
+
 ### 3. Financial Resilience Heatmap
 
-The heatmap provides a high-level view of financial resilience across companies and reporting periods.
-Color intensity captures shifts in liquidity strength, allowing rapid identification of stress periods, stabilization phases, and structural improvement trends.
-The format is designed for fast comparative pattern recognition.
+This heatmap provides a high-level overview of liquidity strength across companies and time.
+
+Color gradients represent financial resilience:
+
+- **Cooler tones (green)** → higher CCP/LTD, stronger liquidity
+- **Warmer tones (yellow → red)** → weakening resilience and elevated financial stress
+
+The visualization enables rapid identification of:
+
+- stress periods
+- recovery phases
+- structural shifts in balance-sheet health
+
+The format is optimized for quick comparative pattern recognition across both time and companies.
 
 ![Financial Resilience Heatmap](images/Financial%20Resilience%20Heatmap.png)
 
+
 ### 4. Debt vs Liquid Assets (all)
 
-This chart compares each company’s liquidity strength against its long-term leverage.
-Bubble positioning and size reveal not only balance-sheet health, but also relative exposure to financial risk.
-Median reference lines allow users to instantly evaluate positioning versus peer benchmarks.
+This visualization compares each company’s **liquidity strength** against its **long-term leverage**.
+
+**How to Read the Chart**
+
+X-axis (CCP): Available cash and liquid assets  
+Y-axis (LTD): Long-term borrowing obligations  
+Bubble size: CCP/LTD ratio — larger bubbles represent stronger liquidity relative to debt  
+Labels: Company tickers for quick identification  
+
+**Quadrant Interpretation**
+
+**Bottom-right (strongest position)**  
+High cash + low debt → financially resilient, low risk profile
+
+**Top-left (weakest position)**  
+Low cash + high debt → elevated liquidity risk
+
+**Bottom-left**  
+Low cash + low debt → smaller or conservative balance sheets
+
+**Top-right**  
+High cash + high debt → aggressive capital structure, reliant on debt cycles
+
+**Reference Lines**
+
+- **Blue dashed horizontal line** — Median Long-Term Debt (LTD) across all companies
+- **Red dashed vertical line** — Median Current Cash Position (CCP) across all companies  
+
+Both reference lines are dynamic and automatically update based on the selected reporting period, allowing real-time comparison against peer benchmarks.
+
+These benchmarks help immediately identify which companies operate above or below industry-typical risk levels.
 
 ![Debt vs Liquid Assets (all)](images/Debt%20vs%20Liquid%20Assets%20\(all\).png)
 
@@ -86,7 +145,7 @@ Together, these metrics provide a clear framework for assessing **financial stab
 │   └── figures_builder.py
 │
 ├── 📁 data/
-│   ├── filings_demo_step3.sglite
+│   ├── filings_demo_step3.sqlite
 │   └── financial_data.json
 │
 ├── 📁 docs/
