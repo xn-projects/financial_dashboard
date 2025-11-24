@@ -242,6 +242,7 @@ def create_fig_1(df: pd.DataFrame, company_colors: dict) -> go.Figure:
         fig,
         text=(
             "This chart tracks the evolution of <b>cash (CCP)</b> and <b>long-term debt (LTD)</b> over time.<br>"
+            "<b>Solid lines represent CCP</b>; <b>dashed lines represent LTD</b>.<br>"
             "Widening gaps signal improving liquidity, while convergence or "
             "crossovers highlight rising leverage pressure.<br>"
             "Use the dropdown to explore CCP, LTD, or combined trends."
@@ -252,7 +253,7 @@ def create_fig_1(df: pd.DataFrame, company_colors: dict) -> go.Figure:
         width=1300
     )
     
-    fig.update_layout(margin=dict(t=150))
+    fig.update_layout(margin=dict(t=180))
 
     fig.update_yaxes(title="USD (Millions)", range=y_range, secondary_y=False)
     fig.update_yaxes(range=y_range, secondary_y=True)
@@ -358,7 +359,7 @@ def create_fig_2(df: pd.DataFrame, company_colors: dict) -> go.Figure:
         text=(
             "This chart shows how effectively cash reserves cover long-term debt over time.<br>"
             "<b>Higher ratios</b> indicate stronger liquidity resilience; <b>lower values</b> signal elevated leverage risk.<br>"
-            "Color bands highlight risk zones from stable to highly vulnerable."
+            "<b>Green zones</b> indicate strong coverage, while <b>yellow to red zones</b> highlight increasing financial vulnerability."
         ),
         position="top",
         y=1.10,
@@ -366,7 +367,7 @@ def create_fig_2(df: pd.DataFrame, company_colors: dict) -> go.Figure:
         width=1300
     )
     fig.update_layout(margin=dict(t=150))
-    
+
     fig.update_xaxes(
         tickmode="array",
         tickvals=quarters_sorted,
@@ -475,7 +476,7 @@ def create_fig_3(df: pd.DataFrame) -> go.Figure:
             "This heatmap highlights shifts in financial resilience across companies and time.<br>"
             "<b>Cooler tones</b> indicate stronger liquidity coverage, "
             "while <b>warmer zones</b> reveal periods of elevated financial pressure.<br>"
-            "Designed for rapid pattern recognition across time and peers."
+            "Designed for rapid detection of stress patterns and structural changes across peers."
         ),
         position="top",
         y=1.10,
@@ -691,15 +692,17 @@ def create_fig_4(df: pd.DataFrame, company_colors: dict) -> go.Figure:
         text=(
             "This chart compares liquidity strength (CCP) against long-term leverage (LTD).<br>"
             "Bubble size reflects the <b>CCP/LTD ratio</b>.<br>"
-            "Median reference lines help identify companies positioned <b>above or below</b> industry benchmarks."
+            "<b>Blue dashed line = median LTD</b>, <b>Red dashed line = median CCP</b> "
+            "(recalculated dynamically for each selected period).<br>"
+            "Used to identify companies positioned above or below peer benchmarks."
         ),
         position="top",
         y=1.10,
         font=dict(size=14),
         width=1300
     )
-    fig.update_layout(margin=dict(t=150))
-
+    fig.update_layout(margin=dict(t=180))
+    
     fig.update_xaxes(showline=True, linewidth=1, linecolor="black", mirror=True,
                      showgrid=True, gridcolor="lightgray")
     fig.update_yaxes(showline=True, linewidth=1, linecolor="black", mirror=True,
